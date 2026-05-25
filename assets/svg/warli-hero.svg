@@ -1,0 +1,793 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" fill="none">
+  <!--
+    ═══════════════════════════════════════════════════════════════════
+    OJAS MITHRA — THE STORY OF BIO-ENZYME MAKING
+    A Warli narrative panorama, read left to right.
+    ═══════════════════════════════════════════════════════════════════
+
+    CHAPTER 1 (x=0–280):   THE GARDEN
+      Kavita's courtyard has fruit trees — citrus, lemon, banana.
+      Two figures pick the fruit waste (peels, rinds) from the trees.
+      A third carries a filled basket toward the kitchen.
+
+    CHAPTER 2 (x=280–430): PREPARATION
+      In the courtyard, a figure chops the peels on a stone surface.
+      Another figure weighs/measures jaggery into a small vessel.
+      Scattered dots show the ingredients: peel pieces and sugar.
+
+    CHAPTER 3 (x=430–540): THE KITCHEN
+      Kavita's house. She stands at the entrance, overseeing.
+      A figure pours the prepared mixture into a large clay matka pot.
+
+    CHAPTER 4 (x=540–740): FERMENTATION — THREE MONTHS
+      Three large clay matka pots stand in a row on the ground.
+      A figure seals the first pot with a cloth and presses it closed.
+      A figure stirs the second with a long ladle (arm reaching in).
+      The third pot is sealed and resting.
+      Above: a sun and crescent moon alternate — marking the passing of time.
+      Month markers (three suns) float overhead.
+
+    CHAPTER 5 (x=740–880): STRAINING
+      A figure holds a large pot tilted at the shoulder and pours.
+      A cloth filter is implied by a wavy horizontal line.
+      The strained liquid drips into a collection vessel on the ground.
+      Another figure lifts and tilts the collection vessel (clear liquid inside).
+
+    CHAPTER 6 (x=880–1060): BOTTLING & LABELLING
+      A figure fills a bottle by hand (arm reaching down to bottle mouth).
+      Three finished bottles stand in a row at ground level.
+      A figure sits cross-legged writing labels (bent forward, pen in hand).
+      A small label ornament near the bottles.
+
+    CHAPTER 7 (x=1060–1200): DELIVERY — THE PRODUCT REACHES HOMES
+      A figure carries a cloth bundle of bottles on the head.
+      A doorway / second home (small hut) receives the delivery.
+      A figure at the door accepts the bottles with outstretched hands.
+
+    CHAPTER 8 (x=1200–1440): THE CLEAN HOME
+      A figure mops the floor (long mop-handle line, wavy floor lines).
+      A figure washes hands at a vessel.
+      Children play — arms wide, in a small joyful dance.
+      A peacock stands near a right-side tree (prosperity symbol).
+      Right framing tree closes the composition.
+
+    ─────────────────────────────────────────────────────────────────
+    Human figures = TWO SOLID TRIANGLES joined tip-to-tip at the waist.
+    Torso = upper triangle, apex DOWN. Pelvis = lower triangle, apex UP.
+    Head = featureless circle above torso apex.
+    Women: small dot above head = Ambada bun. Men: no dot.
+    Trees = stacked conical triangles.
+    Pots = matka anatomy: wide belly + narrow neck + ellipse rim.
+    Ground at y=172. Figure waists at y=134. Sky zone y=0–90.
+    ─────────────────────────────────────────────────────────────────
+  -->
+
+  <!-- GROUND LINE -->
+  <line x1="0" y1="172" x2="1440" y2="172" stroke="#a8472a" stroke-width="0.8" opacity="0.8"/>
+
+
+  <!-- ═══════════════════════════════════════════
+       LEFT FRAMING TREE  (x=58)
+       Marks the beginning — the garden side.
+  ═══════════════════════════════════════════ -->
+  <path d="M 58,6 L 30,80 L 86,80 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M 58,60 L 8,172 L 108,172 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="58" cy="6" r="3" fill="#a8472a"/>
+  <circle cx="30" cy="80" r="3.5" fill="#a8472a"/>
+  <circle cx="86" cy="80" r="3.5" fill="#a8472a"/>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 1: THE GARDEN
+       FRUIT/CITRUS TREE  (x=168)
+       Conical Warli tree with fruit dots at branch junctions.
+  ═══════════════════════════════════════════ -->
+  <!-- Upper narrow crown -->
+  <path d="M 168,14 L 154,46 L 182,46 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Lower wider canopy -->
+  <path d="M 168,42 L 136,108 L 200,108 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Fruit dots at every branch corner (lemons/citrus) -->
+  <circle cx="168" cy="14"  r="3"   fill="#a8472a"/>
+  <circle cx="154" cy="46"  r="3.5" fill="#a8472a"/>
+  <circle cx="182" cy="46"  r="3.5" fill="#a8472a"/>
+  <circle cx="136" cy="108" r="4"   fill="#a8472a"/>
+  <circle cx="200" cy="108" r="4"   fill="#a8472a"/>
+
+  <!-- FIGURE H1 · Kavita picking fruit · x=128, waist y=134
+       Both arms reach UP toward the tree to pick fruit.
+  -->
+  <g transform="translate(128,134)">
+    <!-- Ambada bun — marks female figure -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- head -->
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <!-- torso: apex DOWN at waist -->
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <!-- pelvis: apex UP at waist -->
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms raised high — reaching for fruit -->
+    <line x1="-11" y1="-20" x2="-22" y2="-46" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="24"  y2="-44" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- fruit in right hand (small dot) -->
+    <circle cx="26" cy="-46" r="2.5" fill="#a8472a"/>
+    <!-- walking legs -->
+    <line x1="-10" y1="18" x2="-14" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="6"   y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- FIGURE H2 · Carrying basket of peels · x=230, waist y=134
+       A basket balanced on the head (woman carrying collected peels to kitchen).
+  -->
+  <g transform="translate(230,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-56" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-53" x2="0" y2="-47" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- basket (woven — shown as rectangle with cross-hatch marks) -->
+    <rect x="-12" y="-56" width="24" height="14" rx="1" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- head -->
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <!-- torso -->
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <!-- pelvis -->
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms raised to support basket on head -->
+    <line x1="-11" y1="-20" x2="-11" y2="-42" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="11"  y2="-42" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- walking legs -->
+    <line x1="-10" y1="18" x2="-15" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="3"   y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 2: PREPARATION
+       Chopping surface + figure chopping peels
+       + jaggery measurement figure
+  ═══════════════════════════════════════════ -->
+
+  <!-- Chopping stone / surface at x=295, y=172 -->
+  <rect x="278" y="162" width="36" height="10" rx="2"
+        fill="none" stroke="#a8472a" stroke-width="1.2"/>
+
+  <!-- Ingredient dots (scattered peel pieces) -->
+  <circle cx="284" cy="160" r="1.8" fill="#a8472a"/>
+  <circle cx="291" cy="157" r="1.5" fill="#a8472a"/>
+  <circle cx="300" cy="159" r="2"   fill="#a8472a"/>
+  <circle cx="308" cy="156" r="1.5" fill="#a8472a"/>
+  <circle cx="314" cy="160" r="1.8" fill="#a8472a"/>
+
+  <!-- FIGURE C1 · Chopping · x=296, waist y=134
+       Leans forward, right arm swings DOWN — chopping gesture.
+  -->
+  <g transform="translate(296,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <!-- torso angled forward (lean) -->
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- right arm DOWN — chopping motion -->
+    <line x1="11"  y1="-20" x2="22"  y2="4"   stroke="#a8472a" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- left arm back for balance -->
+    <line x1="-11" y1="-20" x2="-26" y2="-14" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- legs: standing with one foot forward -->
+    <line x1="-10" y1="18" x2="-14" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="18"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small mixing vessel at x=342, y=172 -->
+  <g transform="translate(342,172)">
+    <!-- vessel belly -->
+    <path d="M -5,-28 Q -18,-24 -18,-14 Q -18,-2 0,0 Q 18,-2 18,-14 Q 18,-24 5,-28 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- neck -->
+    <path d="M -5,-28 L -5,-34 L 5,-34 L 5,-28" fill="none" stroke="#a8472a" stroke-width="1.0"/>
+    <!-- rim -->
+    <ellipse cx="0" cy="-34" rx="6" ry="2.5" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <!-- waist decoration -->
+    <path d="M -14,-18 Q 0,-14 14,-18" fill="none" stroke="#a8472a" stroke-width="0.6"/>
+  </g>
+
+  <!-- FIGURE C2 · Measuring/pouring jaggery · x=370, waist y=134
+       Both arms forward, slightly tilting a small vessel.
+  -->
+  <g transform="translate(370,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- both arms reach forward — holding a measuring vessel -->
+    <line x1="-11" y1="-20" x2="-26" y2="-8"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="26"  y2="-6"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- small vessel between hands -->
+    <ellipse cx="34" cy="-4" rx="7" ry="4" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- dripping drops from vessel -->
+    <circle cx="32" cy="6"  r="1.5" fill="#a8472a"/>
+    <circle cx="36" cy="10" r="1.2" fill="#a8472a"/>
+    <!-- legs -->
+    <line x1="-10" y1="18" x2="-14" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="14"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 3: THE KITCHEN — Kavita's house
+  ═══════════════════════════════════════════ -->
+  <g transform="translate(438,172)">
+    <!-- rectangle body -->
+    <rect x="-30" y="-72" width="60" height="72" fill="none" stroke="#a8472a" stroke-width="1.3"/>
+    <!-- triangle roof -->
+    <path d="M -34,-72 L 0,-114 L 34,-72 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+    <!-- door (filled — open) -->
+    <rect x="-10" y="-30" width="20" height="30" fill="#a8472a"/>
+    <!-- left window -->
+    <rect x="-24" y="-60" width="12" height="12" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <!-- right window -->
+    <rect x="12"  y="-60" width="12" height="12" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <!-- smoke / rising plant from apex -->
+    <line x1="0" y1="-114" x2="0" y2="-128" stroke="#a8472a" stroke-width="0.9" stroke-linecap="round"/>
+    <circle cx="0" cy="-131" r="2.5" fill="#a8472a"/>
+  </g>
+
+  <!-- FIGURE K · Kavita at kitchen door · x=488, waist y=134
+       Standing in doorway, one arm gesturing inward (welcoming/overseeing).
+  -->
+  <g transform="translate(488,134)">
+    <!-- Ambada bun (Kavita is female) -->
+    <circle cx="0" cy="-39" r="3.5" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.3"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- left arm: gesturing toward the pots (pointing/welcoming) -->
+    <line x1="-11" y1="-20" x2="-28" y2="-6"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- right arm: hand on chest / overseeing gesture -->
+    <line x1="11"  y1="-20" x2="20"  y2="-26" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="14"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- FIGURE P · Pouring mixture into first matka · x=528, waist y=134
+       Right arm tilts a small pot downward toward the matka below.
+  -->
+  <g transform="translate(528,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- right arm: raised with tilted vessel -->
+    <line x1="11"  y1="-20" x2="28"  y2="-36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- small tilted pot in right hand -->
+    <ellipse cx="32" cy="-42" rx="9" ry="5" fill="none" stroke="#a8472a" stroke-width="1.2"
+             transform="rotate(-30,32,-42)"/>
+    <!-- pour dots from small pot downward -->
+    <circle cx="28" cy="-28" r="1.8" fill="#a8472a"/>
+    <circle cx="26" cy="-20" r="1.5" fill="#a8472a"/>
+    <circle cx="24" cy="-12" r="1.2" fill="#a8472a"/>
+    <!-- left arm: balancing -->
+    <line x1="-11" y1="-20" x2="-24" y2="-12" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="14"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 4: FERMENTATION — THE THREE MATKAS
+       Three clay pots sit sealed on the ground.
+       Time passes: moon and sun mark the months.
+  ═══════════════════════════════════════════ -->
+
+  <!-- MATKA POT 1 · x=578 · being sealed by figure -->
+  <g transform="translate(578,172)">
+    <path d="M -6,-54 Q -22,-48 -22,-30 Q -22,-10 0,0 Q 22,-10 22,-30 Q 22,-48 6,-54 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.4"/>
+    <!-- neck -->
+    <rect x="-6" y="-62" width="12" height="10" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- rim -->
+    <ellipse cx="0" cy="-62" rx="8" ry="3" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- cloth seal on top (filled ellipse = cloth pressed over mouth) -->
+    <ellipse cx="0" cy="-65" rx="10" ry="4" fill="#a8472a"/>
+    <!-- belly stripe -->
+    <path d="M -18,-36 Q 0,-30 18,-36" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  </g>
+
+  <!-- FIGURE S1 · Sealing pot 1 · x=546, waist y=134
+       Both hands press DOWN on the cloth to seal the pot mouth.
+  -->
+  <g transform="translate(546,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- both arms reach forward-down → pressing on pot top -->
+    <line x1="-11" y1="-20" x2="4"   y2="-4"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="26"  y2="-4"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="14"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- MATKA POT 2 · x=632 · being stirred (fermentation active) -->
+  <g transform="translate(632,172)">
+    <path d="M -6,-54 Q -22,-48 -22,-30 Q -22,-10 0,0 Q 22,-10 22,-30 Q 22,-48 6,-54 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.4"/>
+    <rect x="-6" y="-62" width="12" height="10" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <ellipse cx="0" cy="-62" rx="8" ry="3" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- open rim (being stirred — no seal) -->
+    <path d="M -18,-36 Q 0,-30 18,-36" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+    <!-- bubbles rising (fermentation active) -->
+    <circle cx="-4" cy="-68" r="2"   fill="#a8472a" opacity="0.8"/>
+    <circle cx="6"  cy="-72" r="1.5" fill="#a8472a" opacity="0.7"/>
+    <circle cx="0"  cy="-76" r="1.2" fill="#a8472a" opacity="0.6"/>
+  </g>
+
+  <!-- FIGURE S2 · Stirring pot 2 · x=608, waist y=134
+       Right arm deep into pot — long stirring stick reaching down.
+  -->
+  <g transform="translate(608,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- right arm reaching deep into pot — stirring ladle -->
+    <line x1="11" y1="-20" x2="28" y2="-6"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- ladle/stirring stick continues into pot -->
+    <line x1="28" y1="-6"  x2="30" y2="24"  stroke="#a8472a" stroke-width="1.0" stroke-linecap="round" stroke-dasharray="2 2"/>
+    <!-- left arm: resting on knee or body -->
+    <line x1="-11" y1="-20" x2="-22" y2="-10" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="16"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- MATKA POT 3 · x=686 · resting / sealed (late fermentation) -->
+  <g transform="translate(686,172)">
+    <path d="M -6,-54 Q -22,-48 -22,-30 Q -22,-10 0,0 Q 22,-10 22,-30 Q 22,-48 6,-54 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.4"/>
+    <rect x="-6" y="-62" width="12" height="10" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <ellipse cx="0" cy="-62" rx="8" ry="3" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- cloth seal — fully sealed, resting -->
+    <ellipse cx="0" cy="-65" rx="10" ry="4" fill="#a8472a"/>
+    <path d="M -18,-36 Q 0,-30 18,-36" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+    <!-- date mark on pot: three short lines = 3 months -->
+    <line x1="-6" y1="-46" x2="-6" y2="-40" stroke="#a8472a" stroke-width="0.8"/>
+    <line x1="0"  y1="-46" x2="0"  y2="-40" stroke="#a8472a" stroke-width="0.8"/>
+    <line x1="6"  y1="-46" x2="6"  y2="-40" stroke="#a8472a" stroke-width="0.8"/>
+  </g>
+
+  <!-- TIME MARKERS IN SKY: MOON → SUN → SUN → SUN (3 months cycling) -->
+  <!-- Crescent moon (beginning) -->
+  <circle cx="568" cy="24" r="12" fill="#a8472a"/>
+  <circle cx="576" cy="24" r="10" fill="#f1e7d3"/>
+
+  <!-- Sun month 1 (middle) -->
+  <circle cx="632" cy="18" r="14" fill="none" stroke="#a8472a" stroke-width="1.3"/>
+  <line x1="632" y1="1"  x2="632" y2="-3" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="632" y1="35" x2="632" y2="39" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="615" y1="18" x2="611" y2="18" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="649" y1="18" x2="653" y2="18" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="620" y1="7"  x2="617" y2="4"  stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="644" y1="7"  x2="647" y2="4"  stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="620" y1="29" x2="617" y2="32" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="644" y1="29" x2="647" y2="32" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+  <circle cx="632" cy="18" r="5" fill="none" stroke="#a8472a" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Sun month 3 (final, above 3rd pot — fermentation complete) -->
+  <circle cx="686" cy="24" r="12" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+  <line x1="686" y1="9"  x2="686" y2="5"  stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="686" y1="39" x2="686" y2="43" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="671" y1="24" x2="667" y2="24" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="701" y1="24" x2="705" y2="24" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="675" y1="14" x2="672" y2="11" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="697" y1="14" x2="700" y2="11" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="675" y1="34" x2="672" y2="37" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="697" y1="34" x2="700" y2="37" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <!-- V-wing birds in the waiting sky (time passing) -->
+  <path d="M 590,10 Q 594,6 598,10"  fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 650,8  Q 654,4 658,8"   fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 710,12 Q 714,8 718,12"  fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 5: STRAINING / FILTERING
+       The enzyme liquid is poured through cloth.
+  ═══════════════════════════════════════════ -->
+
+  <!-- FIGURE F1 · Straining · x=768, waist y=134
+       Holds a LARGE pot at shoulder height, tilts it to pour.
+  -->
+  <g transform="translate(768,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms raised: holding large tilted pot at shoulder level -->
+    <line x1="-11" y1="-20" x2="-26" y2="-40" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="20"  y2="-42" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- large pot (tilted 45° — pouring position) -->
+    <g transform="translate(4,-54) rotate(40)">
+      <path d="M -5,-18 Q -16,-14 -16,-8 Q -16,2 0,4 Q 16,2 16,-8 Q 16,-14 5,-18 Z"
+            fill="none" stroke="#a8472a" stroke-width="1.3"/>
+      <ellipse cx="0" cy="-18" rx="6" ry="2.5" fill="none" stroke="#a8472a" stroke-width="1.0"/>
+    </g>
+    <!-- pour drops below the tilted pot -->
+    <circle cx="20"  cy="-28" r="2"   fill="#a8472a"/>
+    <circle cx="18"  cy="-18" r="1.8" fill="#a8472a"/>
+    <circle cx="16"  cy="-8"  r="1.5" fill="#a8472a"/>
+    <circle cx="14"  cy="2"   r="1.2" fill="#a8472a"/>
+    <line x1="-10" y1="18" x2="-16" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="6"   y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Filter cloth — wavy horizontal line at y=150 (between pour and collection) -->
+  <path d="M 746,150 Q 752,145 758,150 Q 764,155 770,150 Q 776,145 782,150 Q 788,155 794,150"
+        fill="none" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Collection vessel at x=770, ground level -->
+  <g transform="translate(800,172)">
+    <!-- wide collection pot — the strained liquid collects here -->
+    <path d="M -8,-42 Q -26,-36 -26,-22 Q -26,-6 0,0 Q 26,-6 26,-22 Q 26,-36 8,-42 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.3"/>
+    <rect x="-8" y="-50" width="16" height="10" fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <ellipse cx="0" cy="-50" rx="10" ry="3.5" fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <!-- liquid level line inside (showing fill level) -->
+    <path d="M -20,-28 Q 0,-22 20,-28" fill="none" stroke="#a8472a" stroke-width="0.8"/>
+  </g>
+
+  <!-- FIGURE F2 · Lifting & checking collected liquid · x=834, waist y=134 -->
+  <g transform="translate(834,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms bent: holding/lifting a small vessel to examine it -->
+    <line x1="-11" y1="-20" x2="-28" y2="-10" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="26"  y2="-8"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- small glass/vessel in hands (clarity check) -->
+    <rect x="26" y="-14" width="10" height="16" rx="2"
+          fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <!-- liquid gleam inside vessel -->
+    <line x1="29" y1="-6" x2="29" y2="-2" stroke="#a8472a" stroke-width="0.8" opacity="0.7"/>
+    <line x1="-10" y1="18" x2="-14" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="14"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 6: BOTTLING & LABELLING
+       Filling by hand. Writing labels by hand.
+  ═══════════════════════════════════════════ -->
+
+  <!-- Three bottles standing in a row at ground level, x=890–940 -->
+  <!-- Bottle silhouette: narrow neck + wider body -->
+  <g transform="translate(892,172)">
+    <!-- neck -->
+    <rect x="-4" y="-52" width="8" height="14" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- cap -->
+    <rect x="-5" y="-58" width="10" height="8" rx="1" fill="#a8472a"/>
+    <!-- body -->
+    <path d="M -4,-38 Q -14,-34 -14,-22 Q -14,-8 0,0 Q 14,-8 14,-22 Q 14,-34 4,-38 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- label rectangle on body -->
+    <rect x="-10" y="-32" width="20" height="16" rx="1" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  </g>
+  <g transform="translate(920,172)">
+    <rect x="-4" y="-52" width="8" height="14" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <rect x="-5" y="-58" width="10" height="8" rx="1" fill="#a8472a"/>
+    <path d="M -4,-38 Q -14,-34 -14,-22 Q -14,-8 0,0 Q 14,-8 14,-22 Q 14,-34 4,-38 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <rect x="-10" y="-32" width="20" height="16" rx="1" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  </g>
+  <g transform="translate(948,172)">
+    <rect x="-4" y="-52" width="8" height="14" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <rect x="-5" y="-58" width="10" height="8" rx="1" fill="#a8472a"/>
+    <path d="M -4,-38 Q -14,-34 -14,-22 Q -14,-8 0,0 Q 14,-8 14,-22 Q 14,-34 4,-38 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <rect x="-10" y="-32" width="20" height="16" rx="1" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  </g>
+
+  <!-- FIGURE B1 · Filling a bottle · x=876, waist y=134
+       Right arm reaches DOWN to guide liquid into a bottle.
+  -->
+  <g transform="translate(876,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- right arm reaching DOWN toward bottle — filling gesture -->
+    <line x1="11"  y1="-20" x2="20"  y2="4"   stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- small funnel/ladle in hand -->
+    <circle cx="22" cy="6"  r="3" fill="#a8472a"/>
+    <!-- left arm: holding a vessel to pour from -->
+    <line x1="-11" y1="-20" x2="-24" y2="-8"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-16" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="6"   y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- FIGURE B2 · Writing labels · x=966, waist y=134
+       Crouching/forward with pen, writing directly on a label.
+  -->
+  <g transform="translate(966,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- right arm: reaches forward to write on bottle -->
+    <line x1="11"  y1="-20" x2="30"  y2="-10" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- pen tip -->
+    <circle cx="32" cy="-9" r="2" fill="#a8472a"/>
+    <!-- left arm: steadying -->
+    <line x1="-11" y1="-20" x2="-22" y2="-14" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="14"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 7: DELIVERY — PRODUCT REACHES HOMES
+       A figure carries the finished bottles.
+       A second home receives the delivery.
+  ═══════════════════════════════════════════ -->
+
+  <!-- Small divider tree at x=1010 -->
+  <g transform="translate(1010,172)">
+    <path d="M 0,-68 L -14,-24 L 14,-24 Z" fill="none" stroke="#a8472a" stroke-width="1.3" stroke-linejoin="round"/>
+    <path d="M 0,-28 L -20,0 L 20,0 Z"   fill="none" stroke="#a8472a" stroke-width="1.3" stroke-linejoin="round"/>
+    <circle cx="0" cy="-68" r="2.5" fill="#a8472a"/>
+  </g>
+
+  <!-- FIGURE D1 · Carrying bottles · x=1046, waist y=134
+       Basket/bundle on head (delivery).
+  -->
+  <g transform="translate(1046,134)">
+    <!-- bundle/basket of bottles on head -->
+    <rect x="-14" y="-52" width="28" height="14" rx="2" fill="none" stroke="#a8472a" stroke-width="1.3"/>
+    <!-- bottle silhouettes in bundle -->
+    <line x1="-6"  y1="-52" x2="-6"  y2="-38" stroke="#a8472a" stroke-width="0.8"/>
+    <line x1="0"   y1="-52" x2="0"   y2="-38" stroke="#a8472a" stroke-width="0.8"/>
+    <line x1="6"   y1="-52" x2="6"   y2="-38" stroke="#a8472a" stroke-width="0.8"/>
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-42" r="3" fill="#a8472a"/>
+    <!-- head -->
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms raised to hold bundle -->
+    <line x1="-11" y1="-20" x2="-11" y2="-38" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="11"  y2="-38" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="2"   y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- A SECOND HOME — where the product is received -->
+  <g transform="translate(1110,172)">
+    <rect x="-24" y="-56" width="48" height="56" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <path d="M -28,-56 L 0,-88 L 28,-56 Z" fill="none" stroke="#a8472a" stroke-width="1.3" stroke-linejoin="round"/>
+    <!-- open door (welcoming) -->
+    <rect x="-8" y="-24" width="16" height="24" fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <!-- window -->
+    <rect x="-20" y="-48" width="10" height="10" fill="none" stroke="#a8472a" stroke-width="0.8"/>
+  </g>
+
+  <!-- FIGURE R · Receiving figure at door · x=1086, waist y=134
+       Arms outstretched forward — reaching to receive the delivery.
+  -->
+  <g transform="translate(1086,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- both arms reach FORWARD (toward the delivery figure) -->
+    <line x1="-11" y1="-20" x2="-30" y2="-16" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="28"  y2="-12" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="-10" y1="18"  x2="-14" y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18"  x2="14"  y2="36"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       CHAPTER 8: THE CLEAN HOME
+       A family uses the products. The result:
+       clean floors, clean hands, a healthy home.
+  ═══════════════════════════════════════════ -->
+
+  <!-- FIGURE M · Mopping · x=1170, waist y=134
+       Long mop handle line. Wavy lines at foot = soapy floor.
+  -->
+  <g transform="translate(1170,134)">
+    <!-- Ambada bun -->
+    <circle cx="0" cy="-39" r="3" fill="#a8472a"/>
+    <line x1="0" y1="-36" x2="0" y2="-34" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- both arms forward-down: holding mop handle -->
+    <line x1="-11" y1="-20" x2="-6"  y2="8"   stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="14"  y2="2"   stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- mop handle: long line downward -->
+    <line x1="-2" y1="8" x2="-16" y2="40" stroke="#a8472a" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- mop head: wide oval at bottom -->
+    <ellipse cx="-18" cy="40" rx="10" ry="4" fill="none" stroke="#a8472a" stroke-width="1.3"/>
+    <!-- wavy floor marks (clean soapy floor) -->
+    <path d="M -34,44 Q -28,40 -22,44 Q -16,48 -10,44 Q -4,40 2,44"
+          fill="none" stroke="#a8472a" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-10" y1="18" x2="-6"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="18"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- FIGURE W · Washing hands · x=1232, waist y=134 -->
+  <g transform="translate(1232,134)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -11,-20 L 11,-20 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -10,18 L 10,18 Z" fill="#a8472a"/>
+    <!-- arms reaching down into basin -->
+    <line x1="-11" y1="-20" x2="-16" y2="6"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="11"  y1="-20" x2="16"  y2="6"  stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- basin (flat ellipse at foot level) -->
+    <ellipse cx="0" cy="14" rx="16" ry="6" fill="none" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- water drops / bubbles -->
+    <circle cx="-6" cy="6" r="1.5" fill="#a8472a"/>
+    <circle cx="6"  cy="4" r="1.2" fill="#a8472a"/>
+    <circle cx="0"  cy="2" r="1.0" fill="#a8472a"/>
+    <line x1="-10" y1="18" x2="-14" y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="10"  y1="18" x2="14"  y2="36" stroke="#a8472a" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- PEACOCK · prosperity symbol · x=1290 -->
+  <g transform="translate(1290,155)">
+    <!-- fan tail — 6 feathers, up-left -->
+    <line x1="-12" y1="-6" x2="-42" y2="-48" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="-12" y1="-6" x2="-48" y2="-24" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="-12" y1="-6" x2="-46" y2="-2"  stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="-12" y1="-6" x2="-32" y2="-50" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="-12" y1="-6" x2="-18" y2="-52" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <line x1="-12" y1="-6" x2="-4"  y2="-52" stroke="#a8472a" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- eye dots -->
+    <circle cx="-42" cy="-48" r="2.5" fill="#a8472a"/>
+    <circle cx="-48" cy="-24" r="2.5" fill="#a8472a"/>
+    <circle cx="-46" cy="-2"  r="2.5" fill="#a8472a"/>
+    <circle cx="-32" cy="-50" r="2.5" fill="#a8472a"/>
+    <circle cx="-18" cy="-52" r="2.5" fill="#a8472a"/>
+    <circle cx="-4"  cy="-52" r="2.5" fill="#a8472a"/>
+    <!-- oval body -->
+    <ellipse cx="10" cy="-4" rx="18" ry="10" fill="none" stroke="#a8472a" stroke-width="1.4"/>
+    <!-- neck -->
+    <line x1="-4" y1="-12" x2="-14" y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <!-- head -->
+    <circle cx="-16" cy="-32" r="6" fill="#a8472a"/>
+    <!-- crest -->
+    <line x1="-16" y1="-38" x2="-16" y2="-46" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+    <circle cx="-16" cy="-48" r="2.5" fill="#a8472a"/>
+    <!-- legs -->
+    <line x1="2"  y1="6" x2="0"  y2="16" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="18" y1="6" x2="20" y2="16" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════
+       LARGE SUN — marks the right end of the story.
+       The product reaches homes in the full light of day.
+       Position: (1340, 32)
+  ═══════════════════════════════════════════ -->
+  <circle cx="1340" cy="32" r="18" fill="none" stroke="#a8472a" stroke-width="1.4"/>
+  <!-- 8 rays -->
+  <line x1="1340" y1="10" x2="1340" y2="4"  stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1340" y1="54" x2="1340" y2="60" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1318" y1="32" x2="1312" y2="32" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1362" y1="32" x2="1368" y2="32" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1324" y1="16" x2="1319" y2="11" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1356" y1="16" x2="1361" y2="11" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1324" y1="48" x2="1319" y2="53" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="1356" y1="48" x2="1361" y2="53" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="1340" cy="32" r="7" fill="none" stroke="#a8472a" stroke-width="0.6" opacity="0.6"/>
+
+
+  <!-- ═══════════════════════════════════════════
+       RIGHT FRAMING TREE  (x=1398)
+       Mirrors the left framing tree — closes the story.
+  ═══════════════════════════════════════════ -->
+  <path d="M 1398,6 L 1370,80 L 1426,80 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M 1398,60 L 1348,172 L 1448,172 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="1398" cy="6" r="3" fill="#a8472a"/>
+  <circle cx="1370" cy="80" r="3.5" fill="#a8472a"/>
+  <circle cx="1426" cy="80" r="3.5" fill="#a8472a"/>
+
+  <!-- V-wing birds scattered in the bright-day sky (right side) -->
+  <path d="M 1150,14 Q 1154,10 1158,14" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 1210,20 Q 1214,16 1218,20" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 1260,10 Q 1264,6  1268,10" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 1370,18 Q 1374,14 1378,18" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+
+
+  <!-- ═══════════════════════════════════════════
+       FISH BORDER — bottom strip
+       y=183. Fish every 36px across full 1440px width.
+  ═══════════════════════════════════════════ -->
+  <g stroke="#a8472a" fill="#a8472a" opacity="0.85">
+    <ellipse cx="18"   cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 26,183 L 32,178 L 32,188 Z"/>
+    <ellipse cx="54"   cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 62,183 L 68,178 L 68,188 Z"/>
+    <ellipse cx="90"   cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 98,183 L 104,178 L 104,188 Z"/>
+    <ellipse cx="126"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 134,183 L 140,178 L 140,188 Z"/>
+    <ellipse cx="162"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 170,183 L 176,178 L 176,188 Z"/>
+    <ellipse cx="198"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 206,183 L 212,178 L 212,188 Z"/>
+    <ellipse cx="234"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 242,183 L 248,178 L 248,188 Z"/>
+    <ellipse cx="270"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 278,183 L 284,178 L 284,188 Z"/>
+    <ellipse cx="306"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 314,183 L 320,178 L 320,188 Z"/>
+    <ellipse cx="342"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 350,183 L 356,178 L 356,188 Z"/>
+    <ellipse cx="378"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 386,183 L 392,178 L 392,188 Z"/>
+    <ellipse cx="414"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 422,183 L 428,178 L 428,188 Z"/>
+    <ellipse cx="450"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 458,183 L 464,178 L 464,188 Z"/>
+    <ellipse cx="486"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 494,183 L 500,178 L 500,188 Z"/>
+    <ellipse cx="522"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 530,183 L 536,178 L 536,188 Z"/>
+    <ellipse cx="558"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 566,183 L 572,178 L 572,188 Z"/>
+    <ellipse cx="594"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 602,183 L 608,178 L 608,188 Z"/>
+    <ellipse cx="630"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 638,183 L 644,178 L 644,188 Z"/>
+    <ellipse cx="666"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 674,183 L 680,178 L 680,188 Z"/>
+    <ellipse cx="702"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 710,183 L 716,178 L 716,188 Z"/>
+    <ellipse cx="738"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 746,183 L 752,178 L 752,188 Z"/>
+    <ellipse cx="774"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 782,183 L 788,178 L 788,188 Z"/>
+    <ellipse cx="810"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 818,183 L 824,178 L 824,188 Z"/>
+    <ellipse cx="846"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 854,183 L 860,178 L 860,188 Z"/>
+    <ellipse cx="882"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 890,183 L 896,178 L 896,188 Z"/>
+    <ellipse cx="918"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 926,183 L 932,178 L 932,188 Z"/>
+    <ellipse cx="954"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 962,183 L 968,178 L 968,188 Z"/>
+    <ellipse cx="990"  cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 998,183 L 1004,178 L 1004,188 Z"/>
+    <ellipse cx="1026" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1034,183 L 1040,178 L 1040,188 Z"/>
+    <ellipse cx="1062" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1070,183 L 1076,178 L 1076,188 Z"/>
+    <ellipse cx="1098" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1106,183 L 1112,178 L 1112,188 Z"/>
+    <ellipse cx="1134" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1142,183 L 1148,178 L 1148,188 Z"/>
+    <ellipse cx="1170" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1178,183 L 1184,178 L 1184,188 Z"/>
+    <ellipse cx="1206" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1214,183 L 1220,178 L 1220,188 Z"/>
+    <ellipse cx="1242" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1250,183 L 1256,178 L 1256,188 Z"/>
+    <ellipse cx="1278" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1286,183 L 1292,178 L 1292,188 Z"/>
+    <ellipse cx="1314" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1322,183 L 1328,178 L 1328,188 Z"/>
+    <ellipse cx="1350" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1358,183 L 1364,178 L 1364,188 Z"/>
+    <ellipse cx="1386" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1394,183 L 1400,178 L 1400,188 Z"/>
+    <ellipse cx="1422" cy="183" rx="8" ry="4" fill="none" stroke-width="0.9"/><path d="M 1430,183 L 1436,178 L 1436,188 Z"/>
+  </g>
+
+  <!-- ZIGZAG BORDER (above fish row) -->
+  <path d="M 0,176 L 5,172 L 10,176 L 15,172 L 20,176 L 25,172 L 30,176 L 35,172 L 40,176 L 45,172
+           L 50,176 L 55,172 L 60,176 L 65,172 L 70,176 L 75,172 L 80,176 L 85,172 L 90,176 L 95,172
+           L 100,176 L 105,172 L 110,176 L 115,172 L 120,176 L 125,172 L 130,176 L 135,172 L 140,176
+           L 145,172 L 150,176 L 155,172 L 160,176 L 165,172 L 170,176 L 175,172 L 180,176 L 185,172
+           L 190,176 L 195,172 L 200,176 L 205,172 L 210,176 L 215,172 L 220,176 L 225,172 L 230,176
+           L 235,172 L 240,176 L 245,172 L 250,176 L 255,172 L 260,176 L 265,172 L 270,176 L 275,172
+           L 280,176 L 285,172 L 290,176 L 295,172 L 300,176 L 305,172 L 310,176 L 315,172 L 320,176
+           L 325,172 L 330,176 L 335,172 L 340,176 L 345,172 L 350,176 L 355,172 L 360,176 L 365,172
+           L 370,176 L 375,172 L 380,176 L 385,172 L 390,176 L 395,172 L 400,176 L 405,172 L 410,176
+           L 415,172 L 420,176 L 425,172 L 430,176 L 435,172 L 440,176 L 445,172 L 450,176 L 455,172
+           L 460,176 L 465,172 L 470,176 L 475,172 L 480,176 L 485,172 L 490,176 L 495,172 L 500,176
+           L 505,172 L 510,176 L 515,172 L 520,176 L 525,172 L 530,176 L 535,172 L 540,176 L 545,172
+           L 550,176 L 555,172 L 560,176 L 565,172 L 570,176 L 575,172 L 580,176 L 585,172 L 590,176
+           L 595,172 L 600,176 L 605,172 L 610,176 L 615,172 L 620,176 L 625,172 L 630,176 L 635,172
+           L 640,176 L 645,172 L 650,176 L 655,172 L 660,176 L 665,172 L 670,176 L 675,172 L 680,176
+           L 685,172 L 690,176 L 695,172 L 700,176 L 705,172 L 710,176 L 715,172 L 720,176 L 725,172
+           L 730,176 L 735,172 L 740,176 L 745,172 L 750,176 L 755,172 L 760,176 L 765,172 L 770,176
+           L 775,172 L 780,176 L 785,172 L 790,176 L 795,172 L 800,176 L 805,172 L 810,176 L 815,172
+           L 820,176 L 825,172 L 830,176 L 835,172 L 840,176 L 845,172 L 850,176 L 855,172 L 860,176
+           L 865,172 L 870,176 L 875,172 L 880,176 L 885,172 L 890,176 L 895,172 L 900,176 L 905,172
+           L 910,176 L 915,172 L 920,176 L 925,172 L 930,176 L 935,172 L 940,176 L 945,172 L 950,176
+           L 955,172 L 960,176 L 965,172 L 970,176 L 975,172 L 980,176 L 985,172 L 990,176 L 995,172
+           L 1000,176 L 1005,172 L 1010,176 L 1015,172 L 1020,176 L 1025,172 L 1030,176 L 1035,172
+           L 1040,176 L 1045,172 L 1050,176 L 1055,172 L 1060,176 L 1065,172 L 1070,176 L 1075,172
+           L 1080,176 L 1085,172 L 1090,176 L 1095,172 L 1100,176 L 1105,172 L 1110,176 L 1115,172
+           L 1120,176 L 1125,172 L 1130,176 L 1135,172 L 1140,176 L 1145,172 L 1150,176 L 1155,172
+           L 1160,176 L 1165,172 L 1170,176 L 1175,172 L 1180,176 L 1185,172 L 1190,176 L 1195,172
+           L 1200,176 L 1205,172 L 1210,176 L 1215,172 L 1220,176 L 1225,172 L 1230,176 L 1235,172
+           L 1240,176 L 1245,172 L 1250,176 L 1255,172 L 1260,176 L 1265,172 L 1270,176 L 1275,172
+           L 1280,176 L 1285,172 L 1290,176 L 1295,172 L 1300,176 L 1305,172 L 1310,176 L 1315,172
+           L 1320,176 L 1325,172 L 1330,176 L 1335,172 L 1340,176 L 1345,172 L 1350,176 L 1355,172
+           L 1360,176 L 1365,172 L 1370,176 L 1375,172 L 1380,176 L 1385,172 L 1390,176 L 1395,172
+           L 1400,176 L 1405,172 L 1410,176 L 1415,172 L 1420,176 L 1425,172 L 1430,176 L 1435,172
+           L 1440,176"
+        stroke="#a8472a" stroke-width="0.7" fill="none" opacity="0.55"/>
+
+</svg>

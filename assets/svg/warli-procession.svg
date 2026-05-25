@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" fill="none">
+  <!--
+    AUTHENTIC WARLI PROCESSION — 800×120
+    ======================================
+    Scene: left framing tree → 3 women with pots + 1 child → house → tarpa player
+            → right procession → right framing tree.
+    Human figures = TWO SOLID TRIANGLES (hourglass body), NOT stick figures.
+    Ground at y=100. Figure waists at y=80.
+    Geometry: torso M-9,-14 L9,-14 L0,0 Z  |  pelvis M0,0 L-8,12 L8,12 Z
+              head r=6.5 at cy=-20.  Feet at y=100 (80+12+8 = 100).
+    Trees = stacked conical triangles.
+    Fish border at y=108. Zigzag at y=103.
+  -->
+
+  <!-- ═════════════════════════════════
+       GROUND + BORDERS
+  ═════════════════════════════════ -->
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#a8472a" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- Zigzag border strip (y=100–107) -->
+  <polyline
+    points="40,100 46,106 52,100 58,106 64,100 70,106 76,100 82,106 88,100 94,106 100,100
+            106,106 112,100 118,106 124,100 130,106 136,100 142,106 148,100 154,106 160,100
+            166,106 172,100 178,106 184,100 190,106 196,100 202,106 208,100 214,106 220,100
+            226,106 232,100 238,106 244,100 250,106 256,100 262,106 268,100 274,106 280,100
+            286,106 292,100 298,106 304,100 310,106 316,100 322,106 328,100 334,106 340,100
+            346,106 352,100 358,106 364,100 370,106 376,100 382,106 388,100 394,106 400,100
+            406,106 412,100 418,106 424,100 430,106 436,100 442,106 448,100 454,106 460,100
+            466,106 472,100 478,106 484,100 490,106 496,100 502,106 508,100 514,106 520,100
+            526,106 532,100 538,106 544,100 550,106 556,100 562,106 568,100 574,106 580,100
+            586,106 592,100 598,106 604,100 610,106 616,100 622,106 628,100 634,106 640,100
+            646,106 652,100 658,106 664,100 670,106 676,100 682,106 688,100 694,106 700,100
+            706,106 712,100 718,106 724,100 730,106 736,100 742,106 748,100 754,106 760,100"
+    stroke="#a8472a" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+  <!-- Fish border (y=112, every 22px) -->
+  <g stroke="#a8472a" fill="#a8472a" opacity="0.8">
+    <!-- 34 fish from x=50 -->
+    <ellipse cx="56"  cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 62,112 L 67,108 L 67,116 Z"/>
+    <ellipse cx="78"  cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 84,112 L 89,108 L 89,116 Z"/>
+    <ellipse cx="100" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 106,112 L 111,108 L 111,116 Z"/>
+    <ellipse cx="122" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 128,112 L 133,108 L 133,116 Z"/>
+    <ellipse cx="144" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 150,112 L 155,108 L 155,116 Z"/>
+    <ellipse cx="166" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 172,112 L 177,108 L 177,116 Z"/>
+    <ellipse cx="188" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 194,112 L 199,108 L 199,116 Z"/>
+    <ellipse cx="210" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 216,112 L 221,108 L 221,116 Z"/>
+    <ellipse cx="232" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 238,112 L 243,108 L 243,116 Z"/>
+    <ellipse cx="254" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 260,112 L 265,108 L 265,116 Z"/>
+    <ellipse cx="276" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 282,112 L 287,108 L 287,116 Z"/>
+    <ellipse cx="298" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 304,112 L 309,108 L 309,116 Z"/>
+    <ellipse cx="320" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 326,112 L 331,108 L 331,116 Z"/>
+    <ellipse cx="342" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 348,112 L 353,108 L 353,116 Z"/>
+    <ellipse cx="364" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 370,112 L 375,108 L 375,116 Z"/>
+    <ellipse cx="386" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 392,112 L 397,108 L 397,116 Z"/>
+    <ellipse cx="408" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 414,112 L 419,108 L 419,116 Z"/>
+    <ellipse cx="430" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 436,112 L 441,108 L 441,116 Z"/>
+    <ellipse cx="452" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 458,112 L 463,108 L 463,116 Z"/>
+    <ellipse cx="474" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 480,112 L 485,108 L 485,116 Z"/>
+    <ellipse cx="496" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 502,112 L 507,108 L 507,116 Z"/>
+    <ellipse cx="518" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 524,112 L 529,108 L 529,116 Z"/>
+    <ellipse cx="540" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 546,112 L 551,108 L 551,116 Z"/>
+    <ellipse cx="562" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 568,112 L 573,108 L 573,116 Z"/>
+    <ellipse cx="584" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 590,112 L 595,108 L 595,116 Z"/>
+    <ellipse cx="606" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 612,112 L 617,108 L 617,116 Z"/>
+    <ellipse cx="628" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 634,112 L 639,108 L 639,116 Z"/>
+    <ellipse cx="650" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 656,112 L 661,108 L 661,116 Z"/>
+    <ellipse cx="672" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 678,112 L 683,108 L 683,116 Z"/>
+    <ellipse cx="694" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 700,112 L 705,108 L 705,116 Z"/>
+    <ellipse cx="716" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 722,112 L 727,108 L 727,116 Z"/>
+    <ellipse cx="738" cy="112" rx="6" ry="3" fill="none" stroke-width="0.7"/><path d="M 744,112 L 749,108 L 749,116 Z"/>
+  </g>
+
+  <!-- ═════════════════════════════════
+       LEFT FRAMING TREE  (x=80)
+  ═════════════════════════════════ -->
+  <!-- Lower wider triangle: apex (80,40), base (42,100)–(118,100) -->
+  <path d="M 80,40 L 44,100 L 116,100 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Upper narrow triangle: apex (80,10), base y=40 -->
+  <path d="M 80,10 L 64,40 L 96,40 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+  <circle cx="80" cy="10" r="3" fill="#a8472a"/>
+  <circle cx="64" cy="40" r="2.5" fill="#a8472a"/>
+  <circle cx="96" cy="40" r="2.5" fill="#a8472a"/>
+
+  <!-- ═════════════════════════════════
+       LEFT PROCESSION  — 3 women + child
+       Waists at y=80.
+  ═════════════════════════════════ -->
+
+  <!-- P1 · pot on head · x=178 -->
+  <g transform="translate(178,80)">
+    <!-- pot above head -->
+    <ellipse cx="0" cy="-45" rx="10" ry="5" fill="#a8472a"/>
+    <line x1="0" y1="-40" x2="0" y2="-33" stroke="#a8472a" stroke-width="1.2"/>
+    <!-- head -->
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <!-- TORSO: solid triangle, apex DOWN at waist (0,0) -->
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <!-- PELVIS: solid triangle, apex UP at waist (0,0) -->
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <!-- arms raised to hold pot -->
+    <line x1="-9" y1="-14" x2="-9" y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="9"  y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- walking legs -->
+    <line x1="-8" y1="12" x2="-12" y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12" x2="4"   y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- P2 · walking · x=228 -->
+  <g transform="translate(228,80)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <line x1="-9" y1="-14" x2="-22" y2="-6"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="20"  y2="-4"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-13" y2="20"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="3"   y2="20"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- P3 · pot on head · x=278 -->
+  <g transform="translate(278,80)">
+    <ellipse cx="0" cy="-45" rx="10" ry="5" fill="#a8472a"/>
+    <line x1="0" y1="-40" x2="0" y2="-33" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <line x1="-9" y1="-14" x2="-9" y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="9"  y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-12" y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="4"   y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Child · smaller scale · waist at y=88 · x=323 -->
+  <g transform="translate(323,88)">
+    <circle cx="0" cy="-18" r="4.5" fill="#a8472a"/>
+    <path d="M -6,-11 L 6,-11 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -5,8 L 5,8 Z" fill="#a8472a"/>
+    <line x1="-6" y1="-11" x2="-14" y2="-5" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6"  y1="-11" x2="14"  y2="-5" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="-5" y1="8"   x2="-7"  y2="14" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="5"  y1="8"   x2="7"   y2="14" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═════════════════════════════════
+       HUT  (centre, x=400)
+  ═════════════════════════════════ -->
+  <g transform="translate(400,100)">
+    <rect x="-28" y="-60" width="56" height="60" fill="none" stroke="#a8472a" stroke-width="1.3"/>
+    <path d="M -34,-60 L 0,-100 L 34,-60 Z" fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+    <!-- door -->
+    <rect x="-10" y="-28" width="20" height="28" fill="#a8472a"/>
+    <!-- window -->
+    <rect x="-24" y="-52" width="12" height="12" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <rect x="12"  y="-52" width="12" height="12" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <!-- smoke line from apex -->
+    <line x1="0" y1="-100" x2="0" y2="-116" stroke="#a8472a" stroke-width="0.9" stroke-linecap="round"/>
+    <circle cx="0" cy="-118" r="2.5" fill="#a8472a"/>
+  </g>
+
+  <!-- ═════════════════════════════════
+       TARPA PLAYER  (x=460, waist y=80)
+       Central figure with curved horn
+  ═════════════════════════════════ -->
+  <g transform="translate(460,80)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <!-- right arm raised, holding tarpa horn -->
+    <line x1="9" y1="-14" x2="26" y2="-34" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- tarpa: curved tube with flared bell -->
+    <path d="M 26,-34 Q 42,-24 38,-8 Q 36,-1 48,4"
+          fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- bell flare -->
+    <path d="M 44,2 L 52,7 L 45,13 Z" fill="#a8472a"/>
+    <!-- left arm out -->
+    <line x1="-9" y1="-14" x2="-23" y2="-6" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-12" y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="12"  y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═════════════════════════════════
+       RIGHT PROCESSION  (mirrored)
+  ═════════════════════════════════ -->
+
+  <!-- R1 · pot · x=530 (mirrored) -->
+  <g transform="translate(530,80) scale(-1,1)">
+    <ellipse cx="0" cy="-45" rx="10" ry="5" fill="#a8472a"/>
+    <line x1="0" y1="-40" x2="0" y2="-33" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <line x1="-9" y1="-14" x2="-9" y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="9"  y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-12" y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="4"   y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- R2 · walking · x=580 (mirrored) -->
+  <g transform="translate(580,80) scale(-1,1)">
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <line x1="-9" y1="-14" x2="-22" y2="-6"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="20"  y2="-4"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-13" y2="20"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="3"   y2="20"  stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- R3 · pot · x=630 (mirrored) -->
+  <g transform="translate(630,80) scale(-1,1)">
+    <ellipse cx="0" cy="-45" rx="10" ry="5" fill="#a8472a"/>
+    <line x1="0" y1="-40" x2="0" y2="-33" stroke="#a8472a" stroke-width="1.2"/>
+    <circle cx="0" cy="-27" r="6.5" fill="#a8472a"/>
+    <path d="M -9,-14 L 9,-14 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -8,12 L 8,12 Z" fill="#a8472a"/>
+    <line x1="-9" y1="-14" x2="-9" y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9"  y1="-14" x2="9"  y2="-40" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="12"  x2="-12" y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="12"  x2="4"   y2="20" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═════════════════════════════════
+       SUN  (x=680, y=25)
+  ═════════════════════════════════ -->
+  <circle cx="680" cy="25" r="18" fill="none" stroke="#a8472a" stroke-width="1.4"/>
+  <line x1="680" y1="4"  x2="680" y2="-2" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="680" y1="46" x2="680" y2="52" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="659" y1="25" x2="653" y2="25" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="701" y1="25" x2="707" y2="25" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="665" y1="11" x2="661" y2="7"  stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="695" y1="11" x2="699" y2="7"  stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="665" y1="39" x2="661" y2="43" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="695" y1="39" x2="699" y2="43" stroke="#a8472a" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="680" cy="25" r="7" fill="none" stroke="#a8472a" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- ═════════════════════════════════
+       RIGHT FRAMING TREE  (x=730)
+  ═════════════════════════════════ -->
+  <path d="M 730,40 L 694,100 L 766,100 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M 730,10 L 714,40 L 746,40 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+  <circle cx="730" cy="10" r="3" fill="#a8472a"/>
+  <circle cx="714" cy="40" r="2.5" fill="#a8472a"/>
+  <circle cx="746" cy="40" r="2.5" fill="#a8472a"/>
+
+  <!-- ═════════════════════════════════
+       V-WING BIRDS (sky)
+  ═════════════════════════════════ -->
+  <path d="M 150,18 Q 155,13 160,18" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 350,10 Q 355,5  360,10" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <path d="M 550,14 Q 555,9  560,14" fill="none" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+
+</svg>

@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ojas Mitra — Wordmark system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F2E8D2;
+    --sand: #D9C9A8;
+    --terracotta: #A8432D;
+    --forest: #5E6E50;
+    --ink: #2E2A24;
+    --paper: #FFFFFF;
+
+    --serif: "EB Garamond", "Cormorant Garamond", Georgia, serif;
+    --deva: "Tiro Devanagari Hindi", "EB Garamond", serif;
+    --sans: "Inter", -apple-system, "Helvetica Neue", sans-serif;
+  }
+  html, body { background: #e9dfc8; }
+  body { margin: 0; font-family: var(--sans); color: var(--ink); }
+
+  /* Artboard primitives */
+  .ab {
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .ab.cream { background: var(--cream); }
+  .ab.sand { background: var(--sand); }
+  .ab.terracotta { background: var(--terracotta); }
+  .ab.ink { background: var(--ink); }
+  .ab.paper { background: var(--paper); }
+
+  .ab .corner {
+    position: absolute; top: 20px; left: 24px;
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink); opacity: 0.55;
+  }
+  .ab .corner.light { color: var(--cream); opacity: 0.65; }
+  .ab .corner-r {
+    position: absolute; top: 20px; right: 24px;
+    font-family: var(--sans); font-size: 11px;
+    color: var(--ink); opacity: 0.4;
+  }
+  .ab .corner-r.light { color: var(--cream); opacity: 0.5; }
+
+  /* The wordmark itself */
+  .wordmark {
+    font-family: var(--serif);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1;
+    font-feature-settings: "onum" 1, "liga" 1, "dlig" 0;
+  }
+  .deva {
+    font-family: var(--deva);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  /* ---------- Primary horizontal lockup ---------- */
+  .lockup-horizontal {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; align-items: baseline; gap: 28px;
+  }
+  .lockup-horizontal .wordmark { font-size: 96px; color: var(--ink); }
+  .lockup-horizontal .divider {
+    width: 1px; align-self: stretch;
+    background: currentColor; opacity: 0.25;
+    margin: 8px 0 14px;
+  }
+  .lockup-horizontal .deva {
+    font-size: 42px; color: var(--terracotta);
+    letter-spacing: 0.01em;
+    padding-bottom: 6px;
+  }
+
+  /* ---------- Stacked lockup ---------- */
+  .lockup-stacked {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .lockup-stacked .wordmark { font-size: 104px; color: var(--ink); }
+  .lockup-stacked .deva {
+    font-size: 44px; color: var(--terracotta);
+    margin-top: 22px;
+    letter-spacing: 0.02em;
+  }
+  .lockup-stacked .ornament {
+    width: 28px; height: 1px;
+    background: var(--terracotta); opacity: 0.5;
+    margin: 18px auto 0;
+  }
+
+  /* ---------- Wordmark alone ---------- */
+  .lockup-latin {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .lockup-latin .wordmark { font-size: 124px; color: var(--ink); }
+
+  /* ---------- Monogram OM ---------- */
+  .monogram-wrap {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .monogram {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 220px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.06em;
+    font-feature-settings: "onum" 1, "liga" 1;
+  }
+  .monogram .O { display: inline-block; transform: translateY(0); }
+  .monogram .M { display: inline-block; margin-left: -0.04em; }
+  .monogram-rule {
+    width: 64px; height: 1px;
+    background: var(--terracotta);
+    margin: 22px auto 16px;
+    opacity: 0.6;
+  }
+  .monogram-cap {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: lowercase;
+    color: var(--ink);
+    opacity: 0.6;
+  }
+
+  /* ---------- Inverted: Cream on Terracotta ---------- */
+  .inv-terra .wordmark { color: var(--cream); }
+  .inv-terra .deva { color: var(--cream); opacity: 0.85; }
+  .inv-terra .divider { background: var(--cream); opacity: 0.3; }
+
+  /* ---------- Cream on Ink ---------- */
+  .inv-ink .wordmark { color: var(--cream); }
+  .inv-ink .deva { color: var(--terracotta); }
+
+  /* ---------- Single-ink on paper ---------- */
+  .single-ink .wordmark { color: var(--ink); }
+  .single-ink .deva { color: var(--ink); }
+
+  /* ---------- Clear space spec ---------- */
+  .clearspace {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .clearspace .frame {
+    position: relative;
+    padding: 60px 60px;
+    border: 1px dashed rgba(46, 42, 36, 0.35);
+  }
+  .clearspace .inner {
+    position: relative;
+    display: flex; align-items: baseline; gap: 22px;
+  }
+  .clearspace .wordmark { font-size: 72px; color: var(--ink); }
+  .clearspace .deva { font-size: 32px; color: var(--terracotta); padding-bottom: 4px; }
+  .clearspace .x-marker {
+    position: absolute;
+    background: rgba(168, 67, 45, 0.18);
+    border: 1px solid rgba(168, 67, 45, 0.45);
+  }
+  .clearspace .x-top    { left: 50%; top: -60px; transform: translateX(-50%); width: 36px; height: 36px; }
+  .clearspace .x-bottom { left: 50%; bottom: -60px; transform: translateX(-50%); width: 36px; height: 36px; }
+  .clearspace .x-left   { left: -60px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
+  .clearspace .x-right  { right: -60px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
+  .clearspace .x-label {
+    position: absolute; bottom: -94px; left: 50%; transform: translateX(-50%);
+    font-family: var(--sans); font-size: 11px;
+    color: var(--ink); opacity: 0.7; white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+  .clearspace .x-label em {
+    font-family: var(--serif); font-style: italic;
+    color: var(--terracotta); font-size: 13px; opacity: 1;
+  }
+
+  /* ---------- Minimum sizes ---------- */
+  .minsize-grid {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 80px 70px 60px;
+    gap: 40px 60px;
+  }
+  .minsize-grid .col-head {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--ink); opacity: 0.55;
+    border-bottom: 1px solid rgba(46, 42, 36, 0.2);
+    padding-bottom: 12px;
+  }
+  .minsize-grid .col {
+    display: flex; flex-direction: column; gap: 36px;
+  }
+  .minsize-grid .row { display: flex; align-items: baseline; gap: 32px; }
+  .minsize-grid .row .specimen { min-width: 200px; }
+  .minsize-grid .row .meta {
+    font-family: var(--sans); font-size: 11px;
+    color: var(--ink); opacity: 0.6; letter-spacing: 0.04em;
+  }
+  .minsize-grid .row .meta strong { font-weight: 500; opacity: 0.95; display: block; margin-bottom: 2px; color: var(--ink); }
+
+  .specimen .wm-line { display: flex; align-items: baseline; gap: 10px; }
+  .specimen .wm-line .wordmark { color: var(--ink); }
+  .specimen .wm-line .deva { color: var(--terracotta); }
+
+  /* ---------- Misuse grid ---------- */
+  .misuse {
+    position: absolute; inset: 0;
+    padding: 70px 64px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 28px 32px;
+  }
+  .misuse .cell {
+    position: relative;
+    background: var(--cream);
+    border: 1px solid rgba(46, 42, 36, 0.12);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .misuse .cell .demo {
+    display: flex; align-items: baseline; gap: 10px;
+    font-family: var(--serif); font-weight: 500;
+    font-size: 38px; color: var(--ink); line-height: 1;
+  }
+  .misuse .cell .demo .deva { font-size: 16px; color: var(--terracotta); padding-bottom: 2px; }
+  .misuse .cell .label {
+    position: absolute; left: 14px; bottom: 12px;
+    font-family: var(--sans); font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink); opacity: 0.75;
+  }
+  .misuse .cell .label em {
+    font-family: var(--serif); font-style: italic;
+    color: var(--terracotta); opacity: 1; font-size: 11.5px;
+    margin-right: 4px;
+  }
+
+  /* big red diagonal slash */
+  .misuse .cell::after {
+    content: ""; position: absolute;
+    left: -8%; right: -8%; top: 50%;
+    height: 1.5px; background: var(--terracotta);
+    transform: rotate(-22deg);
+    transform-origin: center; opacity: 0.7;
+  }
+
+  .m-stretch .demo { transform: scaleY(1.55); }
+  .m-recolor .demo { color: #2E7D32; }
+  .m-recolor .demo .deva { color: #2E7D32; }
+  .m-shadow .demo { text-shadow: 2px 4px 0 rgba(168, 67, 45, 0.5); }
+  .m-busy {
+    background:
+      repeating-linear-gradient(45deg, rgba(168,67,45,0.18) 0 8px, transparent 8px 16px),
+      var(--sand);
+  }
+  .m-rotate .demo { transform: rotate(-12deg); }
+  .m-tagline .demo-wrap {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .m-tagline .tag {
+    font-family: var(--serif); font-style: italic;
+    font-size: 13px; color: var(--forest);
+  }
+
+  /* ---------- Header + section labels ---------- */
+  .doc-head {
+    padding: 56px 64px 24px;
+    background: #e9dfc8;
+    color: var(--ink);
+  }
+  .doc-head .kicker {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.32em; color: var(--ink); opacity: 0.55;
+  }
+  .doc-head h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 56px; margin: 14px 0 0; line-height: 1.05;
+    letter-spacing: -0.005em;
+  }
+  .doc-head .deva-head {
+    font-family: var(--deva); font-size: 26px;
+    color: var(--terracotta); margin-top: 10px;
+  }
+  .doc-head p.lead {
+    font-family: var(--serif); font-style: italic;
+    font-size: 19px; line-height: 1.5;
+    color: var(--ink); opacity: 0.85;
+    max-width: 720px; margin: 22px 0 0;
+  }
+  .doc-head .rule {
+    width: 56px; height: 1px; background: var(--terracotta);
+    margin: 28px 0 0;
+  }
+
+  /* Section title row on canvas */
+  .section-title {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 28px; color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .section-title em {
+    font-family: var(--serif); font-style: italic;
+    color: var(--terracotta);
+  }
+
+  /* ---------- Companion symbols ---------- */
+  .symbol-stage {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 28px;
+  }
+  .symbol-stage .symbol-caption {
+    font-family: var(--serif); font-style: italic;
+    font-size: 16px; color: var(--ink); opacity: 0.7;
+    letter-spacing: 0.005em;
+  }
+  .symbol-stage .symbol-caption .deva {
+    font-family: var(--deva); font-style: normal;
+    color: var(--terracotta); font-size: 15px;
+    margin-left: 8px;
+  }
+
+  .symbol-lockup {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; align-items: center; gap: 32px;
+  }
+  .symbol-lockup .mark-slot { flex-shrink: 0; }
+  .symbol-lockup .vrule {
+    width: 1px; align-self: stretch;
+    background: currentColor; opacity: 0.22;
+    margin: 8px 0;
+  }
+  .symbol-lockup .text-side { display: flex; flex-direction: column; gap: 6px; }
+  .symbol-lockup .wordmark { font-size: 56px; line-height: 1; }
+  .symbol-lockup .deva { font-size: 22px; color: var(--terracotta); }
+
+  /* small-scale row */
+  .scale-row {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: space-evenly;
+    padding: 0 60px;
+  }
+  .scale-cell {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+  }
+  .scale-cell .lbl {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.12em; color: var(--ink); opacity: 0.55;
+  }
+  .scale-cell .swatch {
+    display: flex; align-items: center; justify-content: center;
+    background: var(--cream);
+    border: 1px solid rgba(46, 42, 36, 0.12);
+  }
+
+  .on-terra { color: var(--cream); }
+  .on-terra .deva { color: var(--cream); opacity: 0.85; }
+  .on-terra .vrule { background: var(--cream); opacity: 0.3; }
+
+  /* ---------- Specimen tile (small lockups grid) ---------- */
+  .tile-grid {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px;
+    gap: 24px;
+  }
+  .tile {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(46, 42, 36, 0.12);
+  }
+  .tile.cream  { background: var(--cream); }
+  .tile.sand   { background: var(--sand); }
+  .tile.terra  { background: var(--terracotta); }
+  .tile.ink    { background: var(--ink); }
+  .tile.paper  { background: var(--paper); }
+  .tile .mini-mark {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 28px; line-height: 1;
+  }
+  .tile .mini-deva {
+    font-family: var(--deva); font-size: 12px;
+    margin-top: 6px; letter-spacing: 0.02em;
+  }
+  .tile .stack { text-align: center; }
+  .tile .label {
+    position: absolute; left: 12px; bottom: 10px;
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.04em; opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="doc-head">
+  <div class="kicker">brand identity · mark + wordmark system · v2</div>
+  <h1>Ojas Mitra</h1>
+  <div class="deva-head">ओजस&nbsp;·&nbsp;मित्र</div>
+  <p class="lead">A pot, a home, and the leaves that hold them — paired with a serif wordmark for a brand that is calm, warm, and rooted. A friend of vital living, made by hands in villages and brought to homes that hadn't had this choice before.</p>
+  <div class="rule"></div>
+</div>
+
+<div id="canvas-root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+
+<script type="text/babel">
+const { DesignCanvas, DCSection, DCArtboard } = window;
+
+// ============ PRIMARY MARK ============
+// Uses the original PNG artwork as-is.
+
+function App() {
+  return (
+    <DesignCanvas initialZoom={0.55}>
+
+      {/* ============ PRIMARY MARK ============ */}
+      <DCSection id="primary-mark" title="Primary mark — pot, house & leaves">
+
+        {/* Primary component — large and centered */}
+        <DCArtboard id="mark-hero" label="Primary component" width={900} height={900}>
+          <div className="ab cream">
+            <div className="corner">01 · primary component</div>
+            <div className="corner-r">vessel + house + leaves</div>
+            <img
+              src="assets/logo/mark-primary.png"
+              alt="Ojas Mitra primary mark"
+              style={{
+                position: 'absolute', left: '50%', top: '50%',
+                transform: 'translate(-50%, -50%)',
+                height: '78%', width: 'auto',
+                display: 'block',
+                imageRendering: 'auto',
+              }}
+            />
+          </div>
+        </DCArtboard>
+
+        {/* Horizontal lockup */}
+        <DCArtboard id="mark-horiz" label="Horizontal lockup" width={1200} height={520}>
+          <div className="ab cream">
+            <div className="corner">02 · horizontal lockup</div>
+            <div className="corner-r">Mark + wordmark</div>
+            <img
+              src="assets/logo/lockup-horizontal.png"
+              alt="Ojas Mitra horizontal lockup"
+              style={{
+                position: 'absolute', left: '50%', top: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '78%', height: 'auto',
+                display: 'block',
+              }}
+            />
+          </div>
+        </DCArtboard>
+
+        {/* Stacked lockup */}
+        <DCArtboard id="mark-stacked" label="Stacked lockup" width={700} height={800}>
+          <div className="ab cream">
+            <div className="corner">03 · stacked lockup</div>
+            <div className="corner-r">Mark over wordmark</div>
+            <img
+              src="assets/logo/lockup-stacked.png"
+              alt="Ojas Mitra stacked lockup"
+              style={{
+                position: 'absolute', left: '50%', top: '50%',
+                transform: 'translate(-50%, -50%)',
+                height: '82%', width: 'auto',
+                display: 'block',
+              }}
+            />
+          </div>
+        </DCArtboard>
+
+        {/* Seal application */}
+        <DCArtboard id="mark-seal" label="Seal application" width={700} height={700}>
+          <div className="ab cream">
+            <div className="corner">04 · seal application</div>
+            <div className="corner-r">for stamps, coasters, foil</div>
+            <img
+              src="assets/logo/seal-application.png"
+              alt="Ojas Mitra seal application"
+              style={{
+                position: 'absolute', left: '50%', top: '50%',
+                transform: 'translate(-50%, -50%)',
+                height: '82%', width: 'auto',
+                display: 'block',
+              }}
+            />
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ MARK · SCALE LADDER ============ */}
+      <DCSection id="mark-scales" title="Mark — scale ladder">
+
+        <DCArtboard id="mark-scale-row" label="Scale ladder — small to large" width={1400} height={420}>
+          <div className="ab cream">
+            <div className="corner">05 · scale ladder</div>
+            <div className="corner-r">use 64 px or larger for legibility</div>
+            <div className="scale-row">
+              <div className="scale-cell">
+                <img src="assets/logo/mark-primary.png" alt="" style={{height: 32, width: 'auto', display: 'block'}}/>
+                <span className="lbl">32 px</span>
+              </div>
+              <div className="scale-cell">
+                <img src="assets/logo/mark-primary.png" alt="" style={{height: 56, width: 'auto', display: 'block'}}/>
+                <span className="lbl">56 px</span>
+              </div>
+              <div className="scale-cell">
+                <img src="assets/logo/mark-primary.png" alt="" style={{height: 96, width: 'auto', display: 'block'}}/>
+                <span className="lbl">96 px</span>
+              </div>
+              <div className="scale-cell">
+                <img src="assets/logo/mark-primary.png" alt="" style={{height: 160, width: 'auto', display: 'block'}}/>
+                <span className="lbl">160 px</span>
+              </div>
+              <div className="scale-cell">
+                <img src="assets/logo/mark-primary.png" alt="" style={{height: 240, width: 'auto', display: 'block'}}/>
+                <span className="lbl">240 px</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ PRIMARY LOCKUPS ============ */}
+      <DCSection id="primary" title="Primary lockups">
+
+        <DCArtboard id="horizontal" label="Primary horizontal — Ink on Cream" width={1400} height={520}>
+          <div className="ab cream">
+            <div className="corner">01 · primary horizontal</div>
+            <div className="corner-r">Ink on Cream</div>
+            <div className="lockup-horizontal">
+              <span className="wordmark">Ojas Mitra</span>
+              <span className="divider"></span>
+              <span className="deva">ओजस&nbsp;·&nbsp;मित्र</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="stacked" label="Stacked — Ink on Cream" width={900} height={620}>
+          <div className="ab cream">
+            <div className="corner">02 · stacked</div>
+            <div className="corner-r">Ink on Cream</div>
+            <div className="lockup-stacked">
+              <div className="wordmark">Ojas Mitra</div>
+              <div className="deva">ओजस&nbsp;·&nbsp;मित्र</div>
+              <div className="ornament"></div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="latin-alone" label="Wordmark alone — Latin only" width={1400} height={420}>
+          <div className="ab cream">
+            <div className="corner">03 · wordmark alone</div>
+            <div className="corner-r">for small social, export markets</div>
+            <div className="lockup-latin">
+              <span className="wordmark">Ojas Mitra</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="monogram" label="Monogram OM — publisher's colophon" width={620} height={620}>
+          <div className="ab cream">
+            <div className="corner">04 · monogram</div>
+            <div className="corner-r">favicon · embossed seal</div>
+            <div className="monogram-wrap">
+              <div className="monogram">
+                <span className="O">O</span><span className="M">M</span>
+              </div>
+              <div className="monogram-rule"></div>
+              <div className="monogram-cap">ojas mitra · est. 2026</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ COLOR TREATMENTS ============ */}
+      <DCSection id="treatments" title="Color treatments">
+
+        <DCArtboard id="t-cream" label="Ink on Cream — primary" width={760} height={420}>
+          <div className="ab cream">
+            <div className="corner">a · primary</div>
+            <div className="lockup-horizontal">
+              <span className="wordmark" style={{fontSize: 64}}>Ojas Mitra</span>
+              <span className="divider"></span>
+              <span className="deva" style={{fontSize: 28}}>ओजस&nbsp;·&nbsp;मित्र</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="t-terra" label="Cream on Terracotta — packaging caps" width={760} height={420}>
+          <div className="ab terracotta inv-terra">
+            <div className="corner light">b · inverted</div>
+            <div className="lockup-horizontal">
+              <span className="wordmark" style={{fontSize: 64}}>Ojas Mitra</span>
+              <span className="divider"></span>
+              <span className="deva" style={{fontSize: 28}}>ओजस&nbsp;·&nbsp;मित्र</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="t-ink" label="Cream on Ink — reserved" width={760} height={420}>
+          <div className="ab ink inv-ink">
+            <div className="corner light">c · reserved</div>
+            <div className="lockup-horizontal">
+              <span className="wordmark" style={{fontSize: 64}}>Ojas Mitra</span>
+              <span className="divider"></span>
+              <span className="deva" style={{fontSize: 28}}>ओजस&nbsp;·&nbsp;मित्र</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="t-paper" label="Single ink on paper — press, legal" width={760} height={420}>
+          <div className="ab paper single-ink">
+            <div className="corner">d · single ink</div>
+            <div className="lockup-horizontal">
+              <span className="wordmark" style={{fontSize: 64}}>Ojas Mitra</span>
+              <span className="divider"></span>
+              <span className="deva" style={{fontSize: 28}}>ओजस&nbsp;·&nbsp;मित्र</span>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ SPECS ============ */}
+      <DCSection id="specs" title="Construction & specs">
+
+        <DCArtboard id="clearspace" label="Clear space — x = height of lowercase o" width={1200} height={620}>
+          <div className="ab cream">
+            <div className="corner">05 · clear space</div>
+            <div className="corner-r">x = the o-height of Ojas</div>
+            <div className="clearspace">
+              <div className="frame">
+                <div className="inner">
+                  <span className="wordmark">Ojas Mitra</span>
+                  <span className="deva">ओजस&nbsp;·&nbsp;मित्र</span>
+                </div>
+                <div className="x-marker x-top"></div>
+                <div className="x-marker x-bottom"></div>
+                <div className="x-marker x-left"></div>
+                <div className="x-marker x-right"></div>
+                <div className="x-label">minimum clear space on all sides equals <em>x</em></div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="minsize" label="Minimum sizes — print and digital" width={1400} height={620}>
+          <div className="ab cream">
+            <div className="corner">06 · minimum sizes</div>
+            <div className="minsize-grid">
+              <div className="col-head">print · minimums</div>
+              <div className="col-head">digital · minimums</div>
+
+              <div className="col">
+                <div className="row">
+                  <div className="specimen">
+                    <div className="wm-line">
+                      <span className="wordmark" style={{fontSize: 28}}>Ojas Mitra</span>
+                      <span className="deva" style={{fontSize: 12}}>ओजस&nbsp;·&nbsp;मित्र</span>
+                    </div>
+                  </div>
+                  <div className="meta"><strong>Primary horizontal</strong>22 mm wide minimum</div>
+                </div>
+                <div className="row">
+                  <div className="specimen">
+                    <div className="wm-line">
+                      <span className="wordmark" style={{fontSize: 22}}>Ojas Mitra</span>
+                    </div>
+                  </div>
+                  <div className="meta"><strong>Latin only</strong>16 mm wide minimum</div>
+                </div>
+                <div className="row">
+                  <div className="specimen">
+                    <span className="wordmark" style={{fontSize: 32, letterSpacing: '-0.05em'}}>OM</span>
+                  </div>
+                  <div className="meta"><strong>Monogram</strong>6 mm tall minimum</div>
+                </div>
+              </div>
+
+              <div className="col">
+                <div className="row">
+                  <div className="specimen">
+                    <div className="wm-line">
+                      <span className="wordmark" style={{fontSize: 24}}>Ojas Mitra</span>
+                      <span className="deva" style={{fontSize: 11}}>ओजस&nbsp;·&nbsp;मित्र</span>
+                    </div>
+                  </div>
+                  <div className="meta"><strong>Primary horizontal</strong>120 px wide minimum</div>
+                </div>
+                <div className="row">
+                  <div className="specimen">
+                    <span className="wordmark" style={{fontSize: 18}}>Ojas Mitra</span>
+                  </div>
+                  <div className="meta"><strong>Latin only</strong>88 px wide minimum</div>
+                </div>
+                <div className="row">
+                  <div className="specimen">
+                    <span className="wordmark" style={{fontSize: 22, letterSpacing: '-0.05em'}}>OM</span>
+                  </div>
+                  <div className="meta"><strong>Monogram · favicon</strong>32 px tall minimum</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ MISUSE ============ */}
+      <DCSection id="misuse" title="Misuse">
+
+        <DCArtboard id="misuse-grid" label="What not to do" width={1400} height={760}>
+          <div className="ab cream">
+            <div className="corner">07 · misuse</div>
+            <div className="corner-r">never these things</div>
+            <div className="misuse">
+              <div className="cell m-stretch">
+                <div className="demo">Ojas Mitra<span className="deva">ओजस&nbsp;·&nbsp;मित्र</span></div>
+                <div className="label"><em>don't</em> stretch or condense</div>
+              </div>
+              <div className="cell m-recolor">
+                <div className="demo">Ojas Mitra<span className="deva">ओजस&nbsp;·&nbsp;मित्र</span></div>
+                <div className="label"><em>don't</em> recolor outside the palette</div>
+              </div>
+              <div className="cell m-shadow">
+                <div className="demo">Ojas Mitra<span className="deva">ओजस&nbsp;·&nbsp;मित्र</span></div>
+                <div className="label"><em>don't</em> add shadows or effects</div>
+              </div>
+              <div className="cell m-busy">
+                <div className="demo">Ojas Mitra<span className="deva">ओजस&nbsp;·&nbsp;मित्र</span></div>
+                <div className="label"><em>don't</em> place on busy fields without a scrim</div>
+              </div>
+              <div className="cell m-rotate">
+                <div className="demo">Ojas Mitra<span className="deva">ओजस&nbsp;·&nbsp;मित्र</span></div>
+                <div className="label"><em>don't</em> rotate the wordmark</div>
+              </div>
+              <div className="cell m-tagline">
+                <div className="m-tagline">
+                  <div className="demo-wrap">
+                    <span className="demo" style={{fontSize: 32}}>Ojas Mitra</span>
+                    <span className="tag">a clean home, kindly</span>
+                  </div>
+                </div>
+                <div className="label"><em>don't</em> glue the tagline to the wordmark</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============ FOOTER / EXPORT NOTE ============ */}
+      <DCSection id="exports" title="Export specimens — small scales">
+
+        <DCArtboard id="favicon-row" label="Favicon and small-app scales" width={1400} height={300}>
+          <div className="ab cream">
+            <div className="corner">08 · small scales</div>
+            <div className="tile-grid" style={{gridTemplateColumns: 'repeat(6, 1fr)', alignItems: 'center'}}>
+              <div className="tile cream"><span className="mini-mark" style={{fontSize: 14, letterSpacing: '-0.04em'}}>OM</span><span className="label">16</span></div>
+              <div className="tile cream"><span className="mini-mark" style={{fontSize: 20, letterSpacing: '-0.04em'}}>OM</span><span className="label">32</span></div>
+              <div className="tile cream"><span className="mini-mark" style={{fontSize: 36, letterSpacing: '-0.05em'}}>OM</span><span className="label">64</span></div>
+              <div className="tile terra" style={{color: 'var(--cream)'}}><span className="mini-mark" style={{fontSize: 36, letterSpacing: '-0.05em'}}>OM</span><span className="label" style={{color: 'var(--cream)', opacity: 0.85}}>128 · terra</span></div>
+              <div className="tile ink" style={{color: 'var(--cream)'}}><span className="mini-mark" style={{fontSize: 36, letterSpacing: '-0.05em'}}>OM</span><span className="label" style={{color: 'var(--cream)', opacity: 0.85}}>128 · ink</span></div>
+              <div className="tile paper"><span className="mini-mark" style={{fontSize: 36, letterSpacing: '-0.05em', color: 'var(--ink)'}}>OM</span><span className="label">128 · paper</span></div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('canvas-root')).render(<App />);
+</script>
+
+</body>
+</html>

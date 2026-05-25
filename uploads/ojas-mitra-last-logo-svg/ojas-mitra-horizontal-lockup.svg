@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ojas Mitra horizontal logo lockup</title>
+  <desc id="desc">Horizontal logo lockup with the Ojas Mitra component mark and a refined serif wordmark.</desc>
+  <defs>
+    
+  </defs>
+
+  <rect width="1200" height="420" fill="#F2E8D2"></rect>
+  <g transform="translate(80 76) scale(.62)">
+    <rect class="terracotta" x="166" y="61" width="180" height="14" rx="6"></rect>
+    <path class="terracotta" d="M182 75 C178 93 170 104 153 122 C116 160 105 215 127 261 C140 288 161 307 188 319 L324 319 C351 307 372 288 385 261 C407 215 396 160 359 122 C342 104 334 93 330 75 Z"></path>
+    <path class="cream" d="M185 250 L185 198 L256 130 L327 198 L327 250 Z"></path>
+    <path class="cream" d="M170 205 L256 123 L342 205 L328 219 L256 151 L184 219 Z"></path>
+    <rect class="ink" x="235" y="204" width="15" height="15" rx="1"></rect>
+    <rect class="ink" x="262" y="204" width="15" height="15" rx="1"></rect>
+    <rect class="ink" x="235" y="232" width="15" height="15" rx="1"></rect>
+    <rect class="ink" x="262" y="232" width="15" height="15" rx="1"></rect>
+    <circle class="cream" cx="137" cy="238" r="29"></circle>
+    <circle class="ink" cx="137" cy="238" r="20"></circle>
+    <circle class="cream" cx="375" cy="238" r="29"></circle>
+    <circle class="ink" cx="375" cy="238" r="20"></circle>
+    <path class="forest" d="M97 222 C109 286 153 328 219 333 C221 287 196 261 157 247 C133 238 116 229 104 214 C100 210 96 215 97 222 Z"></path>
+    <path class="cream" d="M132 269 C158 278 187 294 203 326 C178 308 157 296 130 291 C119 289 120 265 132 269 Z" opacity="0.96"></path>
+    <path class="forest" d="M415 222 C403 286 359 328 293 333 C291 287 316 261 355 247 C379 238 396 229 408 214 C412 210 416 215 415 222 Z"></path>
+    <path class="cream" d="M380 269 C354 278 325 294 309 326 C334 308 355 296 382 291 C393 289 392 265 380 269 Z" opacity="0.96"></path>
+    <path class="sand" d="M126 349 L386 349 L365 386 L147 386 Z"></path>
+    <rect class="sand" x="147" y="405" width="218" height="9" rx="4.5"></rect>
+    <path class="cream" d="M164 386 C164 361 203 361 203 386 Z"></path>
+    <path class="cream" d="M236 386 C236 361 276 361 276 386 Z"></path>
+    <path class="cream" d="M309 386 C309 361 348 361 348 386 Z"></path>
+  </g>
+
+  <text class="wordmark" x="385" y="254" font-size="108" fill="#2E2A24">Ojas Mitra</text>
+</svg>

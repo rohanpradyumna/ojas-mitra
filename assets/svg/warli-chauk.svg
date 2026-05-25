@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <!--
+    AUTHENTIC WARLI CHAUK (LAGNA CHAUK) — 240×240
+    ================================================
+    The chauk is the CENTRAL sacred square in every Warli ritual painting.
+    It is drawn for weddings, harvests, and worship.
+
+    Structure (outside-in):
+    1. Outermost square frame (thick border)
+    2. Dot row (pophala) — row of circles along all four sides
+    3. Zigzag border (sakhali) — triangles alternating up/down
+    4. Fish/petal border (dhak) — repeating oval-and-triangle motif
+    5. Inner sacred square — contains the central figure (Palaghata / Mother Goddess
+       shown as a figure with her arms open in blessing)
+    6. Corner lotus motifs (four-petal circles at each corner of inner square)
+
+    Human figures at all four sides (facing inward, worshipping).
+    All in #a8472a on transparent background.
+  -->
+
+  <!-- ══ OUTERMOST SQUARE FRAME ══ -->
+  <rect x="8" y="8" width="224" height="224"
+        stroke="#a8472a" stroke-width="2.0" fill="none"/>
+
+  <!-- ══ OUTER DOT ROW (pophala) — dots along all four sides ══ -->
+  <!-- Top row -->
+  <g fill="#a8472a">
+    <circle cx="20"  cy="20" r="2.5"/>
+    <circle cx="30"  cy="20" r="2.5"/>
+    <circle cx="40"  cy="20" r="2.5"/>
+    <circle cx="50"  cy="20" r="2.5"/>
+    <circle cx="60"  cy="20" r="2.5"/>
+    <circle cx="70"  cy="20" r="2.5"/>
+    <circle cx="80"  cy="20" r="2.5"/>
+    <circle cx="90"  cy="20" r="2.5"/>
+    <circle cx="100" cy="20" r="2.5"/>
+    <circle cx="110" cy="20" r="2.5"/>
+    <circle cx="120" cy="20" r="2.5"/>
+    <circle cx="130" cy="20" r="2.5"/>
+    <circle cx="140" cy="20" r="2.5"/>
+    <circle cx="150" cy="20" r="2.5"/>
+    <circle cx="160" cy="20" r="2.5"/>
+    <circle cx="170" cy="20" r="2.5"/>
+    <circle cx="180" cy="20" r="2.5"/>
+    <circle cx="190" cy="20" r="2.5"/>
+    <circle cx="200" cy="20" r="2.5"/>
+    <circle cx="210" cy="20" r="2.5"/>
+    <circle cx="220" cy="20" r="2.5"/>
+    <!-- Bottom row -->
+    <circle cx="20"  cy="220" r="2.5"/>
+    <circle cx="30"  cy="220" r="2.5"/>
+    <circle cx="40"  cy="220" r="2.5"/>
+    <circle cx="50"  cy="220" r="2.5"/>
+    <circle cx="60"  cy="220" r="2.5"/>
+    <circle cx="70"  cy="220" r="2.5"/>
+    <circle cx="80"  cy="220" r="2.5"/>
+    <circle cx="90"  cy="220" r="2.5"/>
+    <circle cx="100" cy="220" r="2.5"/>
+    <circle cx="110" cy="220" r="2.5"/>
+    <circle cx="120" cy="220" r="2.5"/>
+    <circle cx="130" cy="220" r="2.5"/>
+    <circle cx="140" cy="220" r="2.5"/>
+    <circle cx="150" cy="220" r="2.5"/>
+    <circle cx="160" cy="220" r="2.5"/>
+    <circle cx="170" cy="220" r="2.5"/>
+    <circle cx="180" cy="220" r="2.5"/>
+    <circle cx="190" cy="220" r="2.5"/>
+    <circle cx="200" cy="220" r="2.5"/>
+    <circle cx="210" cy="220" r="2.5"/>
+    <circle cx="220" cy="220" r="2.5"/>
+    <!-- Left column -->
+    <circle cx="20" cy="30"  r="2.5"/>
+    <circle cx="20" cy="40"  r="2.5"/>
+    <circle cx="20" cy="50"  r="2.5"/>
+    <circle cx="20" cy="60"  r="2.5"/>
+    <circle cx="20" cy="70"  r="2.5"/>
+    <circle cx="20" cy="80"  r="2.5"/>
+    <circle cx="20" cy="90"  r="2.5"/>
+    <circle cx="20" cy="100" r="2.5"/>
+    <circle cx="20" cy="110" r="2.5"/>
+    <circle cx="20" cy="120" r="2.5"/>
+    <circle cx="20" cy="130" r="2.5"/>
+    <circle cx="20" cy="140" r="2.5"/>
+    <circle cx="20" cy="150" r="2.5"/>
+    <circle cx="20" cy="160" r="2.5"/>
+    <circle cx="20" cy="170" r="2.5"/>
+    <circle cx="20" cy="180" r="2.5"/>
+    <circle cx="20" cy="190" r="2.5"/>
+    <circle cx="20" cy="200" r="2.5"/>
+    <circle cx="20" cy="210" r="2.5"/>
+    <!-- Right column -->
+    <circle cx="220" cy="30"  r="2.5"/>
+    <circle cx="220" cy="40"  r="2.5"/>
+    <circle cx="220" cy="50"  r="2.5"/>
+    <circle cx="220" cy="60"  r="2.5"/>
+    <circle cx="220" cy="70"  r="2.5"/>
+    <circle cx="220" cy="80"  r="2.5"/>
+    <circle cx="220" cy="90"  r="2.5"/>
+    <circle cx="220" cy="100" r="2.5"/>
+    <circle cx="220" cy="110" r="2.5"/>
+    <circle cx="220" cy="120" r="2.5"/>
+    <circle cx="220" cy="130" r="2.5"/>
+    <circle cx="220" cy="140" r="2.5"/>
+    <circle cx="220" cy="150" r="2.5"/>
+    <circle cx="220" cy="160" r="2.5"/>
+    <circle cx="220" cy="170" r="2.5"/>
+    <circle cx="220" cy="180" r="2.5"/>
+    <circle cx="220" cy="190" r="2.5"/>
+    <circle cx="220" cy="200" r="2.5"/>
+    <circle cx="220" cy="210" r="2.5"/>
+  </g>
+
+  <!-- ══ ZIGZAG BORDER BAND (sakhali) — 8px inside the dot row ══ -->
+  <!-- Top zigzag (y=28–36): triangles pointing downward -->
+  <polyline points="28,28 34,36 40,28 46,36 52,28 58,36 64,28 70,36 76,28 82,36 88,28 94,36
+                    100,28 106,36 112,28 118,36 124,28 130,36 136,28 142,36 148,28 154,36
+                    160,28 166,36 172,28 178,36 184,28 190,36 196,28 202,36 208,28 212,36"
+            stroke="#a8472a" stroke-width="1.0" fill="none"/>
+  <!-- Bottom zigzag (y=204–212): triangles pointing upward -->
+  <polyline points="28,212 34,204 40,212 46,204 52,212 58,204 64,212 70,204 76,212 82,204 88,212
+                    94,204 100,212 106,204 112,212 118,204 124,212 130,204 136,212 142,204 148,212
+                    154,204 160,212 166,204 172,212 178,204 184,212 190,204 196,212 202,204 208,212"
+            stroke="#a8472a" stroke-width="1.0" fill="none"/>
+  <!-- Left zigzag (x=28–36): triangles pointing rightward -->
+  <polyline points="28,28 36,34 28,40 36,46 28,52 36,58 28,64 36,70 28,76 36,82 28,88 36,94
+                    28,100 36,106 28,112 36,118 28,124 36,130 28,136 36,142 28,148 36,154
+                    28,160 36,166 28,172 36,178 28,184 36,190 28,196 36,202 28,208 36,212"
+            stroke="#a8472a" stroke-width="1.0" fill="none"/>
+  <!-- Right zigzag (x=204–212): triangles pointing leftward -->
+  <polyline points="212,28 204,34 212,40 204,46 212,52 204,58 212,64 204,70 212,76 204,82 212,88
+                    204,94 212,100 204,106 212,112 204,118 212,124 204,130 212,136 204,142 212,148
+                    204,154 212,160 204,166 212,172 204,178 212,184 204,190 212,196 204,202 212,208"
+            stroke="#a8472a" stroke-width="1.0" fill="none"/>
+
+  <!-- ══ INNER SQUARE (sacred enclosure) ══ -->
+  <rect x="42" y="42" width="156" height="156"
+        stroke="#a8472a" stroke-width="1.4" fill="none"/>
+
+  <!-- ══ INNER SECOND FRAME ══ -->
+  <rect x="52" y="52" width="136" height="136"
+        stroke="#a8472a" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+  <!-- ══ FOUR CORNER LOTUS MARKS (petal circles at inner square corners) ══ -->
+  <!-- Top-left corner -->
+  <circle cx="42" cy="42" r="5" fill="#a8472a"/>
+  <circle cx="42" cy="42" r="9" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <!-- Top-right corner -->
+  <circle cx="198" cy="42" r="5" fill="#a8472a"/>
+  <circle cx="198" cy="42" r="9" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <!-- Bottom-left corner -->
+  <circle cx="42" cy="198" r="5" fill="#a8472a"/>
+  <circle cx="42" cy="198" r="9" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <!-- Bottom-right corner -->
+  <circle cx="198" cy="198" r="5" fill="#a8472a"/>
+  <circle cx="198" cy="198" r="9" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+
+  <!-- ══ PALAGHATA — MOTHER GODDESS at centre ══
+       The Mother Goddess (Palaghata/Palghata) is depicted as a figure
+       with arms outstretched in blessing. She stands at the heart of the chauk.
+       Human figure = two triangles, arms open wide.
+  ══ -->
+  <g transform="translate(120,120)">
+    <!-- head: featureless circle -->
+    <circle cx="0" cy="-38" r="9" fill="#a8472a"/>
+    <!-- torso triangle: apex DOWN at waist -->
+    <path d="M -14,-26 L 14,-26 L 0,0 Z" fill="#a8472a"/>
+    <!-- pelvis triangle: apex UP at waist -->
+    <path d="M 0,0 L -12,20 L 12,20 Z" fill="#a8472a"/>
+    <!-- arms: WIDE OPEN in blessing/Namaste gesture -->
+    <line x1="-14" y1="-26" x2="-38" y2="-14" stroke="#a8472a" stroke-width="2.0" stroke-linecap="round"/>
+    <line x1="14"  y1="-26" x2="38"  y2="-14" stroke="#a8472a" stroke-width="2.0" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="-12" y1="20" x2="-16" y2="38" stroke="#a8472a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="12"  y1="20" x2="16"  y2="38" stroke="#a8472a" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Ambada hair bun on head (marks female figure) -->
+    <circle cx="0" cy="-49" r="3.5" fill="#a8472a"/>
+    <line x1="0" y1="-45" x2="0" y2="-47" stroke="#a8472a" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Decorative dot row around her (blessing radiation) -->
+    <circle cx="0"   cy="-58" r="2" fill="#a8472a"/>
+    <circle cx="14"  cy="-56" r="1.5" fill="#a8472a"/>
+    <circle cx="-14" cy="-56" r="1.5" fill="#a8472a"/>
+    <circle cx="22"  cy="-50" r="1.5" fill="#a8472a"/>
+    <circle cx="-22" cy="-50" r="1.5" fill="#a8472a"/>
+  </g>
+
+  <!-- ══ FOUR WORSHIPPING FIGURES (one on each side, facing inward) ══ -->
+
+  <!-- TOP figure · facing downward (inverted) · y=64 -->
+  <g transform="translate(120,68) scale(1,-1)">
+    <circle cx="0" cy="-22" r="5.5" fill="#a8472a"/>
+    <path d="M -8,-16 L 8,-16 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -7,14 L 7,14 Z" fill="#a8472a"/>
+    <line x1="-8" y1="-16" x2="-18" y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="8"  y1="-16" x2="18"  y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-7" y1="14" x2="-10" y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7"  y1="14" x2="10"  y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- BOTTOM figure · facing upward (normal) · y=172 -->
+  <g transform="translate(120,172)">
+    <circle cx="0" cy="-22" r="5.5" fill="#a8472a"/>
+    <path d="M -8,-16 L 8,-16 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -7,14 L 7,14 Z" fill="#a8472a"/>
+    <line x1="-8" y1="-16" x2="-18" y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="8"  y1="-16" x2="18"  y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-7" y1="14" x2="-10" y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7"  y1="14" x2="10"  y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- LEFT figure · facing right · translate (68, 120) rotated 90° -->
+  <g transform="translate(68,120) rotate(90)">
+    <circle cx="0" cy="-22" r="5.5" fill="#a8472a"/>
+    <path d="M -8,-16 L 8,-16 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -7,14 L 7,14 Z" fill="#a8472a"/>
+    <line x1="-8" y1="-16" x2="-18" y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="8"  y1="-16" x2="18"  y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-7" y1="14" x2="-10" y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7"  y1="14" x2="10"  y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- RIGHT figure · facing left · translate (172, 120) rotated -90° -->
+  <g transform="translate(172,120) rotate(-90)">
+    <circle cx="0" cy="-22" r="5.5" fill="#a8472a"/>
+    <path d="M -8,-16 L 8,-16 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -7,14 L 7,14 Z" fill="#a8472a"/>
+    <line x1="-8" y1="-16" x2="-18" y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="8"  y1="-16" x2="18"  y2="-28" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-7" y1="14" x2="-10" y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7"  y1="14" x2="10"  y2="24" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+</svg>

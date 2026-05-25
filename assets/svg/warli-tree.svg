@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!--
+    AUTHENTIC WARLI CONICAL TREE — 80×80
+    ====================================
+    Classic Warli tree = TWO STACKED CONICAL TRIANGLES.
+    NOT branching lines. NOT a palm frond.
+    Upper triangle = narrow crown. Lower triangle = wider canopy.
+    Apex dots and corner buds are the traditional Warli detail marks.
+  -->
+
+  <!-- Lower wider canopy triangle — apex (40,30), base at y=74 -->
+  <path d="M 40,30 L 10,74 L 70,74 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Upper narrow crown triangle — apex (40,8), base at y=30 -->
+  <path d="M 40,8 L 27,30 L 53,30 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.4" stroke-linejoin="round"/>
+
+  <!-- Apex dot at crown tip -->
+  <circle cx="40" cy="8" r="2.5" fill="#a8472a"/>
+
+  <!-- Bud dots at base corners of upper triangle -->
+  <circle cx="27" cy="30" r="2" fill="#a8472a"/>
+  <circle cx="53" cy="30" r="2" fill="#a8472a"/>
+
+  <!-- Fruit/root dots at base corners of lower triangle -->
+  <circle cx="10" cy="74" r="1.5" fill="#a8472a"/>
+  <circle cx="70" cy="74" r="1.5" fill="#a8472a"/>
+</svg>

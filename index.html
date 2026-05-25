@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ojas Mithra — made the way a home is made</title>
+<meta name="description" content="A small house of bio-enzyme cleaning essentials and Ayurvedic preparations, made by hand in rural south India by Kavita Ajay."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&family=Tiro+Devanagari+Hindi:ital@0;1&family=Tiro+Telugu:ital@0;1&family=Caveat:wght@500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/site.css"/>
+
+<style>
+  /* Maker section paper frame */
+  .maker .frame {
+    background: linear-gradient(180deg, #ecdcc0 0%, #e0caa6 100%);
+  }
+
+  /* Asymmetric headlines */
+  .section-head.offset .right { padding-left: 8%; }
+  @media (max-width: 720px) { .section-head.offset .right { padding-left: 0; } }
+
+  /* ── Hero editorial override ── */
+  .hero-editorial {
+    padding: 0 0 0 0;
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* reset old hero grid */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    column-gap: unset;
+  }
+
+  /* dateline */
+  .hero-dateline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 36px 64px 0;
+  }
+  .hero-kicker {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--terracotta);
+    text-transform: lowercase;
+  }
+  .hero-stamp {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--clay-soft);
+    text-align: right;
+    line-height: 1.5;
+  }
+  .hero-loc {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--terracotta);
+    margin-top: 2px;
+  }
+
+  /* hairline rules */
+  .hero-top-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 28px 64px 0;
+  }
+  .hero-bottom-rule {
+    border: 0;
+    border-top: 1px solid var(--rule-soft);
+    margin: 0 64px;
+  }
+
+  /* ── HEADLINE BLOCK ── */
+  .hero-hl-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;          /* baseline-align the two halves */
+    padding: 72px 64px 56px;
+    flex: 1;
+    gap: 0;
+  }
+  .hero-hl-main {
+    font-family: var(--serif);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(68px, 9.8vw, 148px);
+    line-height: 0.93;
+    letter-spacing: -0.022em;
+    color: var(--clay);
+    margin: 0;
+    /* slightly indent first line — the composed asymmetry */
+    padding-left: 2px;
+  }
+  .hero-hl-coda {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(36px, 5.2vw, 80px);
+    line-height: 1.02;
+    letter-spacing: -0.016em;
+    color: var(--terracotta);
+    text-align: right;
+    margin: 0;
+    /* align the coda baseline to the bottom of the main headline */
+    padding-bottom: 0.05em;
+  }
+
+  /* ── WARLI WATERMARK ── */
+  .hero-warli-wrap {
+    width: 100%;
+    line-height: 0;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  .hero-warli-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.16;
+    /* ensure it never gets too tall on small viewports */
+    max-height: 160px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* ── BOTTOM FOOT ── */
+  .hero-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 24px 64px 64px;
+    gap: 48px;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(16px, 1.35vw, 19px);
+    line-height: 1.65;
+    color: var(--clay-warm);
+    max-width: 44ch;
+    margin: 0;
+  }
+  .hero-cta {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 880px) {
+    .hero-dateline { padding: 28px 28px 0; }
+    .hero-top-rule, .hero-bottom-rule { margin-left: 28px; margin-right: 28px; }
+    .hero-hl-wrap {
+      grid-template-columns: 1fr;
+      padding: 48px 28px 40px;
+      gap: 12px;
+    }
+    .hero-hl-coda { text-align: left; }
+    .hero-foot {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 28px 48px;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 540px) {
+    .hero-editorial { min-height: 0; }
+    .hero-warli-img { max-height: 100px; }
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     SHELF SECTION — products redesign
+     Each bottle gets its own ground tint; shelf rail lines
+     anchor everything to feel like a real kitchen ledge.
+  ══════════════════════════════════════════════════════════ */
+  .shelf-section {
+    background: linear-gradient(180deg,
+      var(--cream) 0%,
+      var(--cream-warm) 38%,
+      var(--cream-deep) 60%,
+      var(--cream) 100%
+    );
+    padding-bottom: 80px;
+  }
+
+  /* ── Warli ornament strip above section head ── */
+  .shelf-warli-strip {
+    width: 100%;
+    height: 56px;
+    display: block;
+    opacity: 0.22;
+    margin-bottom: 0;
+  }
+
+  /* ── Product grid: 4 col, generous vertical rhythm ── */
+  .shelf-section .shelf-preview {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 0;
+    margin-top: 52px;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  /* ── Each item: bordered, shelf-card feel ── */
+  .shelf-section .shelf-preview .item {
+    padding: 32px 20px 28px;
+    border-right: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .shelf-section .shelf-preview .item:nth-child(4n) {
+    border-right: none;
+  }
+
+  /* ── Bottle frames: each product gets its own colour-ground ── */
+  .shelf-section .shelf-preview .item .bottle-frame {
+    aspect-ratio: 2 / 3;
+    border-radius: 2px;
+    /* shelf ledge shadow */
+    box-shadow: 0 6px 18px -4px rgba(42, 29, 20, 0.1);
+  }
+
+  /* Dishwash — warm lemon ground */
+  .shelf-section .shelf-preview .item:nth-child(1) .bottle-frame {
+    background: linear-gradient(175deg, #f2e3a8 0%, #e4cc80 100%);
+  }
+  /* Handwash — aloe sage tint */
+  .shelf-section .shelf-preview .item:nth-child(2) .bottle-frame {
+    background: linear-gradient(175deg, #d8e4cc 0%, #c0d4b0 100%);
+  }
+  /* Toilet cleaner — cool stone */
+  .shelf-section .shelf-preview .item:nth-child(3) .bottle-frame {
+    background: linear-gradient(175deg, #d8e0e8 0%, #c0ccd8 100%);
+  }
+  /* Floor cleaner — neem olive */
+  .shelf-section .shelf-preview .item:nth-child(4) .bottle-frame {
+    background: linear-gradient(175deg, #d4dcbc 0%, #bccca4 100%);
+  }
+  /* Vegetables & fruits — fresh mint */
+  .shelf-section .shelf-preview .item:nth-child(5) .bottle-frame {
+    background: linear-gradient(175deg, #cde0c4 0%, #b4cca0 100%);
+  }
+  /* Laundry liquid — indigo wash */
+  .shelf-section .shelf-preview .item:nth-child(6) .bottle-frame {
+    background: linear-gradient(175deg, #ced8ec 0%, #b8c8e0 100%);
+  }
+  /* Kumkumadhi Tailam — saffron gold */
+  .shelf-section .shelf-preview .item:nth-child(7) .bottle-frame {
+    background: linear-gradient(175deg, #f0d4a4 0%, #e0bc7c 100%);
+  }
+  /* "more, slowly" slot */
+  .shelf-section .shelf-preview .item:nth-child(8) .bottle-frame {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 1px dashed var(--rule-soft) !important;
+  }
+
+  /* ── Product name: larger, more editorial weight ── */
+  .shelf-section .shelf-preview .item .name {
+    font-size: clamp(18px, 1.8vw, 24px);
+    margin-top: 22px;
+    line-height: 1.15;
+  }
+  .shelf-section .shelf-preview .item .blurb {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+
+  /* ── Index numeral: prominent, corner stamp ── */
+  .shelf-section .shelf-preview .item .index-num {
+    font-size: 15px;
+    opacity: 0.55;
+    font-style: italic;
+  }
+
+  /* ── Shelf-rail shadow at base of each bottle frame ── */
+  .shelf-section .shelf-preview .item .bottle-frame::after {
+    background: linear-gradient(to right,
+      transparent 0%,
+      rgba(42, 29, 20, 0.14) 30%,
+      rgba(42, 29, 20, 0.14) 70%,
+      transparent 100%
+    );
+    height: 8px;
+    bottom: 0;
+    left: 0; right: 0;
+    border-radius: 0 0 2px 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 980px) {
+    .shelf-section .shelf-preview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .shelf-section .shelf-preview .item:nth-child(4n) {
+      border-right: 1px solid var(--rule-soft);
+    }
+    .shelf-section .shelf-preview .item:nth-child(2n) {
+      border-right: none;
+    }
+  }
+  @media (max-width: 540px) {
+    .shelf-section .shelf-preview {
+      grid-template-columns: 1fr;
+    }
+    .shelf-section .shelf-preview .item {
+      border-right: none;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     TESTIMONIALS SECTION — staggered, warm background
+  ══════════════════════════════════════════════════════════ */
+  .testimonials-section {
+    background: linear-gradient(180deg,
+      var(--cream) 0%,
+      rgba(168, 71, 42, 0.05) 40%,
+      var(--cream) 100%
+    );
+    padding: 64px 0 80px;
+  }
+
+  /* Stagger the three quotes vertically */
+  .testimonials-section .testimonials {
+    align-items: start;
+    margin-top: 56px;
+  }
+  .testimonials-section .testimonials blockquote:nth-child(1) {
+    margin-top: 0;
+  }
+  .testimonials-section .testimonials blockquote:nth-child(2) {
+    margin-top: 48px;
+  }
+  .testimonials-section .testimonials blockquote:nth-child(3) {
+    margin-top: 24px;
+  }
+
+  /* Slightly richer quote styling */
+  .testimonials-section .testimonials blockquote {
+    border-left: 2px solid var(--terracotta);
+    padding-left: 26px;
+  }
+  .testimonials-section .testimonials blockquote p {
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: var(--clay-warm);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     MAKER SECTION — subtle Warli motif in frame corner
+  ══════════════════════════════════════════════════════════ */
+  .maker .frame {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     FINAL INVITATION — warmer typography
+  ══════════════════════════════════════════════════════════ */
+  .invitation-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 50%, var(--cream) 100%);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     SECTION WARLI DIVIDER — shared ornament style
+  ══════════════════════════════════════════════════════════ */
+  .warli-divider {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    opacity: 0.25;
+  }
+
+  /* Hero warli opacity increase — make it more visible */
+  .hero-warli-img {
+    opacity: 0.22;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <a href="index.html" class="brand" aria-label="Ojas Mithra home">
+    <img src="assets/logo/mark-primary.png" alt=""/>
+    <span class="text">Ojas Mithra<small>ओजस मित्र</small></span>
+  </a>
+  <div class="seal"><em>made by hand, in a kitchen</em></div>
+  <nav>
+    <a href="shelf.html">The shelf</a>
+    <a href="our-way.html">Our way</a>
+    <a href="journal.html">Journal</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HOME OPENING — a letter, opened ============ -->
+  <section class="hero hero-editorial">
+
+    <!-- Dateline row -->
+    <div class="hero-dateline">
+      <span class="hero-kicker">a house of cleaning essentials &amp; ayurveda</span>
+      <span class="hero-stamp">
+        <em>may, 2026</em>
+        <span class="hero-loc">andhra pradesh</span>
+      </span>
+    </div>
+    <hr class="hero-top-rule"/>
+
+    <!-- Headline — upright left, italic terracotta right, baseline-aligned -->
+    <div class="hero-hl-wrap">
+      <h1 class="hero-hl-main">Made the way<br/>a home<br/>is made.</h1>
+      <p class="hero-hl-coda"><em>slowly,<br/>and on<br/>purpose.</em></p>
+    </div>
+
+    <!-- Full-width Warli panorama watermark -->
+    <div class="hero-warli-wrap" aria-hidden="true">
+      <img src="assets/svg/warli-hero.svg" alt="" class="hero-warli-img"/>
+    </div>
+
+    <!-- Bottom strip: sub-copy + link -->
+    <hr class="hero-bottom-rule"/>
+    <div class="hero-foot">
+      <p class="hero-sub">
+        Each bottle is mixed, filled and labelled by hand in a kitchen in rural south India. The work moves at the pace of the seasons. We bring you what we&rsquo;d keep for ourselves.
+      </p>
+      <a class="text-link hero-cta" href="shelf.html">See what is on the shelf <span class="arrow">&rarr;</span></a>
+    </div>
+
+  </section>
+
+  <!-- ============ THE MAKER ============ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="left">the maker</div>
+        <div class="right">
+          <h2>A promise kept in a courtyard.</h2>
+          <p class="lead">Kavita Ajay began this from her own kitchen, in a small village in south India.</p>
+        </div>
+      </div>
+
+      <div class="maker">
+        <div class="frame" aria-hidden="true">
+          <img class="placeholder-portrait" src="assets/img/kavita.png" alt="Kavita Ajay on her balcony" style="width: 100%; height: 100%; object-fit: cover;"/>
+          <span class="corner-note">Kavita, &rsquo;26</span>
+        </div>
+
+        <div class="text">
+          <p>
+            <em>Kavita Ajay</em> began Ojas Mithra in the courtyard of her own home. At forty-six, she has spent more than half her life among families and farms across south India &mdash; a climate activist by training, a community psychologist by listening, learning what people put in their hands and their water, and what they wished they could put instead.
+          </p>
+          <p>
+            Her mother, before she passed, asked her to make something that would reach Indian homes at scale &mdash; quietly, kindly, without harm. This is that promise, in bottles.
+          </p>
+          <p>
+            Every order is filled from her backyard. The recipes use bio-enzymes &mdash; fruit waste fermented for three months in clay pots &mdash; and plant extracts gathered from the trees and gardens around her. Nothing leaves the kitchen until it has been on the shelf long enough that we, the family, have used it ourselves.
+          </p>
+          <p class="signoff">&mdash; with care, Kavita</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ THE SHELF (PREVIEW) ============ -->
+  <section class="section shelf-section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="section-head offset">
+        <div class="left">on the shelf</div>
+        <div class="right">
+          <h2>Seven jars, kept the way we&rsquo;d keep them at home.</h2>
+          <p class="lead">No ranges. No bestsellers. Each one earns its place.</p>
+        </div>
+      </div>
+
+      <div class="shelf-preview">
+        <a class="item" href="product-dishwash.html">
+          <span class="index-num">i.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/dishwash.svg" alt=""/></div>
+          <div class="name">Dishwash</div>
+          <div class="blurb">Tough on grease. Gentle on hands. Smells faintly of lemon and something older.</div>
+        </a>
+
+        <a class="item" href="product-handwash.html">
+          <span class="index-num">ii.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/handwash.svg" alt=""/></div>
+          <div class="name">Hand wash</div>
+          <div class="blurb">For hands that have been outside, or in the kitchen, or both. Aloe and tulsi.</div>
+        </a>
+
+        <a class="item" href="product-toilet-cleaner.html">
+          <span class="index-num">iii.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/toilet-cleaner.svg" alt=""/></div>
+          <div class="name">Toilet cleaner</div>
+          <div class="blurb">Thick enough to cling, gentle enough for septic tanks. No fumes that climb the stairs.</div>
+        </a>
+
+        <a class="item" href="product-floor-cleaner.html">
+          <span class="index-num">iv.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/floor-cleaner.svg" alt=""/></div>
+          <div class="name">Floor cleaner</div>
+          <div class="blurb">Neem, lemon, eucalyptus. The smell of a house just after the morning mop.</div>
+        </a>
+
+        <a class="item" href="product-vegetables-fruits.html">
+          <span class="index-num">v.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/vegetables-fruits.svg" alt=""/></div>
+          <div class="name">Vegetables &amp; fruits</div>
+          <div class="blurb">For what comes off the cart, the field, or someone&rsquo;s hands. Soak, rinse, eat.</div>
+        </a>
+
+        <a class="item" href="product-laundry-liquid.html">
+          <span class="index-num">vi.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/laundry-liquid.svg" alt=""/></div>
+          <div class="name">Laundry liquid</div>
+          <div class="blurb">Low foam, for buckets and machines alike. Colours remember themselves.</div>
+        </a>
+
+        <a class="item" href="product-kumkumadhi-tailam.html">
+          <span class="index-num">vii.</span>
+          <div class="bottle-frame"><img src="assets/svg/bottles/kumkumadhi-tailam.svg" alt=""/></div>
+          <div class="name">Kumkumadhi Tailam</div>
+          <div class="blurb">An old Ayurvedic oil for the face. Saffron, sandalwood, patience.</div>
+        </a>
+
+        <!-- The eighth slot: an honest "more, slowly" -->
+        <div class="item" style="cursor: default;">
+          <div class="bottle-frame" style="background: transparent; border: 1px dashed var(--rule-soft);">
+            <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg" fill="none" style="width: 36%;">
+              <g stroke="var(--rule)" stroke-width="0.8" stroke-linecap="round">
+                <circle cx="50" cy="40" r="14" stroke-dasharray="2 3"/>
+                <path d="M 50 56 L 50 100" stroke-dasharray="2 3"/>
+                <path d="M 36 110 L 64 110"/>
+              </g>
+            </svg>
+          </div>
+          <div class="name" style="font-style: italic; color: var(--clay-soft);">more, slowly</div>
+          <div class="blurb">A floor wipe, a body soap, a hair oil &mdash; whichever is ready first.</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 64px; text-align: center;">
+        <a class="text-link" href="shelf.html">See the full shelf <span class="arrow">&rarr;</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials-section">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="left">from the homes</div>
+        <div class="right">
+          <h2>People who took it home, writing back.</h2>
+          <p class="lead">Notes from the families who have brought our bottles into their kitchens.</p>
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <blockquote>
+          <p>
+            &ldquo;I opened the dishwash and the kitchen smelled of lemon and something older. My grandmother would have approved &mdash; she was a difficult woman to impress.&rdquo;
+          </p>
+          <footer>
+            <span class="who">Lakshmi Reddy</span>
+            <span class="where">a kitchen in Bengaluru</span>
+          </footer>
+        </blockquote>
+
+        <blockquote>
+          <p>
+            &ldquo;I switched from the chemical brand my mother had used for forty years. My hands stopped hurting after a month. I had been ignoring it for a long time.&rdquo;
+          </p>
+          <footer>
+            <span class="who">Priya Anand</span>
+            <span class="where">a flat in Hyderabad</span>
+          </footer>
+        </blockquote>
+
+        <blockquote>
+          <p>
+            &ldquo;The Kumkumadhi tailam arrived wrapped in a piece of cotton, with a handwritten note. It felt like a gift my aunt would have sent, not a delivery.&rdquo;
+          </p>
+          <footer>
+            <span class="who">Rohit Mehta</span>
+            <span class="where">a balcony in Pune</span>
+          </footer>
+        </blockquote>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ A SECOND, QUIETER INVITATION ============ -->
+  <section class="section invitation-section" style="padding-top: 0;">
+    <div class="container narrow" style="text-align: center;">
+      <h2 style="font-style: italic; max-width: 18ch; margin-left: auto; margin-right: auto;">
+        If something here finds you, write to us.
+      </h2>
+      <p style="font-family: var(--serif); font-size: 19px; line-height: 1.7; color: var(--clay-warm); max-width: 38ch; margin: 18px auto 0;">
+        We do not have a checkout. Orders happen on WhatsApp, the way they used to happen at the corner shop.
+      </p>
+      <p style="margin-top: 28px;">
+        <a href="https://wa.me/919059900349" class="text-link" style="font-size: 22px;">+91 90599 00349</a>
+      </p>
+      <p class="handwriting" style="font-size: 24px; color: var(--terracotta-deep); margin-top: 32px;">
+        we will reply when the kitchen is quiet.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="grid">
+    <div class="col">
+      <div class="signoff">Ojas Mithra</div>
+      <p style="font-family: var(--serif); font-style: italic; color: var(--clay-soft); font-size: 15px; line-height: 1.6;">
+        A small house of bio-enzyme cleaning essentials and Ayurvedic preparations. Made in rural south India by Kavita Ajay.
+      </p>
+    </div>
+    <div class="col">
+      <h4>The shelf</h4>
+      <a href="product-dishwash.html">Dishwash</a>
+      <a href="product-handwash.html">Hand wash</a>
+      <a href="product-toilet-cleaner.html">Toilet cleaner</a>
+      <a href="product-floor-cleaner.html">Floor cleaner</a>
+      <a href="product-vegetables-fruits.html">Vegetables &amp; fruits</a>
+      <a href="product-laundry-liquid.html">Laundry liquid</a>
+      <a href="product-kumkumadhi-tailam.html">Kumkumadhi Tailam</a>
+    </div>
+    <div class="col">
+      <h4>Pages</h4>
+      <a href="shelf.html">The shelf</a>
+      <a href="our-way.html">Our way</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <div class="col">
+      <h4>Find us</h4>
+      <a href="https://wa.me/919059900349">+91 90599 00349</a>
+      <a href="https://instagram.com/ojasmithra_ayurveda">@ojasmithra_ayurveda</a>
+      <a href="mailto:hello@ojasmithra.com">hello@ojasmithra.com</a>
+      <p style="font-family: var(--serif); font-style: italic; color: var(--clay-soft); font-size: 14px; margin-top: 14px;">
+        Andhra Pradesh, India
+      </p>
+    </div>
+  </div>
+  <div class="farewell">
+    <span class="deva">शुभं भवतु</span> &nbsp;·&nbsp; may your home be well kept &nbsp;·&nbsp; <span>&copy; 2026 Ojas Mithra</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" fill="none">
+  <!--
+    Kumkumadhi Tailam — deep saffron vermillion (saffron, sandalwood, Ayurveda)
+    A precious, smaller-looking bottle to signal this is special.
+    Colour: #e09060 → #c86030 → #8a3010
+  -->
+  <defs>
+    <linearGradient id="fillTailam" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0"   stop-color="#e8a870"/>
+      <stop offset="0.5" stop-color="#cc7040"/>
+      <stop offset="1"   stop-color="#8a3810"/>
+    </linearGradient>
+    <!-- inner glow — oil has translucency -->
+    <radialGradient id="glowTailam" cx="0.35" cy="0.3" r="0.6">
+      <stop offset="0"   stop-color="#f0c090" stop-opacity="0.5"/>
+      <stop offset="1"   stop-color="#cc7040" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Elegant narrow dropper bottle — sits taller, thinner -->
+  <!-- Dropper cap -->
+  <rect x="86" y="16" width="28" height="46" rx="14" fill="#3a1c08"/>
+  <!-- dropper bulb -->
+  <ellipse cx="100" cy="8" rx="12" ry="8" fill="#5a2c10"/>
+
+  <!-- Bottle body — narrower, more elegant -->
+  <path d="
+    M 90 62
+    L 90 82
+    L 68 100
+    L 58 130
+    L 58 370
+    Q 58 406 82 406
+    L 118 406
+    Q 142 406 142 370
+    L 142 130
+    L 132 100
+    L 110 82
+    L 110 62
+    Z
+  " fill="url(#fillTailam)" stroke="#7a2c08" stroke-width="1.3"/>
+  <!-- oil glow overlay -->
+  <path d="
+    M 90 62
+    L 90 82
+    L 68 100
+    L 58 130
+    L 58 370
+    Q 58 406 82 406
+    L 118 406
+    Q 142 406 142 370
+    L 142 130
+    L 132 100
+    L 110 82
+    L 110 62
+    Z
+  " fill="url(#glowTailam)"/>
+
+  <!-- Highlight — golden oil shimmer -->
+  <line x1="74" y1="120" x2="74" y2="360" stroke="rgba(255,200,120,0.35)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Label — smaller, centred on the narrower bottle -->
+  <rect x="62" y="195" width="76" height="168" rx="2" fill="#f3ebd9" stroke="#a8472a" stroke-width="0.6"/>
+  <line x1="72" y1="218" x2="130" y2="218" stroke="#a8472a" stroke-width="0.5"/>
+  <text x="100" y="234" text-anchor="middle"
+        font-family="EB Garamond, serif" font-size="8" fill="#6b5141" font-style="italic" letter-spacing="0.5">
+    Ojas Mithra
+  </text>
+  <text x="100" y="252" text-anchor="middle"
+        font-family="EB Garamond, serif" font-size="13.5" font-weight="500" fill="#2a1d14">
+    Kumkuma
+  </text>
+  <text x="100" y="268" text-anchor="middle"
+        font-family="EB Garamond, serif" font-size="13.5" font-weight="500" fill="#2a1d14">
+    dhi Tailam
+  </text>
+  <line x1="72" y1="286" x2="130" y2="286" stroke="#a8472a" stroke-width="0.5"/>
+  <text x="100" y="300" text-anchor="middle"
+        font-family="Inter, sans-serif" font-size="5.5" fill="#a8472a" letter-spacing="2">
+    AYURVEDIC
+  </text>
+
+  <!-- Diyas / lamp ornament — sacred Warli symbol -->
+  <!-- left diya -->
+  <path d="M 80,328 Q 84,318 88,326 L 84,330 Z" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <path d="M 84,330 L 84,335" stroke="#a8472a" stroke-width="0.7" stroke-linecap="round"/>
+  <circle cx="84" cy="316" r="1.2" fill="#a8472a" opacity="0.7"/>
+  <!-- right diya -->
+  <path d="M 112,328 Q 116,318 120,326 L 116,330 Z" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <path d="M 116,330 L 116,335" stroke="#a8472a" stroke-width="0.7" stroke-linecap="round"/>
+  <circle cx="116" cy="316" r="1.2" fill="#a8472a" opacity="0.7"/>
+  <!-- centre dot (saffron blossom) -->
+  <circle cx="100" cy="325" r="2.5" fill="none" stroke="#a8472a" stroke-width="0.7"/>
+  <circle cx="100" cy="325" r="1" fill="#a8472a"/>
+</svg>

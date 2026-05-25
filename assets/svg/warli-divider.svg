@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80" fill="none">
+  <!--
+    AUTHENTIC WARLI DIVIDER — 600×80
+    ==================================
+    Scene: two framing conical trees + small procession of 3 women with pots
+    + central hut + sun + figure with offering + right procession.
+    Human figures = TWO SOLID TRIANGLES (hourglass), not stick figures.
+    Ground at y=72. Figure waists at y=52.
+    Trees = stacked conical triangles (not branching lines).
+    All in #a8472a on transparent background.
+  -->
+
+  <!-- ═══════════════════════════
+       GROUND LINE
+  ═══════════════════════════ -->
+  <line x1="20" y1="72" x2="580" y2="72" stroke="#a8472a" stroke-width="0.7" opacity="0.7"/>
+
+  <!-- ═══════════════════════════
+       ZIGZAG BORDER STRIP  (bottom, y=72–79)
+  ═══════════════════════════ -->
+  <polyline
+    points="20,72 26,78 32,72 38,78 44,72 50,78 56,72 62,78 68,72 74,78 80,72
+            86,78 92,72 98,78 104,72 110,78 116,72 122,78 128,72 134,78 140,72
+            146,78 152,72 158,78 164,72 170,78 176,72 182,78 188,72 194,78 200,72
+            206,78 212,72 218,78 224,72 230,78 236,72 242,78 248,72 254,78 260,72
+            266,78 272,72 278,78 284,72 290,78 296,72 302,78 308,72 314,78 320,72
+            326,78 332,72 338,78 344,72 350,78 356,72 362,78 368,72 374,78 380,72
+            386,78 392,72 398,78 404,72 410,78 416,72 422,78 428,72 434,78 440,72
+            446,78 452,72 458,78 464,72 470,78 476,72 482,78 488,72 494,78 500,72
+            506,78 512,72 518,78 524,72 530,78 536,72 542,78 548,72 554,78 560,72
+            566,78 572,72 578,78 580,72"
+    stroke="#a8472a" stroke-width="0.8" fill="none" opacity="0.55"/>
+
+  <!-- ═══════════════════════════
+       LEFT FRAMING TREE  (x=55)
+  ═══════════════════════════ -->
+  <!-- Lower wider canopy: apex (55,24), base y=72 -->
+  <path d="M 55,24 L 28,72 L 82,72 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.3" stroke-linejoin="round"/>
+  <!-- Upper narrow crown: apex (55,8), base y=24 -->
+  <path d="M 55,8 L 44,24 L 66,24 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="55" cy="8" r="2" fill="#a8472a"/>
+  <circle cx="44" cy="24" r="1.5" fill="#a8472a"/>
+  <circle cx="66" cy="24" r="1.5" fill="#a8472a"/>
+
+  <!-- ═══════════════════════════
+       LEFT PROCESSION  — 2 women with pots + 1 walking
+       Waists at y=52.  Pot ellipse above head.
+  ═══════════════════════════ -->
+
+  <!-- Figure D1 · pot on head · x=135 -->
+  <g transform="translate(135,52)">
+    <!-- pot (elevated ellipse above head) -->
+    <ellipse cx="0" cy="-42" rx="7" ry="3.5" fill="#a8472a"/>
+    <line x1="0" y1="-38.5" x2="0" y2="-31" stroke="#a8472a" stroke-width="1.0"/>
+    <!-- head -->
+    <circle cx="0" cy="-25" r="4.5" fill="#a8472a"/>
+    <!-- TORSO: apex DOWN at waist -->
+    <path d="M -7,-18 L 7,-18 L 0,0 Z" fill="#a8472a"/>
+    <!-- PELVIS: apex UP at waist -->
+    <path d="M 0,0 L -6,10 L 6,10 Z" fill="#a8472a"/>
+    <!-- arms raised to balance pot -->
+    <line x1="-7" y1="-18" x2="-7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7" y1="-18" x2="7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <!-- walking legs -->
+    <line x1="-6" y1="10" x2="-9" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="3" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Figure D2 · walking · x=172 -->
+  <g transform="translate(172,52)">
+    <circle cx="0" cy="-25" r="4.5" fill="#a8472a"/>
+    <path d="M -7,-18 L 7,-18 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -6,10 L 6,10 Z" fill="#a8472a"/>
+    <!-- arms: left forward, right back -->
+    <line x1="-7" y1="-18" x2="-18" y2="-10" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7" y1="-18" x2="16" y2="-8" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-6" y1="10" x2="-10" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="2" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Figure D3 · pot on head · x=209 -->
+  <g transform="translate(209,52)">
+    <ellipse cx="0" cy="-42" rx="7" ry="3.5" fill="#a8472a"/>
+    <line x1="0" y1="-38.5" x2="0" y2="-31" stroke="#a8472a" stroke-width="1.0"/>
+    <circle cx="0" cy="-25" r="4.5" fill="#a8472a"/>
+    <path d="M -7,-18 L 7,-18 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -6,10 L 6,10 Z" fill="#a8472a"/>
+    <line x1="-7" y1="-18" x2="-7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7" y1="-18" x2="7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-6" y1="10" x2="-9" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="3" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═══════════════════════════
+       HUT  — central, x=290
+  ═══════════════════════════ -->
+  <g transform="translate(290,72)">
+    <!-- rectangle body -->
+    <rect x="-22" y="-50" width="44" height="50" fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <!-- triangle roof -->
+    <path d="M -26,-50 L 0,-82 L 26,-50 Z" fill="none" stroke="#a8472a" stroke-width="1.2" stroke-linejoin="round"/>
+    <!-- door (filled) -->
+    <rect x="-7" y="-22" width="14" height="22" fill="#a8472a"/>
+    <!-- small window -->
+    <rect x="-18" y="-42" width="10" height="10" fill="none" stroke="#a8472a" stroke-width="0.8"/>
+    <rect x="8" y="-42" width="10" height="10" fill="none" stroke="#a8472a" stroke-width="0.8"/>
+  </g>
+
+  <!-- ═══════════════════════════
+       SUN  — (330, 18)
+  ═══════════════════════════ -->
+  <circle cx="330" cy="18" r="11" fill="none" stroke="#a8472a" stroke-width="1.1"/>
+  <!-- 8 rays -->
+  <line x1="330" y1="4"  x2="330" y2="0"  stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="330" y1="32" x2="330" y2="36" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="316" y1="18" x2="312" y2="18" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="344" y1="18" x2="348" y2="18" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="320" y1="8"  x2="317" y2="5"  stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="340" y1="8"  x2="343" y2="5"  stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="320" y1="28" x2="317" y2="31" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="340" y1="28" x2="343" y2="31" stroke="#a8472a" stroke-width="1.0" stroke-linecap="round"/>
+  <!-- inner ring -->
+  <circle cx="330" cy="18" r="5" fill="none" stroke="#a8472a" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ═══════════════════════════
+       CLAY POT (matka) — x=390
+  ═══════════════════════════ -->
+  <g transform="translate(390,72)">
+    <!-- belly -->
+    <path d="M -4,-42 Q -18,-38 -18,-22 Q -18,-6 0,0 Q 18,-6 18,-22 Q 18,-38 4,-42 Z"
+          fill="none" stroke="#a8472a" stroke-width="1.1"/>
+    <!-- neck -->
+    <rect x="-4" y="-48" width="8" height="8" fill="none" stroke="#a8472a" stroke-width="1.0"/>
+    <!-- rim -->
+    <ellipse cx="0" cy="-48" rx="6" ry="2.5" fill="none" stroke="#a8472a" stroke-width="0.9"/>
+    <!-- belly stripe -->
+    <path d="M -15,-28 Q 0,-22 15,-28" fill="none" stroke="#a8472a" stroke-width="0.6"/>
+  </g>
+
+  <!-- ═══════════════════════════
+       RIGHT PROCESSION  — 2 figures walking left (mirrored)
+       Waists at y=52.
+  ═══════════════════════════ -->
+
+  <!-- Figure R1 · pot on head · x=436 (mirrored) -->
+  <g transform="translate(436,52) scale(-1,1)">
+    <ellipse cx="0" cy="-42" rx="7" ry="3.5" fill="#a8472a"/>
+    <line x1="0" y1="-38.5" x2="0" y2="-31" stroke="#a8472a" stroke-width="1.0"/>
+    <circle cx="0" cy="-25" r="4.5" fill="#a8472a"/>
+    <path d="M -7,-18 L 7,-18 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -6,10 L 6,10 Z" fill="#a8472a"/>
+    <line x1="-7" y1="-18" x2="-7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7" y1="-18" x2="7" y2="-38" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-6" y1="10" x2="-9" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="3" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Figure R2 · walking · x=473 (mirrored) -->
+  <g transform="translate(473,52) scale(-1,1)">
+    <circle cx="0" cy="-25" r="4.5" fill="#a8472a"/>
+    <path d="M -7,-18 L 7,-18 L 0,0 Z" fill="#a8472a"/>
+    <path d="M 0,0 L -6,10 L 6,10 Z" fill="#a8472a"/>
+    <line x1="-7" y1="-18" x2="-18" y2="-10" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="7" y1="-18" x2="16" y2="-8" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="-6" y1="10" x2="-10" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="2" y2="20" stroke="#a8472a" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═══════════════════════════
+       RIGHT FRAMING TREE  (x=545)
+  ═══════════════════════════ -->
+  <path d="M 545,24 L 518,72 L 572,72 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M 545,8 L 534,24 L 556,24 Z"
+        fill="none" stroke="#a8472a" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="545" cy="8" r="2" fill="#a8472a"/>
+  <circle cx="534" cy="24" r="1.5" fill="#a8472a"/>
+  <circle cx="556" cy="24" r="1.5" fill="#a8472a"/>
+
+  <!-- ═══════════════════════════
+       V-WING BIRDS  (sky)
+  ═══════════════════════════ -->
+  <path d="M 244,14 Q 248,10 252,14" fill="none" stroke="#a8472a" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M 370,8  Q 374,4  378,8"  fill="none" stroke="#a8472a" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M 500,12 Q 504,8  508,12" fill="none" stroke="#a8472a" stroke-width="0.9" stroke-linecap="round"/>
+
+</svg>
