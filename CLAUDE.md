@@ -2,6 +2,32 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Source of truth
+
+`CLAUDE.md` is the living **brand book + implementation guide** for this project.
+
+It must always describe the project **as it currently is**, not as a history of what changed. Do **not** use it like release notes or commit history. Update it whenever a durable project truth changes.
+
+### What must be updated here when changed
+
+- Brand positioning, voice, messaging, or audience
+- Colour palette, token names, gradients, or product colour assignments
+- Typography, font families, font usage rules, or script usage
+- Layout systems, page structure, shared components, spacing rules, or responsive behaviour
+- Illustration systems, logo usage, Warli rules, or bottle construction rules
+- Product catalogue structure, product count, product page anatomy, or navigation structure
+- Contact flows, ordering flows, checkout behaviour, or external links that define site behaviour
+- Any API, backend, CMS, form handler, analytics, automation, or third-party integration added later
+- Deployment method, hosting assumptions, preview workflow, or environment requirements
+
+### What does not belong here
+
+- Commit-by-commit summaries
+- Temporary experiments that were reverted
+- Task logs, TODO lists, or debugging notes
+
+When making changes, always ask: **will a future teammate need this to understand the current brand/system?** If yes, add or revise the relevant section in `CLAUDE.md`.
+
 ## Deployment
 
 This is a **zero-build static site** — no bundler, no Node, no `npm install`. Every file is served directly.
@@ -116,7 +142,7 @@ Each bottle has a **unique gradient colour** that signals its identity at a glan
 
 The site is styled as a **hand-typed letter from a kitchen** — editorial, slow, unhurried. Typography is primarily EB Garamond (serif). Inter is used only for small tracking-heavy labels. Caveat (handwriting) is used sparingly for signoffs. Script-level Devanagari (Hindi) and Telugu appear as cultural markers alongside English.
 
-Tone markers: no bullet-point marketing language, no "premium" / "natural" / "eco" adjectives. Product descriptions are first-person observational prose. All kicker labels are `lowercase` with `letter-spacing: 0.28em+`.
+Tone markers: no bullet-point marketing language, no "premium" / "natural" / "eco" adjectives. Product descriptions are first-person observational prose. The site voice should read as **the owner narrating directly**, so avoid third-person references like "Kavita," "she," or "her" in core brand copy unless a historical quotation requires it. All kicker labels are `lowercase` with `letter-spacing: 0.28em+`.
 
 ## Adding a new product
 
