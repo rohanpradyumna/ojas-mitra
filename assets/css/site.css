@@ -43,6 +43,9 @@ html, body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Subtle paper grain — a watermark of texture */
@@ -131,10 +134,13 @@ a {
   text-decoration-thickness: 0.5px;
   text-decoration-color: var(--rule);
   transition: color 200ms ease, text-decoration-color 200ms ease;
+  touch-action: manipulation;
 }
-a:hover {
-  color: var(--terracotta);
-  text-decoration-color: var(--terracotta);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--terracotta);
+    text-decoration-color: var(--terracotta);
+  }
 }
 
 /* ----- Layout primitives ----- */
@@ -204,8 +210,13 @@ a:hover {
   color: var(--clay-warm);
   position: relative;
   padding: 4px 0;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.site-header nav a:hover { color: var(--terracotta); }
+@media (hover: hover) and (pointer: fine) {
+  .site-header nav a:hover { color: var(--terracotta); }
+}
 .site-header nav a.active::after {
   content: "";
   position: absolute;
@@ -258,14 +269,22 @@ a:hover {
   text-decoration-thickness: 0.5px;
   text-decoration-color: var(--rule);
 }
-.text-link:hover { color: var(--terracotta-deep); }
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover { color: var(--terracotta-deep); }
+}
 .text-link .arrow {
   display: inline-block;
   margin-left: 4px;
   transition: transform 250ms ease;
   text-decoration: none;
 }
-.text-link:hover .arrow { transform: translateX(4px); }
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover .arrow { transform: translateX(4px); }
+}
+.text-link:active {
+  opacity: 0.75;
+  transition: opacity 100ms ease-out;
+}
 
 /* ----- Hero (home) — letter-style editorial ----- */
 .hero {
@@ -477,10 +496,20 @@ a:hover {
   color: inherit;
   padding: 24px 18px 28px;
   position: relative;
-  transition: background 250ms ease;
+  transition: transform 160ms ease-out, background 250ms ease;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.shelf-preview .item:hover {
-  background: rgba(168, 71, 42, 0.04);
+@media (hover: hover) and (pointer: fine) {
+  .shelf-preview .item:hover {
+    background: rgba(168, 71, 42, 0.04);
+  }
+}
+.shelf-preview .item:active {
+  background: rgba(168, 71, 42, 0.07);
+  transform: scale(0.985);
+  transition: transform 100ms ease-out, background 100ms;
 }
 .shelf-preview .item .bottle-frame {
   aspect-ratio: 3 / 4;
@@ -545,6 +574,10 @@ a:hover {
   text-decoration: none;
   color: inherit;
   position: relative;
+  transition: transform 160ms ease-out;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .shelf-grid .product .bottle-frame {
   aspect-ratio: 3 / 4;
@@ -596,7 +629,13 @@ a:hover {
   color: var(--clay-soft);
   max-width: 36ch;
 }
-.shelf-grid .product:hover .name { color: var(--terracotta-deep); }
+@media (hover: hover) and (pointer: fine) {
+  .shelf-grid .product:hover .name { color: var(--terracotta-deep); }
+}
+.shelf-grid .product:active {
+  transform: scale(0.985);
+  transition: transform 100ms ease-out;
+}
 
 @media (max-width: 980px) { .shelf-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px) { .shelf-grid { grid-template-columns: 1fr; } }
@@ -731,6 +770,8 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 18px;
+  touch-action: manipulation;
+  transition: transform 160ms ease-out;
 }
 .also-on-shelf .row .mini {
   width: 56px; height: 72px;
@@ -751,7 +792,13 @@ a:hover {
   font-size: 14px;
   color: var(--clay-soft);
 }
-.also-on-shelf .row a:hover .info .name { color: var(--terracotta-deep); }
+@media (hover: hover) and (pointer: fine) {
+  .also-on-shelf .row a:hover .info .name { color: var(--terracotta-deep); }
+}
+.also-on-shelf .row a:active {
+  transform: scale(0.97);
+  transition: transform 100ms ease-out;
+}
 
 @media (max-width: 720px) { .also-on-shelf .row { grid-template-columns: 1fr; gap: 18px; } }
 
@@ -865,10 +912,17 @@ a:hover {
   align-items: baseline;
   text-decoration: none;
   color: inherit;
-  transition: padding-left 200ms ease;
+  transition: transform 200ms ease;
+  touch-action: manipulation;
 }
-.journal-list .entry:hover { padding-left: 16px; }
-.journal-list .entry:hover h3 { color: var(--terracotta-deep); }
+@media (hover: hover) and (pointer: fine) {
+  .journal-list .entry:hover { transform: translateX(12px); }
+  .journal-list .entry:hover h3 { color: var(--terracotta-deep); }
+}
+.journal-list .entry:active {
+  transform: translateX(8px);
+  transition: transform 100ms ease-out;
+}
 .journal-list .entry:last-child { border-bottom: 0; }
 .journal-list .entry .date {
   font-family: var(--serif);
@@ -992,7 +1046,9 @@ a:hover {
   display: block;
   margin-bottom: 8px;
 }
-.site-footer .col a:hover { color: var(--terracotta-deep); }
+@media (hover: hover) and (pointer: fine) {
+  .site-footer .col a:hover { color: var(--terracotta-deep); }
+}
 .site-footer .signoff {
   font-family: var(--hand);
   font-size: 28px;
@@ -1034,4 +1090,15 @@ a:hover {
   pointer-events: none;
   opacity: 0.08;
   z-index: 0;
+}
+
+/* ----- Reduced motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  .journal-list .entry {
+    transition: none;
+  }
+  .journal-list .entry:hover,
+  .journal-list .entry:active {
+    transform: none;
+  }
 }

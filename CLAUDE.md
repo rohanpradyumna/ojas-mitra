@@ -37,7 +37,7 @@ uploads/                 → Raw product photos (WhatsApp JPEGs, not yet wired u
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage — hero, maker story, 4-product preview, testimonials, invitation |
+| `index.html` | Homepage — hero, maker story, scroll-reveal product stories, 4-product preview, testimonials, invitation |
 | `shelf.html` | Full product catalogue (3-column grid, all 7 products) |
 | `product-*.html` | Individual product pages (7 files, identical layout) |
 | `our-way.html` | Brand philosophy / longform |
@@ -46,7 +46,7 @@ uploads/                 → Raw product photos (WhatsApp JPEGs, not yet wired u
 
 ### CSS architecture
 
-All styling is in **`assets/css/site.css`** with a single `<style>` block in `index.html` for page-specific overrides (hero layout, shelf section, shelf product tints). No other page has inline styles of substance.
+All styling is in **`assets/css/site.css`** with a single `<style>` block in `index.html` for page-specific overrides (hero layout, scroll-reveal product stories, shelf section, shelf product tints). `index.html` also contains the only page-specific JavaScript: a small inline `IntersectionObserver` used for the homepage product-story reveal sequence. No other page has inline styles or scripts of substance.
 
 **Design tokens** (defined as CSS custom properties on `:root`):
 - Palette: `--cream`, `--cream-warm`, `--cream-deep`, `--terracotta`, `--terracotta-soft`, `--terracotta-deep`, `--clay`, `--clay-warm`, `--clay-soft`, `--sage`, `--olive`, `--indigo`, `--marigold`
@@ -65,6 +65,29 @@ All styling is in **`assets/css/site.css`** with a single `<style>` block in `in
 - `.also-on-shelf` — 3-column row of mini product links (bottom of product pages)
 
 The paper grain texture is an inline SVG data-URI on `body::before` (feTurbulence noise). All page content sits at `z-index: 2` to render above it.
+
+### Homepage product stories
+
+The homepage includes a dedicated **scroll-reveal product stories** section that sits between the maker block and the shelf preview. It is not a routing shortcut to `shelf.html`; it is an immersive editorial section on the home page itself.
+
+Structure:
+- `.product-stories` — full-width atmospheric section with soft grid and cream gradients
+- `.story-step` — one full-screen-ish product panel per product
+- `.story-stage` — sticky left-side visual zone
+- `.story-card` — right-side content card
+- `.story-piece` — staggered reveal fragments within each card
+
+Interaction rules:
+- Desktop uses a two-column composition: **sticky product visual on the left, revealing text on the right**
+- Mobile collapses to a one-column stack with the image above the content
+- Each `.story-step` becomes `.is-visible` and `.is-active` via `IntersectionObserver`
+- The reveal sequence should feel slow and editorial: kicker first, then title, then subhead, then description, then the ingredient list
+- Reduced-motion users should see all content immediately with no staged transitions
+
+Current content implementation:
+- The section is populated with **5 product entries**
+- The left-side visual currently uses the same temporary photographic asset for all five entries: `uploads/bg_rem_laundry.jpeg`
+- That image is a placeholder stand-in for future background-removed product cutouts; when product-specific assets are ready, they should replace the repeated placeholder one-for-one
 
 ### Warli SVG system
 
