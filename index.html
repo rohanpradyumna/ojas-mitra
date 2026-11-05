@@ -24,7 +24,7 @@
   /* ── Hero editorial override ── */
   .hero-editorial {
     padding: 0 0 0 0;
-    min-height: 94vh;
+    min-height: calc(100svh - 112px);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 36px 64px 0;
+    padding: clamp(18px, 3vh, 32px) clamp(24px, 4vw, 64px) 0;
   }
   .hero-kicker {
     font-family: var(--sans);
@@ -70,12 +70,12 @@
   .hero-top-rule {
     border: 0;
     border-top: 1px solid var(--rule);
-    margin: 28px 64px 0;
+    margin: clamp(16px, 2.4vh, 28px) clamp(24px, 4vw, 64px) 0;
   }
   .hero-bottom-rule {
     border: 0;
     border-top: 1px solid var(--rule-soft);
-    margin: 0 64px;
+    margin: 0 clamp(24px, 4vw, 64px);
   }
 
   /* ── HEADLINE BLOCK ── */
@@ -83,7 +83,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: end;          /* baseline-align the two halves */
-    padding: 72px 64px 56px;
+    padding: clamp(28px, 6vh, 72px) clamp(24px, 4vw, 64px) clamp(24px, 4vh, 56px);
     flex: 1;
     gap: 0;
   }
@@ -91,7 +91,7 @@
     font-family: var(--serif);
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(68px, 9.8vw, 148px);
+    font-size: clamp(54px, min(8.5vw, 12.5svh), 128px);
     line-height: 0.93;
     letter-spacing: -0.022em;
     color: var(--clay);
@@ -102,7 +102,7 @@
   .hero-hl-coda {
     font-family: var(--serif);
     font-style: italic;
-    font-size: clamp(36px, 5.2vw, 80px);
+    font-size: clamp(28px, min(4.6vw, 7svh), 68px);
     line-height: 1.02;
     letter-spacing: -0.016em;
     color: var(--terracotta);
@@ -116,8 +116,8 @@
   .hero-warli-wrap {
     width: 100%;
     line-height: 0;
-    margin-top: 8px;
-    margin-bottom: 32px;
+    margin-top: 4px;
+    margin-bottom: clamp(12px, 2.5vh, 28px);
   }
   .hero-warli-img {
     width: 100%;
@@ -125,7 +125,7 @@
     display: block;
     opacity: 0.16;
     /* ensure it never gets too tall on small viewports */
-    max-height: 160px;
+    max-height: min(14svh, 140px);
     object-fit: cover;
     object-position: center;
   }
@@ -135,7 +135,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 24px 64px 64px;
+    padding: clamp(14px, 2vh, 24px) clamp(24px, 4vw, 64px) clamp(24px, 5vh, 56px);
     gap: 48px;
   }
   .hero-sub {
@@ -154,11 +154,12 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 880px) {
-    .hero-dateline { padding: 28px 28px 0; }
+    .hero-editorial { min-height: auto; }
+    .hero-dateline { padding: 22px 28px 0; }
     .hero-top-rule, .hero-bottom-rule { margin-left: 28px; margin-right: 28px; }
     .hero-hl-wrap {
       grid-template-columns: 1fr;
-      padding: 48px 28px 40px;
+      padding: clamp(32px, 7vh, 48px) 28px clamp(28px, 5vh, 40px);
       gap: 12px;
     }
     .hero-hl-coda { text-align: left; }
@@ -171,7 +172,9 @@
   }
   @media (max-width: 540px) {
     .hero-editorial { min-height: 0; }
-    .hero-warli-img { max-height: 100px; }
+    .hero-hl-main { font-size: clamp(48px, 14vw, 68px); }
+    .hero-hl-coda { font-size: clamp(28px, 9vw, 42px); }
+    .hero-warli-img { max-height: 72px; }
   }
 
   /* ══════════════════════════════════════════════════════════
@@ -362,6 +365,339 @@
   }
 
   /* ══════════════════════════════════════════════════════════
+     PRODUCT STORIES — scroll reveal feature section
+  ══════════════════════════════════════════════════════════ */
+  .product-stories {
+    position: relative;
+    padding: 112px 0 48px;
+    background:
+      radial-gradient(circle at 15% 18%, rgba(240, 212, 164, 0.34), transparent 34%),
+      radial-gradient(circle at 88% 24%, rgba(168, 71, 42, 0.1), transparent 28%),
+      linear-gradient(180deg, rgba(241, 231, 211, 0.94) 0%, rgba(235, 220, 192, 0.96) 52%, rgba(241, 231, 211, 0.98) 100%);
+    overflow: hidden;
+  }
+  .product-stories::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(168, 71, 42, 0.06) 0 1px, transparent 1px 100%),
+      linear-gradient(180deg, rgba(168, 71, 42, 0.05) 0 1px, transparent 1px 100%);
+    background-size: 160px 160px;
+    opacity: 0.24;
+    pointer-events: none;
+  }
+  .stories-head {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+  }
+  .stories-head .right {
+    max-width: 48rem;
+  }
+  .stories-rail {
+    position: relative;
+    z-index: 2;
+  }
+  .story-step {
+    display: grid;
+    --story-panel-height: calc(76vh + 62px);
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap: 56px;
+    min-height: 112vh;
+    align-items: start;
+    padding: 28px 0 0;
+  }
+  .story-stage {
+    position: sticky;
+    top: 200px;
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .story-stage-frame {
+    width: min(100%, 540px);
+    box-sizing: border-box;
+    height: var(--story-panel-height);
+    min-height: var(--story-panel-height);
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .story-stage-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+  .story-stage-image::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 12%;
+    right: 12%;
+    bottom: -3px;
+    height: 42px;
+    background:
+      radial-gradient(ellipse at center, rgba(42, 29, 20, 0.28) 0%, rgba(42, 29, 20, 0.15) 28%, transparent 68%),
+      radial-gradient(ellipse at center, rgba(42, 29, 20, 0.14) 0%, transparent 72%);
+    filter: blur(10px);
+    opacity: 0.08;
+    transform: scaleX(0.72);
+    transform-origin: center;
+    transition: opacity 2100ms cubic-bezier(0.16, 1, 0.3, 1), transform 2400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .story-stage-image img {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    max-width: 100%;
+    max-height: min(66vh, 620px);
+    max-width: min(100%, 460px);
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: contrast(1.04) blur(0.8px);
+    transform-origin: center bottom;
+    transform: scale(0.82);
+    opacity: 0.04;
+    will-change: transform, opacity, filter;
+    transition:
+      transform 2400ms cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 2100ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1800ms ease;
+  }
+  .story-stage-meta {
+    display: none;
+  }
+  .story-stage-meta .stage-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: lowercase;
+    color: var(--terracotta);
+  }
+  .story-stage-meta .stage-count {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--clay-soft);
+  }
+  .story-copy {
+    align-self: center;
+    padding: 4vh 0 10vh;
+  }
+  .story-card {
+    position: relative;
+    box-sizing: border-box;
+    height: var(--story-panel-height);
+    padding: clamp(26px, 3vw, 38px);
+    background: rgba(249, 242, 231, 0.78);
+    border: 1px solid rgba(168, 71, 42, 0.12);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+      0 30px 50px -34px rgba(42, 29, 20, 0.28);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+  .story-card::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(168, 71, 42, 0.08);
+    pointer-events: none;
+  }
+  .story-card > * {
+    position: relative;
+    z-index: 1;
+  }
+  .story-piece {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 640ms ease,
+      transform 760ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .story-step.is-visible .story-piece {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .story-step.is-visible .story-piece:nth-child(1) { transition-delay: 40ms; }
+  .story-step.is-visible .story-piece:nth-child(2) { transition-delay: 160ms; }
+  .story-step.is-visible .story-piece:nth-child(3) { transition-delay: 280ms; }
+  .story-step.is-visible .story-piece:nth-child(4) { transition-delay: 400ms; }
+  .story-step.is-visible .story-piece:nth-child(5) { transition-delay: 520ms; }
+  .story-step.is-visible .story-piece:nth-child(6) { transition-delay: 640ms; }
+  .story-step.is-active .story-stage-image img {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: contrast(1.04) blur(0);
+  }
+  .story-step.is-active .story-stage-image::after {
+    opacity: 0.78;
+    transform: scaleX(1);
+  }
+  .story-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .story-title {
+    font-size: clamp(46px, 4.6vw, 72px);
+    line-height: 0.92;
+    margin-bottom: 12px;
+  }
+  .story-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.55vw, 26px);
+    line-height: 1.34;
+    color: var(--clay-warm);
+    margin: 0 0 14px;
+    max-width: 21ch;
+  }
+  .story-script {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--terracotta);
+    font-style: normal;
+  }
+  .story-description {
+    font-size: clamp(13px, 1vw, 15px);
+    line-height: 1.5;
+    max-width: 52ch;
+    color: var(--clay);
+    margin-bottom: 16px;
+  }
+  .story-description p:last-child {
+    margin-bottom: 0;
+  }
+  .story-meta {
+    padding-top: 16px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .story-meta-title {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .story-meta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .story-meta li {
+    padding: 0;
+    border: 0;
+    font-family: var(--serif);
+    font-size: clamp(14px, 1.05vw, 17px);
+    line-height: 1.38;
+    color: var(--clay-warm);
+  }
+  .story-meta li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .story-step[data-accent="amber"] .story-kicker,
+  .story-step[data-accent="amber"] .story-script,
+  .story-step[data-accent="amber"] .stage-label {
+    color: #b7652b;
+  }
+  .story-step[data-accent="sage"] .story-kicker,
+  .story-step[data-accent="sage"] .story-script,
+  .story-step[data-accent="sage"] .stage-label {
+    color: #60714c;
+  }
+  .story-step[data-accent="olive"] .story-kicker,
+  .story-step[data-accent="olive"] .story-script,
+  .story-step[data-accent="olive"] .stage-label {
+    color: #54603f;
+  }
+  .story-step[data-accent="mint"] .story-kicker,
+  .story-step[data-accent="mint"] .story-script,
+  .story-step[data-accent="mint"] .stage-label {
+    color: #4b7d62;
+  }
+  .story-step[data-accent="indigo"] .story-kicker,
+  .story-step[data-accent="indigo"] .story-script,
+  .story-step[data-accent="indigo"] .stage-label {
+    color: #466193;
+  }
+  @media (max-width: 1120px) {
+    .story-step {
+      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+      gap: 36px;
+    }
+    .story-card {
+      padding: 26px 28px;
+    }
+    .story-description {
+      max-width: 46ch;
+    }
+  }
+  @media (max-width: 920px) {
+    .product-stories {
+      padding-top: 84px;
+    }
+    .story-step {
+      grid-template-columns: 1fr;
+      --story-panel-height: auto;
+      min-height: 0;
+      gap: 18px;
+      padding: 28px 0 48px;
+    }
+    .story-stage {
+      position: relative;
+      top: auto;
+      height: auto;
+    }
+    .story-stage-frame {
+      height: auto;
+      min-height: 0;
+      padding: 0;
+    }
+    .story-stage-image img {
+      max-height: 56vh;
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    .story-copy {
+      padding: 0 0 18px;
+    }
+    .story-card {
+      height: auto;
+      overflow: visible;
+    }
+    .story-meta ul {
+      grid-template-columns: 1fr;
+    }
+    .story-title {
+      font-size: clamp(44px, 10vw, 68px);
+    }
+    .story-sub,
+    .story-description,
+    .story-meta li {
+      max-width: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .story-piece,
+    .story-stage-image img {
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════
      FINAL INVITATION — warmer typography
   ══════════════════════════════════════════════════════════ */
   .invitation-section {
@@ -470,6 +806,186 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT STORIES — SCROLL REVEAL ============ -->
+  <section class="product-stories">
+    <div class="container">
+      <div class="section-head stories-head">
+        <div class="left">five bottles, slowly</div>
+        <div class="right">
+          <h2>Stay here a little longer. Let each bottle arrive before the next one does.</h2>
+          <p class="lead">This section does not send you to the shelf. It lets the products unfold here, one after another, with the bottle held still on one side and the story revealing itself on the other.</p>
+        </div>
+      </div>
+
+      <div class="stories-rail">
+        <article class="story-step" data-accent="amber">
+          <div class="story-stage">
+            <div class="story-stage-frame">
+              <div class="story-stage-image">
+                <img src="uploads/bg_rem_laundry-cutout-tight.png" alt="Product bottle photograph"/>
+              </div>
+              <div class="story-stage-meta">
+                <span class="stage-label">dishwash, held in the light</span>
+                <span class="stage-count">1 / 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="story-card">
+              <span class="story-kicker kicker story-piece">a bio-enzyme essential</span>
+              <h2 class="story-title story-piece">Dishwash</h2>
+              <p class="story-sub story-piece">Tough on grease. Gentle on the hands that wash up after every meal.<span class="deva story-script">बर्तन धोना</span></p>
+              <div class="story-description story-piece">
+                <p>This is the bottle that sits beside the kitchen sink. It is what we use to wash the kadhai after the day's cooking, the steel plates after dinner, and the glass jars after the chutney has been finished.</p>
+                <p>The fragrance is lemon and a faint note of lemongrass. It is the smell of a kitchen being put to bed for the night.</p>
+              </div>
+              <div class="story-meta story-piece">
+                <span class="story-meta-title kicker">what is inside</span>
+                <ul>
+                  <li>Bio-enzymes from citrus peel, jaggery and water, fermented for ninety days.</li>
+                  <li>Saponified coconut oil with cold-pressed lemon extract.</li>
+                  <li>Lemongrass, tulsi and aloe in a gentle plant-derived base.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-step" data-accent="sage">
+          <div class="story-stage">
+            <div class="story-stage-frame">
+              <div class="story-stage-image">
+                <img src="uploads/bg_rem_laundry-cutout-tight.png" alt="Product bottle photograph"/>
+              </div>
+              <div class="story-stage-meta">
+                <span class="stage-label">hand wash, near the basin</span>
+                <span class="stage-count">2 / 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="story-card">
+              <span class="story-kicker kicker story-piece">a bio-enzyme essential</span>
+              <h2 class="story-title story-piece">Hand wash</h2>
+              <p class="story-sub story-piece">Aloe and tulsi, in a quiet base. For hands that have been outside, or inside, or both.<span class="deva story-script">हाथ धोना</span></p>
+              <div class="story-description story-piece">
+                <p>A hand wash that you can keep beside the kitchen sink and the bathroom basin without thinking twice. The aloe softens the skin; the tulsi steadies the cleaning; the base is plant-derived and biodegradable.</p>
+                <p>There is no synthetic fragrance, only the smell of the leaves themselves, and a Telugu-labelled version sits in the homes nearest ours.</p>
+              </div>
+              <div class="story-meta story-piece">
+                <span class="story-meta-title kicker">what is inside</span>
+                <ul>
+                  <li>Bio-enzymes with aloe vera juice and tulsi leaf extract.</li>
+                  <li>Saponified coconut oil, neem leaf infusion and plant glycerine.</li>
+                  <li>A plant-derived foaming base that keeps the wash mild.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-step" data-accent="olive">
+          <div class="story-stage">
+            <div class="story-stage-frame">
+              <div class="story-stage-image">
+                <img src="uploads/bg_rem_laundry-cutout-tight.png" alt="Product bottle photograph"/>
+              </div>
+              <div class="story-stage-meta">
+                <span class="stage-label">floor cleaner, after the mop</span>
+                <span class="stage-count">3 / 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="story-card">
+              <span class="story-kicker kicker story-piece">a bio-enzyme essential</span>
+              <h2 class="story-title story-piece">Floor cleaner</h2>
+              <p class="story-sub story-piece">Neem, lemon, eucalyptus. The way a house smells just after the morning mop.<span class="deva story-script">फ़र्श साफ़ करना</span></p>
+              <div class="story-description story-piece">
+                <p>The bottle that sits in the corner near the broom. A capful into a bucket of water is enough; the floors come up clean and the room takes on the smell of a temple courtyard at dawn.</p>
+                <p>It is safe on tiles, marble, granite, wood and the strange in-between surfaces that old Indian houses have. Pets walk on it. Children sit on it. We thought about that.</p>
+              </div>
+              <div class="story-meta story-piece">
+                <span class="story-meta-title kicker">what is inside</span>
+                <ul>
+                  <li>Bio-enzyme citrus base with neem leaf extract.</li>
+                  <li>Lemon and eucalyptus essential oils for the bright herbal lift.</li>
+                  <li>Plant-derived surfactants with tulsi and fermented citric acid.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-step" data-accent="mint">
+          <div class="story-stage">
+            <div class="story-stage-frame">
+              <div class="story-stage-image">
+                <img src="uploads/bg_rem_laundry-cutout-tight.png" alt="Product bottle photograph"/>
+              </div>
+              <div class="story-stage-meta">
+                <span class="stage-label">vegetables &amp; fruits, by the sink</span>
+                <span class="stage-count">4 / 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="story-card">
+              <span class="story-kicker kicker story-piece">a bio-enzyme essential</span>
+              <h2 class="story-title story-piece">Vegetables &amp; fruits</h2>
+              <p class="story-sub story-piece">For what comes off the cart, the field, or someone&rsquo;s hands. Soak, rinse, eat.<span class="deva story-script">फल और सब्ज़ी</span></p>
+              <div class="story-description story-piece">
+                <p>Vegetables and fruits in India have travelled. They have been handled by many hands, sat on carts in the sun, and may have been sprayed once or twice.</p>
+                <p>This cleanser is for taking off what should not be on them, without leaving a taste of soap behind. Spray, soak for two minutes, rinse with water. That is all.</p>
+              </div>
+              <div class="story-meta story-piece">
+                <span class="story-meta-title kicker">what is inside</span>
+                <ul>
+                  <li>Bio-enzyme citrus base with edible-grade plant surfactants.</li>
+                  <li>Citric acid and cold-pressed lemon for a clean rinse.</li>
+                  <li>A pared-back formula made to stay close to the kitchen sink.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-step" data-accent="indigo">
+          <div class="story-stage">
+            <div class="story-stage-frame">
+              <div class="story-stage-image">
+                <img src="uploads/bg_rem_laundry-cutout-tight.png" alt="Laundry liquid bottle photograph"/>
+              </div>
+              <div class="story-stage-meta">
+                <span class="stage-label">laundry liquid, ready for wash day</span>
+                <span class="stage-count">5 / 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="story-card">
+              <span class="story-kicker kicker story-piece">a bio-enzyme essential</span>
+              <h2 class="story-title story-piece">Laundry liquid</h2>
+              <p class="story-sub story-piece">Low foam, for buckets and machines alike. Colours remember themselves.<span class="deva story-script">कपड़े धोना</span></p>
+              <div class="story-description story-piece">
+                <p>A laundry liquid for the way most Indian families actually do laundry: sometimes in a machine, sometimes by hand in a bucket, sometimes with a stone in the courtyard.</p>
+                <p>It is low-foam, so it rinses out cleanly however you wash. It does not strip colour from the cottons your mother gave you, and it leaves old cotton looking like old cotton.</p>
+              </div>
+              <div class="story-meta story-piece">
+                <span class="story-meta-title kicker">what is inside</span>
+                <ul>
+                  <li>Bio-enzymes with saponified coconut and plant-derived stain enzymes.</li>
+                  <li>Soapnut extract and soda ash for everyday wash loads.</li>
+                  <li>Lavender with a citrus blend for a light clean finish.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -664,6 +1180,39 @@
     <span class="deva">शुभं भवतु</span> &nbsp;·&nbsp; may your home be well kept &nbsp;·&nbsp; <span>&copy; 2026 Ojas Mithra</span>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const steps = Array.from(document.querySelectorAll(".story-step"));
+    if (!steps.length) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      steps.forEach((step) => {
+        step.classList.add("is-visible", "is-active");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+
+          entry.target.classList.toggle("is-active", entry.intersectionRatio >= 0.28);
+        });
+      },
+      {
+        threshold: [0.08, 0.28, 0.64],
+        rootMargin: "-4% 0px -4% 0px"
+      }
+    );
+
+    steps.forEach((step) => observer.observe(step));
+  })();
+</script>
 
 </body>
 </html>
