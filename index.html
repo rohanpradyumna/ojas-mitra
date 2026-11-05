@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&family=Tiro+Devanagari+Hindi:ital@0;1&family=Tiro+Telugu:ital@0;1&family=Caveat:wght@500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/site.css"/>
+<script src="assets/js/motion.js" defer></script>
 
 <style>
   /* Maker section paper frame */
@@ -442,7 +443,7 @@
   <section class="section">
     <div class="container">
 
-      <div class="section-head">
+      <div class="section-head fade-up">
         <div class="left">the maker</div>
         <div class="right">
           <h2>A promise kept in a courtyard.</h2>
@@ -450,7 +451,7 @@
         </div>
       </div>
 
-      <div class="maker">
+      <div class="maker fade-up" style="--delay:120ms">
         <div class="frame" aria-hidden="true">
           <img class="placeholder-portrait" src="assets/img/kavita.png" alt="Kavita Ajay on her balcony" style="width: 100%; height: 100%; object-fit: cover;"/>
           <span class="corner-note">Kavita, &rsquo;26</span>
@@ -477,7 +478,7 @@
   <section class="section shelf-section" style="padding-top: 0;">
     <div class="container">
 
-      <div class="section-head offset">
+      <div class="section-head offset fade-up">
         <div class="left">on the shelf</div>
         <div class="right">
           <h2>Seven jars, kept the way we&rsquo;d keep them at home.</h2>
@@ -485,7 +486,7 @@
         </div>
       </div>
 
-      <div class="shelf-preview">
+      <div class="shelf-preview" data-stagger="55">
         <a class="item" href="product-dishwash.html">
           <span class="index-num">i.</span>
           <div class="bottle-frame"><img src="assets/svg/bottles/dishwash.svg" alt=""/></div>
@@ -562,7 +563,7 @@
   <section class="section testimonials-section">
     <div class="container">
 
-      <div class="section-head">
+      <div class="section-head fade-up">
         <div class="left">from the homes</div>
         <div class="right">
           <h2>People who took it home, writing back.</h2>
@@ -570,7 +571,7 @@
         </div>
       </div>
 
-      <div class="testimonials">
+      <div class="testimonials" data-stagger="90">
         <blockquote>
           <p>
             &ldquo;I opened the dishwash and the kitchen smelled of lemon and something older. My grandmother would have approved &mdash; she was a difficult woman to impress.&rdquo;
@@ -607,7 +608,7 @@
 
   <!-- ============ A SECOND, QUIETER INVITATION ============ -->
   <section class="section invitation-section" style="padding-top: 0;">
-    <div class="container narrow" style="text-align: center;">
+    <div class="container narrow fade-up" style="text-align: center;">
       <h2 style="font-style: italic; max-width: 18ch; margin-left: auto; margin-right: auto;">
         If something here finds you, write to us.
       </h2>
@@ -664,6 +665,11 @@
     <span class="deva">शुभं भवतु</span> &nbsp;·&nbsp; may your home be well kept &nbsp;·&nbsp; <span>&copy; 2026 Ojas Mithra</span>
   </div>
 </footer>
+
+<!-- Floating WhatsApp CTA — appears after scrolling past hero -->
+<a href="https://wa.me/919059900349" class="wa-float" aria-label="Enquire on WhatsApp">
+  write to us <span class="wa-arrow">&rarr;</span>
+</a>
 
 </body>
 </html>
