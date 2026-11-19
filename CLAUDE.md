@@ -25,7 +25,14 @@ Live URL: `https://ojas-mitra.vercel.app`
 
 ```
 /                        → HTML pages (flat, no routing layer)
-assets/css/site.css      → Single stylesheet; all CSS lives here
+assets/css/site.css      → Shared stylesheet for every page
+assets/css/home.css      → Homepage scroll experience only (loader, stage, discover, gallery)
+assets/js/motion.js      → Shared micro-interactions (scroll-reveal, sticky header, WhatsApp float)
+assets/js/home.js        → Homepage choreography (GSAP + ScrollTrigger + Lenis)
+assets/vendor/           → Vendored gsap 3.12.5, ScrollTrigger, lenis 1.1.13 (no CDN, no build)
+assets/img/bottles/      → Transparent bottle photos (.webp), one per bio-enzyme product
+assets/img/gallery/      → Product posters used in the homepage gallery (.webp)
+assets/logo/mark.svg     → Current component mark (matka + home + leaves), coloured
 assets/svg/              → Warli illustrations + product bottles
 assets/svg/bottles/      → One SVG per product (7 bottles)
 assets/logo/             → PNG logo lockups + mark
@@ -37,7 +44,7 @@ uploads/                 → Raw product photos (WhatsApp JPEGs, not yet wired u
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage — hero, maker story, 4-product preview, testimonials, invitation |
+| `index.html` | Homepage — loader, pinned bottle carousel → "discover the shelf", horizontal gallery, maker, testimonials, invitation |
 | `shelf.html` | Full product catalogue (3-column grid, all 7 products) |
 | `product-*.html` | Individual product pages (7 files, identical layout) |
 | `our-way.html` | Brand philosophy / longform |
@@ -46,7 +53,17 @@ uploads/                 → Raw product photos (WhatsApp JPEGs, not yet wired u
 
 ### CSS architecture
 
-All styling is in **`assets/css/site.css`** with a single `<style>` block in `index.html` for page-specific overrides (hero layout, shelf section, shelf product tints). No other page has inline styles of substance.
+Shared styling is in **`assets/css/site.css`**. The homepage adds **`assets/css/home.css`** (scoped under `body.home`). No other page has inline styles of substance.
+
+### Homepage scroll experience (`assets/js/home.js`)
+
+One pinned `.stage` runs a single scrubbed GSAP timeline. The timeline only tweens numbers on an `S` state object (`intro`, `p`, `hand`, `rock`); `render()` turns them into bottle transforms every frame.
+- **Hero carousel** (`S.p`): bottles travel right → left. Tilt depends on screen position: +45° at the right edge, upright at centre, −30° at the left edge.
+- **Hand-off** (`S.hand`): the last `.hb--hero` bottle tilts, dips and settles in the centre while the green `.discover` panel wipes up behind it. The other bottles roll off left.
+- **Discover**: per product, the bottle rocks (`S.rock`) and cross-fades to the next label image while the `.d-item` copy and glow colour change.
+- **Gallery**: a separate pinned section whose vertical scroll drives the `.g-track` horizontally.
+
+Bottle images: `assets/img/bottles/*.webp` were generated from `uploads/bg_rem_laundry.jpeg`. The white background was flood-filled out, and "LAUNDRY LIQUID" plus the first tagline line were in-painted and re-set in Roboto Condensed. Replace them with real photography of each bottle when available, keeping the 301×1100 ratio.
 
 **Design tokens** (defined as CSS custom properties on `:root`):
 - Palette: `--cream`, `--cream-warm`, `--cream-deep`, `--terracotta`, `--terracotta-soft`, `--terracotta-deep`, `--clay`, `--clay-warm`, `--clay-soft`, `--sage`, `--olive`, `--indigo`, `--marigold`
