@@ -1,0 +1,298 @@
+import type { Product, ProductSlug } from './types'
+
+/**
+ * Every bottle on the shelf, in shelf order. Copy is first-person and
+ * observational (see CLAUDE.md "Design language"); `*text*` marks italics.
+ */
+export const PRODUCTS: readonly Product[] = [
+  {
+    slug: 'dishwash',
+    name: 'Dishwash',
+    titleLines: ['Dishwash'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'बर्तन धोना',
+    tagline: 'lemon · lemongrass',
+    sub: 'Tough on grease. Gentle on the hands that wash up after every meal.',
+    metaDescription: 'Tough on grease. Gentle on the hands that wash up after every meal.',
+    description: [
+      "This is the bottle that sits beside the kitchen sink. It is what we use to wash the kadhai after the day's cooking, the steel plates after dinner, the glass jars after the chutney has been finished. It does not foam excessively — that is decorative, not useful — but it cuts grease the way a hot cloth and patience would, and it does not leave the hands raw.",
+      'The fragrance is lemon and a faint note of lemongrass. It is the smell of a kitchen being put to bed for the night.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus peel, jaggery, water, fermented 90 days)',
+      'Saponified coconut oil',
+      'Cold-pressed lemon extract',
+      'Lemongrass essential oil',
+      'Tulsi leaf extract',
+      'Aloe vera juice',
+      'Plant-derived foaming agent (decyl glucoside)',
+      'Spring water from a borewell on the property',
+    ],
+    note: 'We collect citrus peels from our own kitchen and the neighbours’. They go into a clay pot with jaggery and water and rest for three months in the shade of the courtyard. The result is a quiet, working liquid that cleans without harshness. This is the base of most of what we make.',
+    howTo: [
+      'One small squeeze in half a basin of warm water is enough.',
+      'Keeps for nine months. Use before that and we will be glad.',
+      'Refills available — bring back the bottle when it is empty.',
+      'Stored away from direct sun, it will be patient.',
+    ],
+    keeps: '9 months',
+    bottle: { src: '/images/bottles/dishwash.webp', width: 301, height: 1100, kind: 'photo' },
+    poster: '/images/gallery/dishwash.webp',
+    tint: '#f3e6b8',
+    accent: '#e0bd48',
+  },
+  {
+    slug: 'handwash',
+    name: 'Hand wash',
+    titleLines: ['Hand', 'wash'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'हाथ धोना',
+    tagline: 'aloe · tulsi',
+    sub: 'Aloe and tulsi, in a quiet base. For hands that have been outside, or inside, or both.',
+    metaDescription:
+      'Aloe and tulsi, in a quiet base. For hands that have been outside, or inside, or both.',
+    description: [
+      'A hand wash that you can keep beside the kitchen sink and the bathroom basin without thinking twice. The aloe softens the skin; the tulsi steadies the cleaning; the base is plant-derived and biodegradable. There is no synthetic fragrance — only the smell of the leaves themselves.',
+      'We make a Telugu-labelled version of this for the homes near ours. Both versions are the same recipe, in the same bottle, with different writing on the label.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus peel, jaggery, water)',
+      'Aloe vera juice (from our own plants)',
+      'Tulsi leaf extract',
+      'Saponified coconut oil',
+      'Neem leaf infusion',
+      'Glycerine (plant-derived)',
+      'Plant-derived foaming agent',
+      'Spring water',
+    ],
+    note: 'The same bio-enzyme base as the dishwash, here in a milder concentration. The aloe and the glycerine make it kind to skin that has done a lot of work that day.',
+    howTo: [
+      'One pump is enough.',
+      'Keeps for nine months from the date on the underside of the label.',
+      'Refills available — bring back the bottle.',
+    ],
+    keeps: '9 months',
+    bottle: { src: '/images/bottles/handwash.webp', width: 301, height: 1100, kind: 'photo' },
+    poster: '/images/gallery/handwash.webp',
+    tint: '#d8ead5',
+    accent: '#7cc286',
+  },
+  {
+    slug: 'toilet-cleaner',
+    name: 'Toilet cleaner',
+    titleLines: ['Toilet', 'cleaner'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'शौचालय',
+    tagline: 'eucalyptus · pine',
+    sub: 'Thick enough to cling. Kind to septic tanks and to the people who clean the bathroom.',
+    metaDescription:
+      'Thick enough to cling. Kind to septic tanks and to the people who clean the bathroom.',
+    description: [
+      'A thicker formulation, so it stays where you put it instead of running into the bowl. It does the work that needs doing — limescale, hard-water marks, the things bathrooms collect — without the chlorine fumes that climb up the stairs and into the rest of the house.',
+      'We thought a long time about the smell. The choice was a floral one, in the end. Not heavy, just enough to say that the room has been cleaned.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus, fermented 120 days for this one)',
+      'Citric acid (from fermented citrus)',
+      'Plant-derived surfactants',
+      'Xanthan gum (for the cling)',
+      'Eucalyptus essential oil',
+      'Pine needle extract',
+      'Geranium essential oil',
+      'Spring water',
+    ],
+    note: 'For this one the enzymes ferment longer — four months instead of three — which gives a more acidic, more dissolving liquid. It is still gentle on septic tanks: bio-enzymes feed the bacteria that septic tanks rely on, rather than killing them.',
+    howTo: [
+      'Apply along the rim. Leave it for ten minutes. Then brush.',
+      'Keeps for twelve months.',
+      'Safe for septic tanks and for plumbing.',
+      'Do not mix with bleach. Nothing here needs bleach.',
+    ],
+    keeps: '12 months',
+    bottle: { src: '/images/bottles/toilet-cleaner.webp', width: 301, height: 1100, kind: 'photo' },
+    poster: '/images/gallery/toilet-cleaner.webp',
+    tint: '#d3e3ef',
+    accent: '#4f98d0',
+  },
+  {
+    slug: 'floor-cleaner',
+    name: 'Floor cleaner',
+    titleLines: ['Floor', 'cleaner'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'फ़र्श साफ़ करना',
+    tagline: 'neem · lemon',
+    sub: 'Neem, lemon, eucalyptus. The way a house smells just after the morning mop.',
+    metaDescription: 'Neem, lemon, eucalyptus. The way a house smells just after the morning mop.',
+    description: [
+      'The bottle that sits in the corner near the broom. A capful into a bucket of water is enough; the floors come up clean and the room takes on the smell of a temple courtyard at dawn — neem, lemon, a little eucalyptus underneath it all.',
+      'Safe on tiles, marble, granite, wood and the strange in-between surfaces that old Indian houses have. Pets walk on it. Children sit on it. We thought about that.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus base)',
+      'Neem leaf extract',
+      'Lemon essential oil',
+      'Eucalyptus essential oil',
+      'Plant-derived surfactants',
+      'Citric acid (from fermented citrus)',
+      'Tulsi leaf extract',
+      'Spring water',
+    ],
+    note: 'Bio-enzymes break down the everyday film that floors collect — oil from the kitchen, dust from outdoors, the small stickiness of life. They keep working for an hour or so after the floor has dried.',
+    howTo: [
+      'One capful in a bucket of water. No more.',
+      'Mop and let air-dry. No rinse needed.',
+      'Keeps for twelve months.',
+      'Safe for tiles, marble, granite, wood, vitrified, kota.',
+    ],
+    keeps: '12 months',
+    bottle: { src: '/images/bottles/floor-cleaner.webp', width: 301, height: 1100, kind: 'photo' },
+    poster: '/images/gallery/floor-cleaner.webp',
+    tint: '#d5e3cf',
+    accent: '#5fae6a',
+  },
+  {
+    slug: 'vegetables-fruits',
+    name: 'Vegetables & fruits',
+    titleLines: ['Fruit & veg', 'wash'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'फल और सब्ज़ी',
+    tagline: 'plant · gentle',
+    sub: 'For what comes off the cart, the field, or someone’s hands. Soak, rinse, eat.',
+    metaDescription: 'For what comes off the cart, the field, or someones hands. Soak, rinse, eat.',
+    description: [
+      'Vegetables and fruits in India have travelled. They have been handled by many hands; they have sat on carts in the sun; they may have been sprayed once, or twice. This cleanser is for taking off what shouldn’t be on them, without leaving a taste of soap behind.',
+      'Spray, soak for two minutes, rinse with water. That is all.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus base)',
+      'Edible-grade plant surfactants',
+      'Citric acid',
+      'Cold-pressed lemon',
+      'Spring water',
+    ],
+    note: 'This one uses fewer ingredients than anything else on the shelf, on purpose. It is the bottle that goes near the kitchen sink, and what is in it should be safe to swallow accidentally. (It is. We have checked.)',
+    howTo: [
+      'Spray onto produce.',
+      'Soak for two minutes.',
+      'Rinse with clean water.',
+      'Keeps for nine months. Refrigerate once opened, if you have the room.',
+    ],
+    keeps: '9 months',
+    bottle: {
+      src: '/images/bottles/vegetables-fruits.webp',
+      width: 301,
+      height: 1100,
+      kind: 'photo',
+    },
+    poster: '/images/gallery/vegetables-fruits.webp',
+    tint: '#d6ece0',
+    accent: '#86c8a6',
+  },
+  {
+    slug: 'laundry-liquid',
+    name: 'Laundry liquid',
+    titleLines: ['Laundry', 'liquid'],
+    family: 'bio-enzyme',
+    kicker: 'a bio-enzyme essential',
+    deva: 'कपड़े धोना',
+    tagline: 'reetha · low-foam',
+    sub: 'Low foam, for buckets and machines alike. Colours remember themselves.',
+    metaDescription: 'Low foam, for buckets and machines alike. Colours remember themselves.',
+    description: [
+      'A laundry liquid for the way most Indian families actually do laundry — sometimes in a machine, sometimes by hand in a bucket, sometimes with a stone in the courtyard. It is low-foam, so it rinses out cleanly however you wash. It does not strip colour from the cottons your mother gave you.',
+      'Bring whites back to white with a little extra soaking. We do not believe in optical brighteners. Old cotton should look like old cotton.',
+    ],
+    ingredients: [
+      'Bio-enzymes (citrus, fermented 90 days)',
+      'Plant-derived surfactants (saponified coconut)',
+      'Soapnut (reetha) extract',
+      'Soda ash (washing soda)',
+      'Lavender essential oil',
+      'Citrus essential oil blend',
+      'Plant-derived stain enzymes',
+      'Spring water',
+    ],
+    note: 'Reetha — the soapnut tree — grew in the courtyard of the house Kavita grew up in. Her grandmother used it to wash silk saris. We are still using it, with help from a few modern friends.',
+    howTo: [
+      'Machine wash: 20–30 ml per load.',
+      'Hand wash: one small cap in a bucket.',
+      'For stubborn stains, dab on directly and wait ten minutes.',
+      'Keeps for twelve months.',
+    ],
+    keeps: '12 months',
+    bottle: { src: '/images/bottles/laundry-liquid.webp', width: 301, height: 1100, kind: 'photo' },
+    poster: '/images/gallery/laundry-liquid.webp',
+    tint: '#d9e0f0',
+    accent: '#7c96d4',
+  },
+  {
+    slug: 'kumkumadhi-tailam',
+    name: 'Kumkumadhi Tailam',
+    titleLines: ['Kumkumadhi', 'tailam'],
+    family: 'ayurvedic',
+    kicker: 'an ayurvedic preparation',
+    deva: 'कुंकुमादि तैलम्',
+    tagline: 'saffron · sesame',
+    sub: 'An old Ayurvedic oil for the face. Saffron, sandalwood, patience.',
+    metaDescription: 'An old Ayurvedic oil for the face. Saffron, sandalwood, patience.',
+    description: [
+      'Kumkumadhi tailam is one of the oldest preparations in Ayurveda — a face oil used for centuries by women in temple towns and royal kitchens alike. The name is from *kumkuma*, which is saffron; *adi*, which means ‘and others’. There are sixteen herbs in this bottle and saffron is only the first.',
+      'We make it the way it is meant to be made: in small batches, in a sesame oil base, over slow heat, with the herbs steeped for hours. A few drops at night, on a clean face, massaged in for a minute. That is all it asks.',
+    ],
+    ingredients: [
+      'Saffron (Kashmiri Mongra grade)',
+      'Sandalwood',
+      'Manjishtha root',
+      'Vetiver (khus)',
+      'Lotus stamen',
+      'Banyan bark',
+      'Indian madder',
+      'Liquorice (yashtimadhu)',
+      'Indian rose petals',
+      'Cold-pressed sesame oil',
+      'Goat’s milk',
+      'Sixteen herbs in all — the full list is on the bottle',
+    ],
+    note: 'This is the one bottle on our shelf that does not contain bio-enzymes. It belongs to a different tradition — the slow, oil-based *tailams* of Ayurveda — and we have made it the way the old books describe.',
+    howTo: [
+      'Three to five drops, at night, on a freshly washed face.',
+      'Massage gently for one minute. Leave on overnight.',
+      'Patch-test if you have sensitive skin.',
+      'Keeps for eighteen months, away from direct sun.',
+    ],
+    keeps: '18 months',
+    bottle: {
+      src: '/svg/bottles/kumkumadhi-tailam.svg',
+      width: 200,
+      height: 440,
+      kind: 'illustration',
+    },
+    poster: '/images/gallery/kumkumadhi-tailam.webp',
+    tint: '#f3dcc0',
+    accent: '#d08a4c',
+  },
+]
+
+export const PRODUCT_SLUGS: readonly ProductSlug[] = PRODUCTS.map((p) => p.slug)
+
+export function isProductSlug(value: string): value is ProductSlug {
+  return (PRODUCT_SLUGS as readonly string[]).includes(value)
+}
+
+/** The six bio-enzyme bottles that travel round the home carousel. */
+export const CAROUSEL_PRODUCTS: readonly Product[] = PRODUCTS.filter(
+  (p) => p.family === 'bio-enzyme',
+)
+
+export function getProduct(slug: string): Product | undefined {
+  return isProductSlug(slug) ? PRODUCTS.find((p) => p.slug === slug) : undefined
+}
+
+export function getOtherProducts(slug: ProductSlug): Product[] {
+  return PRODUCTS.filter((p) => p.slug !== slug)
+}

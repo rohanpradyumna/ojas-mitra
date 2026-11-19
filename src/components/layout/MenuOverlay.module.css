@@ -1,0 +1,91 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8vw;
+  background: var(--seal);
+  color: var(--cream);
+  clip-path: circle(0% at calc(100% - 59px) 45px);
+  visibility: hidden;
+  transition:
+    clip-path 800ms var(--ease-out-expo),
+    visibility 0s 800ms;
+}
+.open {
+  clip-path: circle(150% at calc(100% - 59px) 45px);
+  visibility: visible;
+  transition:
+    clip-path 800ms var(--ease-out-expo),
+    visibility 0s;
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.links a {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: clamp(44px, 7vw, 104px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  text-decoration: none;
+  transition:
+    color 200ms ease,
+    transform 400ms var(--ease-spring);
+}
+.links a:hover {
+  color: var(--seal-text);
+  transform: translateX(10px);
+}
+.links .write {
+  font-style: italic;
+  color: var(--seal-text);
+}
+
+.foot {
+  margin-top: 48px;
+  max-width: 46ch;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: rgba(241, 231, 211, 0.72);
+}
+.foot a {
+  color: var(--cream);
+}
+
+.close {
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  padding: 10px 20px;
+  border: 1px solid rgba(241, 231, 211, 0.5);
+  border-radius: 999px;
+  background: none;
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--cream);
+  color: var(--seal);
+}
+
+@media (max-width: 760px) {
+  .close {
+    top: 18px;
+    right: 16px;
+  }
+}

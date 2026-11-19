@@ -1,0 +1,128 @@
+.notes {
+  position: relative;
+  z-index: 3;
+  /* Tuck up under the reveal so the reading starts right after the bottle leaves. */
+  margin-top: -18vh;
+  padding: 0 var(--gutter) 96px;
+  text-align: center;
+}
+
+.sub {
+  max-width: 34ch;
+  margin: 40px auto 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.4;
+  color: var(--terracotta-deep);
+}
+.description {
+  max-width: 60ch;
+  margin: 28px auto 0;
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.6;
+  color: var(--clay);
+}
+.footnote {
+  margin: 8px auto 44px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--clay-soft);
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  max-width: 1080px;
+  margin: 72px auto 0;
+  text-align: left;
+  border-top: 1px solid var(--rule-soft);
+}
+.specs > div {
+  padding: 22px 28px 0;
+  border-left: 1px solid var(--rule-soft);
+}
+.specs > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.specs dt,
+.heading {
+  margin: 0 0 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.specs dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--clay-warm);
+}
+.specs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.specs li + li {
+  margin-top: 6px;
+}
+.pill {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--clay);
+}
+
+.inside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 1080px;
+  margin: 72px auto 0;
+  text-align: left;
+}
+.ingredients {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--clay-warm);
+}
+.ingredients li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule-faint);
+}
+.note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--clay-soft);
+}
+
+@media (max-width: 760px) {
+  .notes {
+    margin-top: -10vh;
+  }
+  .specs,
+  .inside {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .specs > div {
+    padding: 18px 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .inside > div + div {
+    margin-top: 40px;
+  }
+}

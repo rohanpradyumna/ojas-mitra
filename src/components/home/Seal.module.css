@@ -1,0 +1,34 @@
+.seal {
+  position: absolute;
+  left: 50%;
+  top: 40vh;
+  width: max(92vw, 760px);
+  aspect-ratio: 1;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate3d(-50%, 30vh, 0) rotate(22deg);
+  will-change: transform, opacity;
+}
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.octagon {
+  fill: var(--seal);
+  stroke: var(--seal);
+  stroke-width: 150;
+  stroke-linejoin: round;
+}
+.ring {
+  font-family: var(--serif);
+  font-size: 118px;
+  fill: var(--seal-text);
+}
+
+@media (max-width: 760px) {
+  .seal {
+    top: 52vh;
+    width: 150vw;
+  }
+}

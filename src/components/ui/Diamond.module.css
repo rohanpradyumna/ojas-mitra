@@ -1,0 +1,8 @@
+.diamond {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  background: var(--clay);
+  transform: rotate(45deg);
+}

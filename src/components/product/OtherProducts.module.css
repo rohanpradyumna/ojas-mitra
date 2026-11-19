@@ -1,0 +1,32 @@
+.others {
+  position: relative;
+  z-index: 3;
+  padding: 40px 40px 40px;
+}
+.title {
+  margin: 0 0 64px;
+  text-align: center;
+  font-size: clamp(54px, 7.6vw, 130px);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 560px) {
+  .others {
+    padding: 32px 18px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

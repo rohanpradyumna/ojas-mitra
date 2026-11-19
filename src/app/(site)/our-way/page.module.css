@@ -1,0 +1,157 @@
+.tree {
+  display: block;
+  height: 56px;
+  width: auto;
+  margin: 0 auto 64px;
+  opacity: 0.6;
+}
+
+.longform {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.longform p {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.85;
+}
+.first::first-letter {
+  float: left;
+  margin: 6px 12px 0 0;
+  font-size: 64px;
+  font-style: italic;
+  line-height: 0.95;
+  color: var(--terracotta);
+}
+.pull {
+  max-width: 22ch;
+  margin: 80px auto;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.25;
+  color: var(--terracotta-deep);
+  text-wrap: balance;
+}
+
+.definitions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin: 56px 0 0;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule-soft);
+}
+.definitions dt {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--terracotta);
+}
+.definitions dt span {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 26px;
+  color: var(--clay-warm);
+}
+.definitions dd {
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.maker {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 140px auto 0;
+  padding: 0 var(--gutter);
+}
+.portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.corner {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-size: 22px;
+  color: var(--cream);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+.makerText h2 {
+  margin-top: 12px;
+}
+.makerText p:not(:global(.kicker)) {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.75;
+}
+.sign {
+  font-size: 26px;
+}
+
+.letters {
+  max-width: 1180px;
+  margin: 140px auto 0;
+  padding: 0 var(--gutter);
+}
+.lettersTitle {
+  max-width: 20ch;
+  margin-bottom: 56px;
+}
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.quotes blockquote {
+  margin: 0;
+  padding-left: 26px;
+  border-left: 2px solid var(--terracotta);
+}
+.quotes p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.7vw, 21px);
+  line-height: 1.5;
+  color: var(--clay-warm);
+}
+.quotes footer {
+  font-size: 13px;
+  color: var(--clay-soft);
+}
+.quotes cite {
+  display: block;
+  font-style: normal;
+  color: var(--clay);
+}
+
+@media (max-width: 880px) {
+  .maker,
+  .definitions,
+  .quotes {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .portrait {
+    max-width: 420px;
+  }
+}

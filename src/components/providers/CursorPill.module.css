@@ -1,0 +1,34 @@
+.pill {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px 7px 9px;
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: 0 6px 22px -6px rgba(42, 29, 20, 0.3);
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  white-space: nowrap;
+  visibility: hidden;
+}
+.pill::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+@media (pointer: coarse) {
+  .pill {
+    display: none;
+  }
+}

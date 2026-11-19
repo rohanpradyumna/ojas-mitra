@@ -1,0 +1,11 @@
+.bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 80;
+  height: 2px;
+  background: var(--terracotta);
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0.8;
+  pointer-events: none;
+}

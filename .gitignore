@@ -1,5 +1,18 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# deploy
+.vercel
+
+# os
 .DS_Store
 **/.DS_Store
-node_modules/
-.vercel/
-.vercel
+
+# env
+.env*.local

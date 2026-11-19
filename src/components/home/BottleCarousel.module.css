@@ -1,0 +1,110 @@
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  outline: none;
+}
+.stage[data-dragging='true'] {
+  cursor: grabbing;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+}
+.item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: var(--bh);
+  aspect-ratio: 301 / 1100;
+  will-change: transform, opacity;
+  /* Off-stage until the first frame poses it. */
+  transform: translate3d(-200vw, 0, 0);
+}
+.bottle {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  -webkit-user-drag: none;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 30px rgba(42, 29, 20, 0.22));
+  transition: filter 500ms ease;
+}
+.item[data-far='true'] .image {
+  filter: drop-shadow(0 26px 30px rgba(42, 29, 20, 0.18)) blur(1.6px);
+}
+.bottle:focus-visible {
+  outline-offset: 8px;
+  border-radius: 6px;
+}
+
+.foot {
+  position: absolute;
+  inset: auto 40px 24px;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.shelfLink {
+  pointer-events: auto;
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--clay-warm);
+  background: rgba(241, 231, 211, 0.85);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.cue {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--cream);
+}
+.cue span {
+  width: 44px;
+  height: 6px;
+  border-radius: 6px;
+  background: rgba(241, 231, 211, 0.85);
+  animation: nudge 2s var(--ease-out-expo) infinite;
+}
+@keyframes nudge {
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@media (max-width: 760px) {
+  .foot {
+    inset: auto 16px 18px;
+  }
+  .shelfLink {
+    display: none;
+  }
+}

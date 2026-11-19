@@ -1,0 +1,91 @@
+.reveal {
+  position: relative;
+}
+.stage {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  inset: 17vh 0 auto;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(64px, 11vw, 190px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.line {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.04em;
+}
+.line > span {
+  display: inline-block;
+}
+
+.captionLeft,
+.captionRight {
+  position: absolute;
+  top: 66vh;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.25;
+  color: var(--clay);
+}
+.captionLeft {
+  left: 10vw;
+}
+.captionRight {
+  right: 10vw;
+  text-align: right;
+}
+.captionLeft :global(.deva) {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85em;
+  color: var(--terracotta);
+}
+
+/* Starts in the hand-off pose (see --handoff-* in globals.css). */
+.bottle {
+  position: absolute;
+  inset-inline: 0;
+  top: var(--handoff-top);
+  z-index: 2;
+  width: max-content;
+  height: calc(var(--bh) * var(--handoff-scale));
+  margin-inline: auto;
+  will-change: transform;
+}
+.layer {
+  height: 100%;
+}
+.image {
+  display: block;
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(0 26px 30px rgba(42, 29, 20, 0.22));
+}
+
+@media (max-width: 760px) {
+  .title {
+    inset-block-start: calc(var(--header-h) + 16px);
+    font-size: 15vw;
+  }
+  .captionLeft,
+  .captionRight {
+    top: 58vh;
+    font-size: 14px;
+  }
+  .captionLeft {
+    left: 18px;
+  }
+  .captionRight {
+    right: 18px;
+  }
+}
