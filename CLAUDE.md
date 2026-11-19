@@ -26,7 +26,7 @@ Live URL: `https://ojas-mitra.vercel.app`
 ```
 /                        → HTML pages (flat, no routing layer)
 assets/css/site.css      → Shared stylesheet for every page
-assets/css/home.css      → Homepage scroll experience only (loader, stage, discover, gallery)
+assets/css/home.css      → Homepage only (loader, header/menu, stage, product notes, drag gallery, other products)
 assets/js/motion.js      → Shared micro-interactions (scroll-reveal, sticky header, WhatsApp float)
 assets/js/home.js        → Homepage choreography (GSAP + ScrollTrigger + Lenis)
 assets/vendor/           → Vendored gsap 3.12.5, ScrollTrigger, lenis 1.1.13 (no CDN, no build)
@@ -44,7 +44,7 @@ uploads/                 → Raw product photos (WhatsApp JPEGs, not yet wired u
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage — loader, pinned bottle carousel → "discover the shelf", horizontal gallery, maker, testimonials, invitation |
+| `index.html` | Homepage — loader, bottle carousel over the rotating seal → product reveal, notes, drag gallery, other products, maker, invitation |
 | `shelf.html` | Full product catalogue (3-column grid, all 7 products) |
 | `product-*.html` | Individual product pages (7 files, identical layout) |
 | `our-way.html` | Brand philosophy / longform |
@@ -57,11 +57,12 @@ Shared styling is in **`assets/css/site.css`**. The homepage adds **`assets/css/
 
 ### Homepage scroll experience (`assets/js/home.js`)
 
-One pinned `.stage` runs a single scrubbed GSAP timeline. The timeline only tweens numbers on an `S` state object (`intro`, `p`, `hand`, `rock`); `render()` turns them into bottle transforms every frame.
-- **Hero carousel** (`S.p`): bottles travel right → left. Tilt depends on screen position: +45° at the right edge, upright at centre, −30° at the left edge.
-- **Hand-off** (`S.hand`): the last `.hb--hero` bottle tilts, dips and settles in the centre while the green `.discover` panel wipes up behind it. The other bottles roll off left.
-- **Discover**: per product, the bottle rocks (`S.rock`) and cross-fades to the next label image while the `.d-item` copy and glow colour change.
-- **Gallery**: a separate pinned section whose vertical scroll drives the `.g-track` horizontally.
+Modelled on the agrumeafarm.it home page. One pinned `.stage` runs a single scrubbed GSAP timeline. The timeline only tweens numbers on `S`, and `render()` turns them into transforms every frame:
+- **`S.p` (carousel):** the six `.hb` bottles loop right → left over the rotating `.seal-svg` octagon. Tilt depends on screen position: +45° at the right edge, upright at centre, −30° at the left edge. The centre bottle is largest, and edge bottles get a slight blur (`.is-far`).
+- **`S.hand` (hand-off):** whichever bottle is centred at the end of the loop drops to bottom-centre. The others fade, the seal sinks, and the product title (`.pd-title`) and captions rise in. Clicking a bottle tweens `LOOP.shift` so that bottle ends up centred, then scrolls to this point.
+- **`S.rise` / `S.after`:** the bottle rises through the title tilting to about +28°, then leaves faster than the page as the stage unpins.
+- **Product data:** the `PRODUCTS` array in home.js holds each bottle's title, Hindi name, description, how-to-use and keeps-for. `showProduct()` fills the title, notes and specs, and hides the current bottle's tile in "The other products".
+- **Extras:** the `.pd-gallery` drag strip uses pointer drag with inertia on mouse and native scroll-snap on touch. `.cursor-pill` follows the pointer ("discover the product" / "drag"). `.menu-overlay` is the full-screen menu.
 
 Bottle images: `assets/img/bottles/*.webp` were generated from `uploads/bg_rem_laundry.jpeg`. The white background was flood-filled out, and "LAUNDRY LIQUID" plus the first tagline line were in-painted and re-set in Roboto Condensed. Replace them with real photography of each bottle when available, keeping the 301×1100 ratio.
 
