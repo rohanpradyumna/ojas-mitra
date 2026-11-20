@@ -33,7 +33,8 @@ src/
   components/
     providers/              SmoothScroll (Lenis on GSAP's ticker), CursorProvider (cursor pill)
     layout/                 SiteHeader, MenuOverlay, SiteFooter, WhatsAppFloat
-    home/                   Loader, BottleCarousel, Seal, useBottleLoop (engine), carouselGeometry (pure maths)
+    home/                   Loader, BottleCarousel, useBottleLoop (engine), carouselGeometry (pure maths)
+      wheel/                CartWheel (bullock-cart wheel behind the bottles), geometry, useWheelVariant, warli/ (frieze + figures)
     product/                ProductReveal, ProductNotes, DragGallery, OtherProducts, ProductTile
     fruit/                  Fruit (lemon/pineapple/apple SVGs), FruitBurst, scatter
     journal/  ui/           ReadingProgress; RichText, Reveal, PageIntro, BottleImage, Diamond
@@ -56,6 +57,10 @@ uploads/                    Raw photos, not served
 
 - **Home (`useBottleLoop`)**: an endless loop driven by wheel, drag/swipe, arrow keys and a slow drift. A bottle's pose is a pure function of its loop position (`carouselGeometry.ts`): +45° entering right, upright at centre, −30° leaving left. Clicking a bottle centres it, then parks it at the **hand-off pose** and navigates.
 - **The hand-off pose** is defined once, as CSS variables `--handoff-top` / `--handoff-scale` (with `--bh`, the bottle height) in `globals.css`. The carousel reads them (`readHandoffPose`) and `ProductReveal` starts its bottle there, so the bottle doesn't move across the page change. `lib/handoff.ts` notes the chosen slug so the product page skips its own bottle entrance.
+- **The cart wheel (`home/wheel/`)**: a bullock-cart wheel in `--seal` turns behind the bottles (`useBottleLoop` rotates it with the loop). It's modelled on a real cart wheel: iron tyre with bolts, broad wooden rim, 14 tapered spokes, ringed hub. Three rims, chosen by `HOME_WHEEL` in `data/site.ts` and previewable with `?wheel=text|warli|plain`:
+  - `text` — the ring text on a broad painted band;
+  - `warli` — a twelve-scene Warli frieze of how a bottle is made (picking fruit → peeling → the matka → ninety days under sun and moon → stirring → straining → bottling → the cart → a clean home), white on the wood like the paintings. Scenes run anticlockwise so each next one rises into view from the left as the wheel turns. Figures follow the Warli rules below and are placed on the circle one by one (`onRing`), so they stand on the curve;
+  - `plain` — a narrower rim with its segment joints.
 - **Product page (`ProductReveal`)**: pinned stage; on scroll the bottle rises through the giant title tilting to +28°, then leaves faster than the page. Three nested wrappers (rise / exit / entrance) keep each tween on its own element.
 - **Other products (`ProductTile` + `FruitBurst`)**: hover or focus tints the tile and throws out a random handful of lemons, pineapples and apples (`scatter.ts` keeps them clear of the bottle) — the fruit the bio-enzymes are fermented from.
 

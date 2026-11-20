@@ -8,7 +8,9 @@ import { useCursor } from '@/components/providers/CursorPill'
 import { BottleImage } from '@/components/ui/BottleImage'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 import { noteHandoff } from '@/lib/handoff'
-import { Seal } from './Seal'
+import { HOME_WHEEL } from '@/data/site'
+import { CartWheel } from './wheel/CartWheel'
+import { useWheelVariant } from './wheel/useWheelVariant'
 import { useBottleLoop } from './useBottleLoop'
 import styles from './BottleCarousel.module.css'
 
@@ -22,18 +24,25 @@ interface Props {
 }
 
 /**
- * The home page: an endless loop of bottles over the turning seal. Scroll, swipe, drag
+ * The home page: an endless loop of bottles over the turning cart wheel. Scroll, swipe, drag
  * or use the arrow keys to turn it; choose a bottle to carry it into its own page.
  */
 export function BottleCarousel({ products, ref }: Props) {
   const stageRef = useRef<HTMLElement>(null)
-  const sealRef = useRef<HTMLDivElement>(null)
+  const wheelRef = useRef<HTMLDivElement>(null)
   const itemRefs = useRef<Array<HTMLLIElement | null>>([])
   const router = useRouter()
   const cursor = useCursor()
   const reducedMotion = useReducedMotion()
+  const wheel = useWheelVariant(HOME_WHEEL)
 
-  const loop = useBottleLoop({ stageRef, itemRefs, sealRef, count: products.length, reducedMotion })
+  const loop = useBottleLoop({
+    stageRef,
+    itemRefs,
+    wheelRef,
+    count: products.length,
+    reducedMotion,
+  })
   useImperativeHandle(ref, () => ({ enter: loop.enter }))
 
   const choose = (e: MouseEvent<HTMLAnchorElement>, index: number) => {
@@ -58,7 +67,7 @@ export function BottleCarousel({ products, ref }: Props) {
       aria-label="The bottles — scroll or use the arrow keys to turn the shelf"
       tabIndex={-1}
     >
-      <Seal ref={sealRef} />
+      <CartWheel ref={wheelRef} variant={wheel} />
 
       <ul className={styles.track}>
         {products.map((product, i) => (

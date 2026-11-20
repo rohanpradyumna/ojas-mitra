@@ -39,7 +39,7 @@ interface LoopState {
 interface Options {
   stageRef: RefObject<HTMLElement | null>
   itemRefs: RefObject<Array<HTMLElement | null>>
-  sealRef: RefObject<HTMLElement | null>
+  wheelRef: RefObject<HTMLElement | null>
   count: number
   reducedMotion: boolean
 }
@@ -63,7 +63,7 @@ export interface BottleLoop {
 export function useBottleLoop({
   stageRef,
   itemRefs,
-  sealRef,
+  wheelRef,
   count,
   reducedMotion,
 }: Options): BottleLoop {
@@ -155,13 +155,13 @@ export function useBottleLoop({
           el.dataset.far = String(pose.depth > 0.78 && h === 0)
         })
 
-        const seal = sealRef.current
-        if (seal) {
+        const wheel = wheelRef.current
+        if (wheel) {
           const eased = h * h * (3 - 2 * h)
-          seal.style.transform =
+          wheel.style.transform =
             `translate3d(-50%, ${(eased * 46 + s.intro * 30).toFixed(2)}vh, 0) ` +
             `rotate(${(22 + s.offset * 110 - h * 24).toFixed(2)}deg) scale(${(1 + s.intro * 0.12).toFixed(3)})`
-          seal.style.opacity = String(clamp(1 - h * 1.8, 0, 1))
+          wheel.style.opacity = String(clamp(1 - h * 1.8, 0, 1))
         }
       }
       gsap.ticker.add(render)

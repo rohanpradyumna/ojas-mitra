@@ -65,3 +65,6 @@ export interface GalleryImage {
   width: number
   height: number
 }
+
+/** The rim of the home-page cart wheel: painted text, a Warli frieze, or plain wood. */
+export type WheelVariant = 'text' | 'warli' | 'plain'

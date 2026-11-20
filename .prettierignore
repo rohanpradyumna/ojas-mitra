@@ -4,3 +4,6 @@ public
 design
 uploads
 package-lock.json
+.agents
+.claude
+skills-lock.json

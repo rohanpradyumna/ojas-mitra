@@ -86,6 +86,10 @@
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--cream);
+  /* The wheel has gaps between its spokes, so the cue carries its own ground. */
+  padding: 8px 18px 10px;
+  border-radius: 999px;
+  background: var(--seal);
 }
 .cue span {
   width: 44px;

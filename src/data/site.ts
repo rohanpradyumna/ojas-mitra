@@ -1,3 +1,5 @@
+import type { WheelVariant } from './types'
+
 export const SITE = {
   name: 'Ojas Mithra',
   deva: 'ओजस मित्र',
@@ -9,6 +11,12 @@ export const SITE = {
   instagram: { display: '@ojasmithra_ayurveda', href: 'https://instagram.com/ojasmithra_ayurveda' },
   email: 'hello@ojasmithra.com',
 } as const
+
+/**
+ * Which cart wheel turns behind the bottles on the home page.
+ * Any variant can be previewed with ?wheel=text | warli | plain.
+ */
+export const HOME_WHEEL: WheelVariant = 'text'
 
 export const NAV_LINKS = [
   { href: '/shelf', label: 'The shelf' },
