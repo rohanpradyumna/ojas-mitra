@@ -16,7 +16,7 @@ export const SITE = {
  * Which cart wheel turns behind the bottles on the home page.
  * Any variant can be previewed with ?wheel=text | warli | plain.
  */
-export const HOME_WHEEL: WheelVariant = 'text'
+export const HOME_WHEEL: WheelVariant = 'warli'
 
 export const NAV_LINKS = [
   { href: '/shelf', label: 'The shelf' },
