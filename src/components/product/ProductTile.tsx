@@ -13,10 +13,12 @@ interface Props {
   product: Product
   /** Show the two-note tagline under the name (the shelf page does; the product page doesn't). */
   withTagline?: boolean
+  /** Throw out one-colour fruit silhouettes instead of full-colour fruit. */
+  silhouetteFruit?: boolean
 }
 
 /** A product on the shelf. Hover or focus tints it and throws out the fruit it's made from. */
-export function ProductTile({ product, withTagline = false }: Props) {
+export function ProductTile({ product, withTagline = false, silhouetteFruit = false }: Props) {
   const [active, setActive] = useState(false)
   const cursor = useCursor()
 
@@ -38,7 +40,7 @@ export function ProductTile({ product, withTagline = false }: Props) {
       onBlur={() => setActive(false)}
     >
       <span className={styles.frame}>
-        <FruitBurst active={active} />
+        <FruitBurst active={active} silhouette={silhouetteFruit} />
         <BottleImage
           bottle={product.bottle}
           sizes="(max-width: 560px) 30vw, 16vw"

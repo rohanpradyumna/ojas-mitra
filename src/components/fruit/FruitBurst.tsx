@@ -2,26 +2,34 @@
 
 import { useRef } from 'react'
 import { gsap, useGSAP } from '@/lib/gsap'
-import { Fruit, FRUIT_KINDS, type FruitKind } from './Fruit'
+import { Fruit, type FruitKind } from './Fruit'
 import { scatter } from './scatter'
+import { cx } from '@/lib/cx'
 import styles from './FruitBurst.module.css'
 
-/** Three of each fruit; a random handful of these is thrown out on every hover. */
-const POOL: readonly FruitKind[] = FRUIT_KINDS.flatMap((kind) => [kind, kind, kind])
 const SHOWN = 6
+
+/** The full-colour burst keeps its original three fruit. */
+const COLOUR_KINDS: readonly FruitKind[] = ['lemon', 'pineapple', 'apple']
+/** The silhouette burst swaps the apple for an orange — all citrus-and-pineapple peels. */
+const SILHOUETTE_KINDS: readonly FruitKind[] = ['lemon', 'pineapple', 'orange']
 
 interface Props {
   active: boolean
   /** Tile height ÷ width. */
   aspect?: number
+  /** Flat, one-colour shapes behind the bottle instead of full-colour fruit. */
+  silhouette?: boolean
 }
 
 /**
- * Lemons, pineapples and apples that pop out around a product when it is hovered —
+ * Lemons, pineapples and apples (or, as silhouettes, lemons, pineapples and oranges) that pop out around a product when it is hovered —
  * a nod to the fruit the bio-enzymes are fermented from. New positions every time.
  */
-export function FruitBurst({ active, aspect = 1.25 }: Props) {
+export function FruitBurst({ active, aspect = 1.25, silhouette = false }: Props) {
   const ref = useRef<HTMLDivElement>(null)
+  // Three of each fruit; a random handful of these is thrown out on every hover.
+  const pool = (silhouette ? SILHOUETTE_KINDS : COLOUR_KINDS).flatMap((kind) => [kind, kind, kind])
 
   useGSAP(
     () => {
@@ -78,14 +86,14 @@ export function FruitBurst({ active, aspect = 1.25 }: Props) {
         })
       })
     },
-    { scope: ref, dependencies: [active, aspect] },
+    { scope: ref, dependencies: [active, aspect, silhouette] },
   )
 
   return (
-    <div ref={ref} className={styles.burst} aria-hidden="true">
-      {POOL.map((kind, i) => (
+    <div ref={ref} className={cx(styles.burst, silhouette && styles.silhouette)} aria-hidden="true">
+      {pool.map((kind, i) => (
         <span key={i} className={styles.fruit} data-fruit>
-          <Fruit kind={kind} />
+          <Fruit kind={kind} silhouette={silhouette} />
         </span>
       ))}
     </div>

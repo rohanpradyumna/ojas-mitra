@@ -9,7 +9,29 @@
   pointer-events: none;
   transition:
     transform 600ms var(--ease-out-expo),
-    opacity 400ms ease;
+    opacity 400ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease,
+    padding 300ms ease;
+}
+/*
+ * Once the page has scrolled, the header comes back over the content, so it brings its own
+ * cream backdrop and a hairline rule — the logo never lands on top of the text below it.
+ * The Devanagari line folds away to keep the bar compact.
+ */
+.scrolled {
+  padding-top: 14px;
+  padding-bottom: 12px;
+  background-color: var(--cream);
+  box-shadow: 0 1px 0 var(--rule-soft);
+  pointer-events: auto;
+}
+.scrolled .brand small {
+  display: none;
+}
+.scrolled .order,
+.scrolled .menuButton {
+  margin-top: 6px;
 }
 .header > * {
   pointer-events: auto;
@@ -115,6 +137,9 @@
 @media (max-width: 760px) {
   .header {
     padding: 16px 16px 0;
+  }
+  .scrolled {
+    padding: 10px 16px 8px;
   }
   .order {
     visibility: hidden;

@@ -19,3 +19,9 @@
   width: 100%;
   height: 100%;
 }
+
+/* One-colour shapes: a darker wash of whatever tint the tile has turned, no shadow. */
+.silhouette .fruit {
+  filter: none;
+  color: rgba(42, 29, 20, 0.16);
+}

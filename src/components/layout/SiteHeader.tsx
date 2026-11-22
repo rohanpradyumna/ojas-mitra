@@ -11,11 +11,18 @@ import styles from './SiteHeader.module.css'
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const hidden = useHideOnScroll()
+  const { hidden, scrolled } = useHideOnScroll()
 
   return (
     <>
-      <header className={cx(styles.header, hidden && !menuOpen && styles.hidden)} data-site-header>
+      <header
+        className={cx(
+          styles.header,
+          scrolled && styles.scrolled,
+          hidden && !menuOpen && styles.hidden,
+        )}
+        data-site-header
+      >
         <a className={styles.order} href={SITE.whatsapp.href}>
           order on whatsapp
         </a>
