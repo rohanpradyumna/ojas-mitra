@@ -9,6 +9,9 @@ export type ProductSlug =
 
 export type ProductFamily = 'bio-enzyme' | 'ayurvedic'
 
+/** Fruit drawn as silhouettes (the peels the bio-enzymes are fermented from). */
+export type FruitKind = 'lemon' | 'pineapple' | 'apple' | 'orange'
+
 export interface BottleImage {
   src: string
   width: number
@@ -38,6 +41,8 @@ export interface Product {
   poster: string
   /** Background a tile takes on hover. */
   tint: string
+  /** The fruit that pours into its tile on hover. */
+  fruit: FruitKind
   /** The bottle's identity colour. */
   accent: string
 }

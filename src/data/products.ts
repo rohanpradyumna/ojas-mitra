@@ -40,6 +40,7 @@ export const PRODUCTS: readonly Product[] = [
     bottle: { src: '/images/bottles/dishwash.webp', width: 301, height: 1100, kind: 'photo' },
     poster: '/images/gallery/dishwash.webp',
     tint: '#f3e6b8',
+    fruit: 'lemon',
     accent: '#e0bd48',
   },
   {
@@ -77,6 +78,7 @@ export const PRODUCTS: readonly Product[] = [
     bottle: { src: '/images/bottles/handwash.webp', width: 301, height: 1100, kind: 'photo' },
     poster: '/images/gallery/handwash.webp',
     tint: '#d8ead5',
+    fruit: 'orange',
     accent: '#7cc286',
   },
   {
@@ -115,6 +117,7 @@ export const PRODUCTS: readonly Product[] = [
     bottle: { src: '/images/bottles/toilet-cleaner.webp', width: 301, height: 1100, kind: 'photo' },
     poster: '/images/gallery/toilet-cleaner.webp',
     tint: '#d3e3ef',
+    fruit: 'pineapple',
     accent: '#4f98d0',
   },
   {
@@ -152,6 +155,7 @@ export const PRODUCTS: readonly Product[] = [
     bottle: { src: '/images/bottles/floor-cleaner.webp', width: 301, height: 1100, kind: 'photo' },
     poster: '/images/gallery/floor-cleaner.webp',
     tint: '#d5e3cf',
+    fruit: 'lemon',
     accent: '#5fae6a',
   },
   {
@@ -191,6 +195,7 @@ export const PRODUCTS: readonly Product[] = [
     },
     poster: '/images/gallery/vegetables-fruits.webp',
     tint: '#d6ece0',
+    fruit: 'apple',
     accent: '#86c8a6',
   },
   {
@@ -228,6 +233,7 @@ export const PRODUCTS: readonly Product[] = [
     bottle: { src: '/images/bottles/laundry-liquid.webp', width: 301, height: 1100, kind: 'photo' },
     poster: '/images/gallery/laundry-liquid.webp',
     tint: '#d9e0f0',
+    fruit: 'pineapple',
     accent: '#7c96d4',
   },
   {
@@ -274,6 +280,7 @@ export const PRODUCTS: readonly Product[] = [
     },
     poster: '/images/gallery/kumkumadhi-tailam.webp',
     tint: '#f3dcc0',
+    fruit: 'orange',
     accent: '#d08a4c',
   },
 ]

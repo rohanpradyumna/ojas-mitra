@@ -1,0 +1,22 @@
+.pour {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  /* One flat wash over the tile's tint. The transparency is on the layer, not each fruit,
+     so overlapping fruit read as one shape instead of stacking darker. */
+  color: var(--clay);
+  opacity: 0.16;
+}
+.fruit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  will-change: transform;
+}
+.fruit svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

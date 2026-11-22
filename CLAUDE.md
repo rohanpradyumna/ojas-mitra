@@ -36,7 +36,7 @@ src/
     home/                   Loader, BottleCarousel, useBottleLoop (engine), carouselGeometry (pure maths)
       wheel/                CartWheel (bullock-cart wheel behind the bottles), geometry, useWheelVariant, warli/ (frieze + figures)
     product/                ProductReveal, ProductNotes, DragGallery, OtherProducts, ProductTile
-    fruit/                  Fruit (lemon/pineapple/apple SVGs), FruitBurst, scatter
+    fruit/                  Fruit (lemon/orange/apple/pineapple SVGs + silhouettes), FruitPour, pourPhysics
     journal/  ui/           ReadingProgress; RichText, Reveal, PageIntro, BottleImage, Diamond
   data/                     Typed content — products, journal, gallery, site constants, types
   hooks/  lib/              useReducedMotion, useHideOnScroll; gsap (registered plugins), handoff, math, cx
@@ -62,7 +62,7 @@ uploads/                    Raw photos, not served
   - `warli` — a twelve-scene Warli frieze of how a bottle is made (picking fruit → peeling → the matka → ninety days under sun and moon → stirring → straining → bottling → the cart → a clean home), white on the wood like the paintings. Scenes run anticlockwise so each next one rises into view from the left as the wheel turns. Figures follow the Warli rules below and are placed on the circle one by one (`onRing`), so they stand on the curve;
   - `plain` — a narrower rim with its segment joints.
 - **Product page (`ProductReveal`)**: pinned stage; on scroll the bottle rises through the giant title tilting to +28°, then leaves faster than the page. Three nested wrappers (rise / exit / entrance) keep each tween on its own element.
-- **Other products (`ProductTile` + `FruitBurst`)**: hover or focus tints the tile and throws out a random handful of lemons, pineapples and apples (`scatter.ts` keeps them clear of the bottle) — the fruit the bio-enzymes are fermented from.
+- **Product tiles (`ProductTile` + `FruitPour`)**: hover or focus tints the tile and pours in silhouettes of that product's fruit (`fruit` in `PRODUCTS`), as if into a glass jar seen from the side. They fall, knock together, roll and settle into a heap behind the bottle; on leaving, the jar's floor opens and they drop out. `pourPhysics.ts` is a small pure Verlet simulation (fixed 120 Hz step, circle collisions, walls, floor); `FruitPour` only runs the GSAP ticker while fruit is moving. With reduced motion the heap appears already settled.
 
 ### Images
 
@@ -129,7 +129,7 @@ Tone markers: no bullet-point marketing language, no "premium" / "natural" / "ec
 
 ## Adding a new product
 
-1. Add its slug to `ProductSlug` in `src/data/types.ts` and an entry to `PRODUCTS` in `src/data/products.ts` (copy, ingredients, how-to, keeps, tint, accent).
+1. Add its slug to `ProductSlug` in `src/data/types.ts` and an entry to `PRODUCTS` in `src/data/products.ts` (copy, ingredients, how-to, keeps, tint, accent, and the `fruit` that pours into its tile).
 2. Add `public/images/bottles/<slug>.webp` (transparent, 301×1100) — or an SVG in `public/svg/bottles/` following the bottle anatomy above, with `kind: 'illustration'`.
 3. Add its poster to `public/images/gallery/<slug>.webp` and its size to `POSTER_SIZES` in `src/data/gallery.ts`.
 4. That's all: the product page, shelf, footer, sitemap, carousel (if `family: 'bio-enzyme'`) and redirects pick it up.

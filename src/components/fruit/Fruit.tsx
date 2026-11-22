@@ -1,11 +1,12 @@
 import type { JSX } from 'react'
+import type { FruitKind } from '@/data/types'
+
+export type { FruitKind }
 
 /**
  * Flat fruit silhouettes — the peels and pulp the bio-enzymes are fermented from.
  * Drawn on a 100×100 box so they scale cleanly to any size.
  */
-export type FruitKind = 'lemon' | 'pineapple' | 'apple' | 'orange'
-
 export const FRUIT_KINDS: readonly FruitKind[] = ['lemon', 'pineapple', 'apple', 'orange']
 
 const LEAF = '#5f8a4a'
@@ -92,6 +93,17 @@ function Orange() {
       />
     </>
   )
+}
+
+/**
+ * The round body of each drawing, in its 100×100 box: centre and radius. Used to
+ * treat a fruit as a ball when it falls (the pineapple's crown sits outside it).
+ */
+export const FRUIT_BODY: Record<FruitKind, { cx: number; cy: number; r: number }> = {
+  lemon: { cx: 50, cy: 52, r: 34 },
+  pineapple: { cx: 50, cy: 66, r: 27 },
+  apple: { cx: 50, cy: 60, r: 33 },
+  orange: { cx: 50, cy: 56, r: 34 },
 }
 
 const SHAPES: Record<FruitKind, () => JSX.Element> = {

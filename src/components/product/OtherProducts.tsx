@@ -14,7 +14,7 @@ export function OtherProducts({ current }: { current: ProductSlug }) {
       <ul className={styles.grid}>
         {getOtherProducts(current).map((product) => (
           <li key={product.slug}>
-            <ProductTile product={product} silhouetteFruit />
+            <ProductTile product={product} />
           </li>
         ))}
       </ul>
