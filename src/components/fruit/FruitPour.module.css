@@ -6,7 +6,7 @@
   /* One flat wash over the tile's tint. The transparency is on the layer, not each fruit,
      so overlapping fruit read as one shape instead of stacking darker. */
   color: var(--clay);
-  opacity: 0.16;
+  opacity: 0.3;
 }
 .fruit {
   position: absolute;

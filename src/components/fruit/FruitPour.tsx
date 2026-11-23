@@ -107,7 +107,9 @@ export function FruitPour({ active, kind }: Props) {
         // Fruit that has dropped out of the bottom (crowns included) is done with.
         if (jar.open) balls = balls.filter((b) => b.y - b.r * 1.8 < jar.height)
         draw()
-        if ((toPour === 0 && isSettled(balls)) || balls.length === 0) stop()
+        // Only stop once the pour is finished — never while fruit is still waiting to drop
+        // (on the first frame of a hover nothing has fallen yet, and that is not "done").
+        if (toPour === 0 && (balls.length === 0 || isSettled(balls))) stop()
       }
 
       const start = () => {
