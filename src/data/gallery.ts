@@ -11,7 +11,7 @@ const POSTER_SIZES: Record<ProductSlug, [number, number]> = {
   'kumkumadhi-tailam': [669, 1200],
 }
 
-/** A product's own photographs, shown first in its gallery. Add more products here as photos arrive. */
+/** A product's own photographs. When a product has these, its gallery shows only them. */
 const PRODUCT_PHOTOS: Partial<Record<ProductSlug, readonly GalleryImage[]>> = {
   'laundry-liquid': [
     {
@@ -47,7 +47,7 @@ const PRODUCT_PHOTOS: Partial<Record<ProductSlug, readonly GalleryImage[]>> = {
   ],
 }
 
-/** Photographs from around the house, shown for every product after its own. */
+/** Photographs from around the house, for products that don't have their own yet. */
 const LIFESTYLE: readonly GalleryImage[] = [
   {
     src: '/images/gallery/life-kitchen.webp',
@@ -81,10 +81,12 @@ function posterFor(slug: ProductSlug): GalleryImage {
 }
 
 /**
- * Gallery for a product page: its own photographs, then its poster, then the house
- * photographs, then the other products' posters.
+ * Gallery for a product page. A product with its own photographs shows only those;
+ * until it has some, it shows its poster, the house photographs and the other posters.
  */
 export function galleryFor(slug: ProductSlug): GalleryImage[] {
+  const photos = PRODUCT_PHOTOS[slug]
+  if (photos?.length) return [...photos]
   const others = PRODUCTS.filter((p) => p.slug !== slug).map((p) => posterFor(p.slug))
-  return [...(PRODUCT_PHOTOS[slug] ?? []), posterFor(slug), ...LIFESTYLE, ...others]
+  return [posterFor(slug), ...LIFESTYLE, ...others]
 }
