@@ -66,7 +66,7 @@ uploads/                    Raw photos, not served
 
 ### Images
 
-`public/images/bottles/*.webp` (301×1100) were generated from `uploads/bg_rem_laundry.jpeg`: background flood-filled out, "LAUNDRY LIQUID" and the first tagline line in-painted and re-set. Replace them with real photography of each bottle when available, keeping the ratio. Kumkumadhi uses its Warli-labelled SVG illustration. Gallery posters are in `public/images/gallery/`.
+`public/images/bottles/*.webp` (301×1100) were generated from `uploads/bg_rem_laundry.jpeg`: background flood-filled out, "LAUNDRY LIQUID" and the first tagline line in-painted and re-set. Replace them with real photography of each bottle when available, keeping the ratio. Kumkumadhi uses its Warli-labelled SVG illustration. Gallery posters are in `public/images/gallery/`; a product's own photographs go in `public/images/gallery/<slug>/` (web-sized `.webp`, originals kept in `uploads/`) and are listed in `PRODUCT_PHOTOS` in `src/data/gallery.ts`, which shows them first in that product's gallery.
 
 ### Design tokens
 
